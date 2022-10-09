@@ -84,7 +84,8 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  rotate: 45deg;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   z-index: -2;
   opacity: 1;
   -webkit-transition-duration: 2s;
@@ -117,7 +118,8 @@ main {
   border: 1px solid;
   width: 30px;
   height: 30px;
-  rotate: 45deg;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   margin: 0px auto 30px;
 }
 
@@ -386,7 +388,8 @@ header h2 {
   width: 8px;
   height: 8px;
   position: absolute;
-  rotate: 45deg;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background: black;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
