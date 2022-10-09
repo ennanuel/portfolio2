@@ -1,8 +1,10 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  transition-duration: 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .for-phone {
@@ -10,9 +12,15 @@
 }
 
 ul.for-others {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
 }
 
@@ -31,9 +39,15 @@ main {
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .full-hw {
@@ -46,9 +60,12 @@ main {
 }
 
 .box {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, 50%);
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: (50%)[2];
+      grid-template-rows: repeat(2, 50%);
 }
 
 #background {
@@ -63,12 +80,15 @@ main {
 }
 
 .background-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   rotate: 45deg;
   z-index: -2;
   opacity: 1;
-  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .content {
@@ -76,7 +96,8 @@ main {
   padding: 5em;
   background-color: #000000;
   scale: 1;
-  transition-duration: 3s;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
 }
 
 .socials {
@@ -85,12 +106,14 @@ main {
   left: 30px;
   height: 30%;
   width: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .social {
-  background-color: rgb(11, 11, 11);
+  background-color: #0b0b0b;
   border: 1px solid;
   width: 30px;
   height: 30px;
@@ -103,7 +126,8 @@ main {
   width: 0;
   height: 0;
   background-color: white;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .social:hover::before {
@@ -134,10 +158,19 @@ header {
   width: 30px;
   height: 30px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-icon .icon-line {
@@ -149,8 +182,10 @@ header {
 
 .scrolled {
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 1px 5px black;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-box-shadow: 0 1px 5px black;
+          box-shadow: 0 1px 5px black;
 }
 
 .about h2 span {
@@ -168,15 +203,21 @@ header h2 {
 .nav-bar {
   width: 100vw;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
 }
 
 .nav-bar ul li {
   margin: 0 15px;
-  color:rgba(255, 255, 255, 0.704)
+  color: rgba(255, 255, 255, 0.704);
 }
 
 .nav-bar ul li:hover {
@@ -189,8 +230,9 @@ header h2 {
   position: relative;
   min-height: 300px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color:rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .introduction:hover .about p::before {
@@ -202,10 +244,16 @@ header h2 {
   width: 100%;
   height: 30px;
   background-color: #000000b7;
-  border-bottom:1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .task-bar .dot {
@@ -215,7 +263,7 @@ header h2 {
   background-color: #ffffff;
 }
 
-.intro-title{
+.intro-title {
   padding: 10px !important;
   font-size: 26px !important;
   top: -15px !important;
@@ -224,10 +272,17 @@ header h2 {
 
 .info {
   margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
 }
 
@@ -242,9 +297,15 @@ header h2 {
   width: 35%;
   min-width: 300px;
   height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .btn {
@@ -252,7 +313,7 @@ header h2 {
   width: 70%;
   height: 60px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color:rgba(0, 0, 0, 0.623);
+  background-color: rgba(0, 0, 0, 0.623);
   color: white;
   position: relative;
   font-size: 20px;
@@ -262,9 +323,15 @@ header h2 {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   left: 0;
   z-index: 1;
@@ -301,7 +368,7 @@ header h2 {
 
 .about h2 {
   font-size: 50px;
-  color:rgba(255, 255, 255, 0.609);
+  color: rgba(255, 255, 255, 0.609);
 }
 
 .about p::before {
@@ -346,7 +413,7 @@ header h2 {
 
 p {
   font-size: 19px;
-  color:rgba(255, 255, 255, 0.513);
+  color: rgba(255, 255, 255, 0.513);
 }
 
 .bg-text {
@@ -377,15 +444,23 @@ p {
 }
 
 .me {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 50px;
 }
 
 .me .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -426,7 +501,7 @@ p {
   font-size: 35px;
   padding: 15px;
   background-color: #000000;
-  border:1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   position: absolute;
   top: -40px;
 }
@@ -440,14 +515,17 @@ p {
 }
 
 .title .number {
-  color:rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 30px;
 }
 
 .skills {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: auto;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   grid-gap: 10px;
   margin-left: 20px;
   list-style: none;
@@ -471,12 +549,22 @@ p {
   bottom: 0px;
   width: 100%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background:rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .nav-items div {
@@ -496,46 +584,38 @@ p {
 
 @media (max-width: 700px) {
   .introduction {
-      margin-top: 100px;
+    margin-top: 100px;
   }
-
   .intro-title {
-      left: 10px;
+    left: 10px;
   }
-
   .task-bar, .socials {
-      display: none;
+    display: none;
   }
-
   h1 {
-      font-size: 20px;
+    font-size: 20px;
   }
-
   .bg-text {
-      font-size: 50px;
+    font-size: 50px;
   }
-
   .about h2 {
-      margin-top: 20px;
-      font-size: 35px;
+    margin-top: 20px;
+    font-size: 35px;
   }
-
   .profile-image {
-      margin: 0 20px;
-      border: none;
-      border-left: none;
-      border-top:1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 20px;
+    border: none;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
-
   .about, .profile-image {
-      width: 100%;
+    width: 100%;
   }
-
   .for-phone {
     display: block !important;
   }
-
   .for-others {
     display: none !important;
   }
 }
+/*# sourceMappingURL=index.css.map */

@@ -6,7 +6,6 @@ import Socials from './components/Socials'
 import AboutMe from './components/AboutMe'
 import Resume from './components/Resume'
 import Projects from './components/Projects'
-import './App.css'
 
 function App() {
 
