@@ -1,0 +1,37 @@
+@media (max-width: 700px) {
+  .introduction {
+    margin-top: 100px;
+  }
+  .about p, .profile-image .btn {
+    width: 100%;
+  }
+  .intro-title {
+    left: 10px;
+  }
+  .task-bar, .socials {
+    display: none;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .bg-text {
+    font-size: 50px;
+  }
+  .about h2 {
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  .profile-image {
+    margin: 20px;
+  }
+  .about, .profile-image {
+    width: 100%;
+  }
+  .for-phone {
+    display: block !important;
+  }
+  .for-others {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=smallerDevice.css.map */

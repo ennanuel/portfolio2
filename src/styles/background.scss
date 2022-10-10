@@ -1,0 +1,23 @@
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.background-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: rotate(45deg);
+    z-index: -2;
+    opacity: 1;
+    transition-duration: 2s;
+}
+  
+.content {
+    position: relative;
+    padding: 5em;
+    background-color: #000000;
+    scale: 1;
+    transition-duration: 3s;
+}
+  

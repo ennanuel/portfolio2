@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,WAAW;EAClB,mBAAmB,EAAE,GAAG,CAAC,0BAA0B;CACpD;;AAED,AAAA,aAAa,CAAC;EACZ,IAAI,EAAE,EAAE;CACT;;AAED,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,EAAE;CACV",
+    "sources": [
+        "bgtext.scss"
+    ],
+    "names": [],
+    "file": "bgtext.css"
+}

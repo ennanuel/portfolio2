@@ -3,6 +3,7 @@ import BoxDecor from "./BoxDecor"
 import Button from "./Button"
 import Highlight from "./Highlight"
 import Taskbar from "./Taskbar"
+import '../styles/introduction.css'
 
 const Introduction = () => {
   return (
@@ -20,7 +21,7 @@ const Introduction = () => {
           </p>
         </div>
         <div className="profile-image">
-          <Button>Let's Connect</Button>
+          <Button width="100%">Let's Connect</Button>
         </div>
       </article>
       <BgText r="10px" b="-10px">Intro.</BgText>

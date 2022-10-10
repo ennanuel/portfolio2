@@ -1,0 +1,90 @@
+.about h2 span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.introduction {
+  width: 85%;
+  max-width: 900px;
+  margin: 15% auto;
+  position: relative;
+  min-height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.introduction:hover .about p::before {
+  top: 20px;
+  left: 20px;
+}
+
+.intro-title {
+  padding: 10px !important;
+  font-size: 26px !important;
+  top: -15px !important;
+  left: -5% !important;
+}
+
+.info {
+  margin: 0px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about {
+  width: 60%;
+  position: relative;
+  padding-right: 0;
+}
+
+.profile-image {
+  width: 35%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about p {
+  width: 80%;
+  margin: 10px auto;
+  position: relative;
+  padding: 30px;
+  background-color: #0000006f;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.609);
+}
+
+.about p::before {
+  content: "";
+  width: 100%;
+  background: repeating-linear-gradient(45deg, #ffffff3c, #ffffff3c 2px, transparent 2px, transparent 10px);
+  height: 100%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+}
+/*# sourceMappingURL=introduction.css.map */

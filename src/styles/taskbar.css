@@ -1,0 +1,23 @@
+.task-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #000000b7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.task-bar .dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 15px;
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=taskbar.css.map */

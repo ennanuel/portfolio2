@@ -1,0 +1,76 @@
+.me {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px;
+}
+
+.me .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.me .second .picture {
+  width: 60%;
+  margin: 20px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.me .second .picture span {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+  background: repeating-linear-gradient(45deg, #ffffff80, #ffffff80 2px, transparent 2px, transparent 12px);
+}
+
+.me .second .picture:hover span {
+  top: 10px;
+  left: 10px;
+}
+
+.skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 10px;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.skills li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.513);
+}
+
+.skills li::before {
+  content: "\25A1";
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.about-me p {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=aboutme.css.map */

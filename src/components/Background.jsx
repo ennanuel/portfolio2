@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import BackgroundBox from './BackgroundBox.jsx';
+import BackgroundBox from './BackgroundBox.jsx'
 import { v4 as uuidv4 } from 'uuid'
+import '../styles/background.css'
 
 let isFirstTime = true;
 const Background = () => {

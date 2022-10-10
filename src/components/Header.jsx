@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Button from "./Button";
+import '../styles/header.css'
 
 
 const Header = () => {
@@ -39,9 +40,9 @@ const Header = () => {
                 <ul className="for-phone">
                 <li>
                         <div className="header-icon" onClick={changePosition}>
-                            <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {}}></div>
-                            <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)'}: {}}></div>
-                            <div className="icon-line line3" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {}}></div>
+                            <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {position: 'relative'}}></div>
+                            <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)'}: {position: 'relative'}}></div>
+                            <div className="icon-line line3" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {position: 'relative'}}></div>
                         </div>
                     </li>
                 </ul>

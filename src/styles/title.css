@@ -1,0 +1,22 @@
+.title {
+  font-size: 35px;
+  padding: 15px;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -40px;
+}
+
+.title-left {
+  left: 10%;
+}
+
+.title-right {
+  right: 10%;
+}
+
+.title .number {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 30px;
+}
+/*# sourceMappingURL=title.css.map */

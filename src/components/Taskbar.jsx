@@ -1,3 +1,5 @@
+import '../styles/taskbar.css'
+
 const Taskbar = () => (
     <div className="task-bar">
         <div className="dot red-dot"></div>

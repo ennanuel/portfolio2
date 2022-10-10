@@ -1,6 +1,7 @@
 import BgText from "./BgText"
 import Highlight from "./Highlight"
 import Title from "./Title"
+import '../styles/aboutme.css'
 
 const AboutMe = () => {
   return (
