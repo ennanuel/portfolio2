@@ -5,6 +5,11 @@
   font-weight: bolder;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.123);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .bg-text-left {

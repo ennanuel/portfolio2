@@ -27,7 +27,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header>
+        <header className={isAbs? 'new-header-bg': ''}>
             <div className={`nav-bar${scrolled? ' scrolled': ''}`}>
             <h2>LOGO</h2>
             <nav>
@@ -40,9 +40,9 @@ const Header = () => {
                 <ul className="for-phone">
                 <li>
                         <div className="header-icon" onClick={changePosition}>
-                            <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {position: 'relative'}}></div>
-                            <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)'}: {position: 'relative'}}></div>
-                            <div className="icon-line line3" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)'}: {position: 'relative'}}></div>
+                            <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)', top: '50%'}: {position: 'absolute', top: '5px'}}></div>
+                            <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)', top: '50%'}: {position: 'absolute', top: '50%'}}></div>
+                            <div className="icon-line line3" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)', top: '50%'}: {position: 'absolute', bottom: '5px'}}></div>
                         </div>
                     </li>
                 </ul>

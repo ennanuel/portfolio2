@@ -92,9 +92,13 @@ header h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.new-header-bg {
   background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
+  z-index: 9999;
 }
 
 .nav-items div {

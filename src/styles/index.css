@@ -26,13 +26,12 @@ ul.for-others {
 
 body, html {
   overflow-x: hidden;
+  width: 100vw;
   color: white;
-  background: black;
 }
 
-main {
-  margin: -1px;
-  padding: 1px;
+#root {
+  width: 100vw;
 }
 
 .hidden {

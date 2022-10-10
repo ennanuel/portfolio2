@@ -68,8 +68,12 @@ header h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.new-header-bg {
   background:rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
+  z-index: 9999;
 }
 
 .nav-items div {

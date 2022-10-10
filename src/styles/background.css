@@ -18,6 +18,7 @@
   opacity: 1;
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
+  pointer-events: none;
 }
 
 .content {
