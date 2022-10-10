@@ -7,15 +7,15 @@ import '../styles/introduction.css'
 
 const Introduction = () => {
   return (
-    <section className="introduction">
+    <section className="introduction full-border">
       <Taskbar />
-      <div className="title intro-title">
+      <div className="title full-border intro-title">
         <span>Hi, my name is</span>
       </div>
       <article className="info">
         <div className="about">
           <h2><span>Ezema Emmanuel.</span><br />I build stuff for the web.</h2>
-          <p>
+          <p className="full-border">
             <BoxDecor />
             I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <Highlight>Upstatement</Highlight>.
           </p>

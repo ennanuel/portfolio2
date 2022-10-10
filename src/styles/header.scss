@@ -78,7 +78,7 @@ header h2 {
 
 .nav-items div {
   padding: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--border);
   font-size: 20px;
   text-transform: uppercase;
 }

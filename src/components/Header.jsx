@@ -27,7 +27,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={isAbs? 'new-header-bg': ''}>
+        <header className={isAbs && window.innerWidth < 720? 'new-header-bg': ''}>
             <div className={`nav-bar${scrolled? ' scrolled': ''}`}>
             <h2>LOGO</h2>
             <nav>

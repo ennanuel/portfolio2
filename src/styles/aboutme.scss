@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .me .second .picture {
@@ -52,13 +51,9 @@
 
 .skills li::before {
   content: "\25A1";
-  color: white;
+  color: var(--text);
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
-
-.about-me p {
-  margin-bottom: 15px;
 }

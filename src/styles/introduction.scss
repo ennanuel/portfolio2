@@ -6,17 +6,16 @@
 .introduction {
   width: 85%;
   max-width: 900px;
-  margin: 15% auto;
+  margin: 10% auto;
   position: relative;
   min-height: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color:rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
-}
+  background-color: rgba(0, 0, 0, 0.3)
+};
 
 .introduction:hover .about p::before {
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
 }
 
 .intro-title{
@@ -49,11 +48,10 @@
 }
 .about p {
   width: 80%;
-  margin: 10px auto;
+  margin: 25px auto;
   position: relative;
   padding: 30px;
   background-color: #0000006f;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 

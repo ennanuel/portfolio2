@@ -1,5 +1,5 @@
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
   .introduction {
       margin-top: 100px;
   }
@@ -20,7 +20,7 @@
   }
 
   .bg-text {
-      font-size: 50px;
+      font-size: 90px;
   }
 
   .about h2 {
@@ -42,5 +42,31 @@
 
   .for-others {
     display: none !important;
+  }
+
+  .section {
+    padding: 7%;
+  }
+
+  .project {
+    
+    .project-info {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        align-items: flex-start !important;
+
+        .project-description, .tech-used {
+            width: 100%;
+        }
+
+        .tech-used, .links {
+            justify-content: flex-start !important;
+        }
+    }
+
+    .project-img {
+        width: 100%;
+    }
   }
 }

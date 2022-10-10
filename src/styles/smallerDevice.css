@@ -1,4 +1,4 @@
-@media (max-width: 700px) {
+@media (max-width: 720px) {
   .introduction {
     margin-top: 100px;
   }
@@ -15,7 +15,7 @@
     font-size: 20px;
   }
   .bg-text {
-    font-size: 50px;
+    font-size: 90px;
   }
   .about h2 {
     margin-top: 20px;
@@ -32,6 +32,28 @@
   }
   .for-others {
     display: none !important;
+  }
+  .section {
+    padding: 7%;
+  }
+  .project .project-info {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  .project .project-info .project-description, .project .project-info .tech-used {
+    width: 100%;
+  }
+  .project .project-info .tech-used, .project .project-info .links {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .project .project-img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=smallerDevice.css.map */
