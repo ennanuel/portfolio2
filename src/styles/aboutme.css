@@ -1,11 +1,3 @@
-.me {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 50px;
-}
-
 .me .second {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,31 +8,29 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.me .second .picture {
-  width: 60%;
-  margin: 20px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.7);
-  position: relative;
-  z-index: 1;
+  float: right;
+  margin: 15px;
 }
 
 .me .second .picture span {
-  content: "";
+  background-color: white;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 0;
+  z-index: 1;
+}
+
+.me .second .picture {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  padding: 10px;
+  height: 240px;
+  width: 240px;
+  border: 2px solid white;
   background: repeating-linear-gradient(45deg, #ffffff80, #ffffff80 2px, transparent 2px, transparent 12px);
 }
 
-.me .second .picture:hover span {
-  top: 10px;
-  left: 10px;
+.me .second .picture:hover {
+  padding: 5px;
 }
 
 .skills {
@@ -51,7 +41,7 @@
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 10px;
-  margin-left: 20px;
+  margin: 20px;
   list-style: none;
 }
 

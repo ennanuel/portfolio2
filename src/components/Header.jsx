@@ -13,7 +13,7 @@ const Header = () => {
     useEffect( () => {
 
         const scrollHandler = () => {
-            if(window.scrollY > 50) {
+            if(window.scrollY > 20) {
                 setScrolled(true)
             } else {
                 setScrolled(false)
@@ -27,10 +27,18 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={isAbs && window.innerWidth < 720? 'new-header-bg': ''}>
-            <div className={`nav-bar${scrolled? ' scrolled': ''}`}>
-            <h2>LOGO</h2>
-            <nav>
+        <header>
+            {isAbs && <div className="blur-bg for-phone" onClick={changePosition} />}
+            <div className={`for-phone nav-items ${isAbs? 'down': 'up'}`}>
+                <ul>
+                    <li className="flex-center">Home</li>
+                    <li className="flex-center">About Us</li>
+                    <li className="flex-center">Contact</li>
+                    <li className="flex-center"><Button width="90px" height="40px" fontSize="16px">Resume</Button></li>
+                </ul>
+            </div>
+            <nav className={`nav-bar${isAbs && window.innerWidth < 770? ' shown': scrolled? ' scrolled': ''}`}>
+                <h2 className="home-logo">LOGO</h2>
                 <ul className="for-others">
                     <li>Home</li>
                     <li>About Us</li>
@@ -38,7 +46,7 @@ const Header = () => {
                     <li><Button width="90px" height="40px" fontSize="16px">Resume</Button></li>
                 </ul>
                 <ul className="for-phone">
-                <li>
+                    <li>
                         <div className="header-icon" onClick={changePosition}>
                             <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)', top: '50%'}: {position: 'absolute', top: '5px'}}></div>
                             <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)', top: '50%'}: {position: 'absolute', top: '50%'}}></div>
@@ -47,13 +55,6 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            </div>
-            <div className={`for-phone nav-items ${isAbs? 'down': 'up'}`}>
-                <div className="flex-center">Home</div>
-                <div className="flex-center">About Us</div>
-                <div className="flex-center">Contact</div>
-                <div className="flex-center">Resume</div>
-            </div>
         </header>
     )
 }

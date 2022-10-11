@@ -1,5 +1,5 @@
 
-@media (max-width: 720px) {
+@media (max-width: 770px) {
   .introduction {
       margin-top: 100px;
   }
@@ -37,7 +37,7 @@
   }
 
   .for-phone {
-    display: block !important;
+    display: flex !important;
   }
 
   .for-others {
@@ -49,6 +49,7 @@
   }
 
   .project {
+    background-color: rgba(0, 0, 0, 0.344);
     
     .project-info {
         position: relative;
@@ -57,6 +58,9 @@
         align-items: flex-start !important;
 
         .project-description, .tech-used {
+            background-color: transparent;
+            box-shadow: none;
+            padding-left: 0;
             width: 100%;
         }
 
@@ -68,5 +72,12 @@
     .project-img {
         width: 100%;
     }
+  }
+}
+
+@media (max-width: 420px) {
+  .picture {
+    width: 150px !important;
+    height: 150px !important;
   }
 }

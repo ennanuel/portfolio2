@@ -120,4 +120,11 @@
   font-size: 40px;
   font-weight: normal;
 }
+
+.projects .projects-text {
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.739);
+}
 /*# sourceMappingURL=projects.css.map */

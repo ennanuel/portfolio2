@@ -1,4 +1,4 @@
-@media (max-width: 720px) {
+@media (max-width: 770px) {
   .introduction {
     margin-top: 100px;
   }
@@ -28,13 +28,18 @@
     width: 100%;
   }
   .for-phone {
-    display: block !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .for-others {
     display: none !important;
   }
   .section {
     padding: 7%;
+  }
+  .project {
+    background-color: rgba(0, 0, 0, 0.344);
   }
   .project .project-info {
     position: relative;
@@ -45,6 +50,10 @@
             align-items: flex-start !important;
   }
   .project .project-info .project-description, .project .project-info .tech-used {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding-left: 0;
     width: 100%;
   }
   .project .project-info .tech-used, .project .project-info .links {
@@ -54,6 +63,13 @@
   }
   .project .project-img {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .picture {
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 /*# sourceMappingURL=smallerDevice.css.map */

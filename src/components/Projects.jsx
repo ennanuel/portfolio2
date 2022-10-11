@@ -8,7 +8,7 @@ const Projects = () => {
     <section className="section projects">
       <Title number="03." left={true}>Projects</Title>
       
-      <h2>Some Things I've Built</h2>
+      <h2 className="projects-text">Some Things I've Built</h2>
 
       <Project />
       <Project left={true} />

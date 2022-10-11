@@ -14,8 +14,8 @@
 }
 
 .introduction:hover .about p::before {
-  top: 10px;
-  left: 10px;
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
 }
 
 .intro-title {
@@ -81,8 +81,10 @@
   background: repeating-linear-gradient(45deg, #ffffff3c, #ffffff3c 2px, transparent 2px, transparent 10px);
   height: 100%;
   position: absolute;
+  z-index: -1;
   top: 15px;
   left: 15px;
-  z-index: -1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 /*# sourceMappingURL=introduction.css.map */
