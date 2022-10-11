@@ -1,7 +1,9 @@
 
 @media (max-width: 770px) {
   .introduction {
-      margin: auto 100px;
+      margin: 100px auto;
+      border: none;
+      border-top: 1px solid var(--border);
   }
   .about p, .profile-image .btn {
       width: 100%;
