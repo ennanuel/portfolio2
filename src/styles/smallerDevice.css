@@ -1,6 +1,6 @@
 @media (max-width: 770px) {
   .introduction {
-    margin-top: 100px;
+    margin: auto 100px;
   }
   .about p, .profile-image .btn {
     width: 100%;
@@ -36,7 +36,7 @@
     display: none !important;
   }
   .section {
-    padding: 7%;
+    padding: 100px 7%;
   }
   .project {
     background-color: rgba(0, 0, 0, 0.344);
