@@ -13,15 +13,15 @@ const Project = ({left}) => {
         A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
         </div>
         <div className={`bb-10 tech-used ${left? 'flex-end': 'flex-start'}`}>
-            <div className='tech' style={left? {marginLeft: '20px'}: {marginRight: '10px'}}>PHP</div>
-            <div className='tech' style={left? {marginLeft: '20px'}: {marginRight: '10px'}}>MySQL</div>
-            <div className='tech' style={left? {marginLeft: '20px'}: {marginRight: '10px'}}>React</div>
-            <div className='tech' style={left? {marginLeft: '20px'}: {marginRight: '10px'}}>JavaScript</div>
-            <div className='tech' style={left? {marginLeft: '20px'}: {marginRight: '10px'}}>HTML/CSS</div>
+            <div className={`tech${left? ' ml': ' mr'}`}>PHP</div>
+            <div className={`tech${left? ' ml': ' mr'}`}>MySQL</div>
+            <div className={`tech${left? ' ml': ' mr'}`}>React</div>
+            <div className={`tech${left? ' ml': ' mr'}`}>JavaScript</div>
+            <div className={`tech${left? ' ml': ' mr'}`}>HTML/CSS</div>
         </div>
         <div className={`bb-10 links ${left? 'flex-end': 'flex-start'}`}>
-            <div className='link social git-link full-border' style={left? {marginLeft: '15px'}: {marginRight: '15px'}}></div>
-            <div className='link social project-link full-border' style={left? {marginLeft: '15px'}: {marginRight: '15px'}}></div>
+            <div className={`link social git-link full-border${left? ' ml': ' mr'}`}></div>
+            <div className={`link social project-link full-border${left? ' ml': ' mr'}`}></div>
         </div>
       </div>
     </div>

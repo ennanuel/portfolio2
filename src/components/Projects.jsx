@@ -2,6 +2,8 @@ import BgText from './BgText'
 import Title from './Title'
 import Project from './Project'
 import '../styles/projects.css'
+import Project2 from './Project2'
+import Button from './Button'
 
 const Projects = () => {
   return (
@@ -15,6 +17,21 @@ const Projects = () => {
       <Project />
       <Project left={true} />
       <Project />
+
+      <div className="other-projects">
+        <h2 className="projects-text">Other Noteworthy Projects</h2>
+        <p className="archive-link">view the archive</p>
+
+        <div className="other-projects-container">
+          <Project2 />
+          <Project2 />
+          <Project2 />
+          <Project2 />
+          <Project2 />
+          <Project2 />
+        </div>
+        <Button width="150px">Show More</Button>
+      </div>
 
       <BgText>Projects.</BgText>
     </section>

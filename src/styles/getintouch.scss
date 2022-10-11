@@ -1,0 +1,13 @@
+.contact {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+
+    h2 {
+        font-size: 50px;
+    }
+}

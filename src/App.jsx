@@ -6,6 +6,7 @@ import Socials from './components/Socials'
 import AboutMe from './components/AboutMe'
 import Resume from './components/Resume'
 import Projects from './components/Projects'
+import GetInTouch from './components/GetInTouch'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <AboutMe />
         <Resume />
         <Projects />
+        <GetInTouch />
       </main>
       <Socials />
     </div>
