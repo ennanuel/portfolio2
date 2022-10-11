@@ -38,7 +38,7 @@ const Header = () => {
                 </ul>
             </div>
             <nav className={`nav-bar${isAbs && window.innerWidth < 770? ' shown': scrolled? ' scrolled': ''}`}>
-                <h2 className="home-logo">LOGO</h2>
+                <h2 className="home-logo">E</h2>
                 <ul className="for-others">
                     <li>Home</li>
                     <li>About Us</li>
