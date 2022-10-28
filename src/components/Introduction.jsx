@@ -21,7 +21,7 @@ const Introduction = () => {
               I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <Highlight>Upstatement</Highlight>.
             </p>
           </div>
-          <div className="profile-image">
+          <div className="lets-connect">
             <Button width="100%">Let's Connect</Button>
           </div>
         </article>

@@ -5,7 +5,13 @@
       border: 1px solid var(--border);
   }
 
- .btn, .about, .second {
+ .lets-connect{
+    max-width: 300px;
+    width: 100%;
+    margin: 30px auto;
+ }
+ 
+ .about, .second {
       width: 100%;
   }
 
@@ -68,10 +74,12 @@
         width: 100%;
     }
 
-    .title .title-content {
-      transform: translate(10px, -10px);
-    }
   }
+
+  .title .title-content {
+    transform: translate(10px, -10px);
+  }
+
   
   .other-projects-container {
     padding: 0px 10%;

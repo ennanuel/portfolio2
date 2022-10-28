@@ -12,6 +12,7 @@ const Background = () => {
     }
 
     const background = () => {
+        return;
 
         if(width < height || width < 720) {
             setState( (prev) => ({...prev, content: null}))

@@ -3,7 +3,12 @@
     margin: 100px auto;
     border: 1px solid var(--border);
   }
-  .btn, .about, .second {
+  .lets-connect {
+    max-width: 300px;
+    width: 100%;
+    margin: 30px auto;
+  }
+  .about, .second {
     width: 100%;
   }
   .intro-title {
@@ -62,7 +67,7 @@
   .project .project-img {
     width: 100%;
   }
-  .project .title .title-content {
+  .title .title-content {
     -webkit-transform: translate(10px, -10px);
             transform: translate(10px, -10px);
   }
