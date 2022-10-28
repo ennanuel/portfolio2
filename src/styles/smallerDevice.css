@@ -2,22 +2,18 @@
   .introduction {
     margin: 100px auto;
     border: 1px solid var(--border);
-    border-bottom: none;
   }
-  .about p, .profile-image .btn {
+  .btn, .about, .second {
     width: 100%;
   }
   .intro-title {
     left: 10px;
   }
-  .task-bar, .socials {
-    display: none;
+  .task-bar, .socials, .bg-text, .for-others {
+    display: none !important;
   }
   h1 {
     font-size: 20px;
-  }
-  .bg-text {
-    display: none;
   }
   .about h2 {
     margin-top: 20px;
@@ -26,16 +22,10 @@
   .profile-image {
     margin: 20px;
   }
-  .about, .profile-image {
-    width: 100%;
-  }
   .for-phone {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-  }
-  .for-others {
-    display: none !important;
   }
   .section {
     padding: 100px 7%;
@@ -78,9 +68,8 @@
 }
 
 @media (max-width: 500px) {
-  .picture {
-    width: 150px !important;
-    height: 150px !important;
+  .introduction {
+    border-bottom: none;
   }
   .other-projects-container {
     padding: 0;

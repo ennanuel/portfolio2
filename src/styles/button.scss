@@ -7,6 +7,7 @@
     color: var(--text);
     position: relative;
     font-size: 20px;
+    overflow: hidden;
   }
   
   .btn span {
@@ -25,15 +26,16 @@
   .btn::before {
     content: "";
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 100%;
     background: white;
     color: black;
     top: 0;
     right: 0;
+    transform: translateX(100%);
   }
   
   .btn:hover::before {
-    width: 100%;
+    transform: translateX(0);
   }
   

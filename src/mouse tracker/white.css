@@ -1,0 +1,9 @@
+:root {
+    --background: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --menu-linear-gradient: rgba(0, 0, 0, 0.6);
+    --menu-btn-bg: rgba(0, 0, 0, 0.4);
+    --light-secondary: rgb(255, 204, 37);
+    --article-bg: rgba(255, 255, 255, 0.5);
+}
+

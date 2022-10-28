@@ -1,27 +1,26 @@
 import { useState, useEffect } from 'react'
 
 const BackgroundBox = () => {
-    const colors = ['#131313', '#151515', '#222222', '#292929', '#111111', '#1d1d1d'];
-    const [color, setState] = useState('black');
+    const [opacity, setState] = useState(0);
 
 
     useEffect( () => {
         let changeColor;
         const animate = () => {
-            const rand = Math.floor(Math.random() * colors.length);
-            const randomColor = colors[rand];
 
-            setState(randomColor);
+            const randomNum = Math.random().toFixed(2)
+
+            setState(randomNum);
         }
         animate();
 
         clearInterval(changeColor);
-        changeColor = setInterval(animate, 1500);
+        changeColor = setInterval(animate, 2000);
     }, [])
 
     return (
         <div className="block flex-center full-hw">
-        <div className="content full-hw" style={ {backgroundColor: color} } />
+        <div className="content full-hw" style={ {opacity, background: 'rgb(30, 30, 30)'} } />
         </div>
     )
 }

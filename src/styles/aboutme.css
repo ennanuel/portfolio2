@@ -1,3 +1,19 @@
+.bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.me {
+  width: 100%;
+}
+
 .me .second {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,29 +24,43 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  float: right;
-  margin: 15px;
+  margin: 20px;
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 1;
 }
 
-.me .second .picture span {
-  background-color: white;
+.bio-text {
+  max-width: 500px;
   width: 100%;
-  height: 100%;
+}
+
+.me .second .picture::before {
+  content: '';
+  width: 100%;
+  aspect-ratio: 1;
   z-index: 1;
+  border: 2px solid white;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .me .second .picture {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   padding: 10px;
-  height: 240px;
-  width: 240px;
-  border: 2px solid white;
-  background: repeating-linear-gradient(45deg, #ffffff80, #ffffff80 2px, transparent 2px, transparent 12px);
+  width: 100%;
+  aspect-ratio: 1;
+  background: white;
+  position: relative;
 }
 
-.me .second .picture:hover {
-  padding: 5px;
+.me .second .picture:hover:before {
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
 }
 
 .skills {
@@ -42,6 +72,7 @@
       grid-template-rows: auto;
   grid-gap: 10px;
   margin: 20px;
+  margin-left: 10px;
   list-style: none;
 }
 
@@ -57,5 +88,10 @@
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.me h2 {
+  font-size: 3rem;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=aboutme.css.map */

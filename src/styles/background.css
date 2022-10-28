@@ -24,7 +24,6 @@
 .content {
   position: relative;
   padding: 5em;
-  background-color: #000000;
   scale: 1;
   -webkit-transition-duration: 3s;
           transition-duration: 3s;

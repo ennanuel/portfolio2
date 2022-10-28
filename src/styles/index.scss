@@ -1,8 +1,10 @@
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   transition-duration: 0.3s;
+}
+
+#body {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .for-phone {
@@ -17,10 +19,14 @@ ul.for-others {
 }
 
 body, html {
+  padding: 0;
+  margin: 0;
   overflow-x: hidden;
   width: 100vw;
-  color: var(--text)
+  color: var(--text);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 #root {
   width: 100vw;
 }
@@ -116,19 +122,28 @@ body, html {
   left: -4px;
 }
 
+.number {
+  color:rgba(255, 255, 255, 0.7);
+  font-size: 0.8em;
+}
+
+
 p {
-  font-size: 19px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:lighter;
   color:rgba(255, 255, 255, 0.513);
+  line-height: 1.4;
 }
 
 .section {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.663);
   position: relative;
   padding: 80px 15%;
   min-height: 80vh;
   border-top: 1px solid var(--border);
-  margin-bottom: 25%;
+  margin-bottom: 10%;
 }
 
 .highlight {
@@ -137,4 +152,10 @@ p {
 
 .full-border {
   border: 1px solid var(--border);
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  padding: 20px;
 }

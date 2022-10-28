@@ -2,15 +2,19 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+main .intro-container {
+  min-height: 110vh;
+  padding: 0;
+}
 
 .introduction {
   width: 85%;
   max-width: 900px;
-  margin: 10% auto;
+  margin: auto;
   position: relative;
   min-height: 300px;
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.3);
 };
 
 .introduction:hover .about p::before {

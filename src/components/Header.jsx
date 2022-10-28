@@ -3,9 +3,18 @@ import Button from "./Button";
 import '../styles/header.css'
 
 
-const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
+const Header = ({currentPageTitle}) => {
+    const [scrolled, setScrolled] = useState('');
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [style, setStyle] = useState({})
     const [isAbs, setIsAbs] = useState(false)
+    const linkItems = [
+        {name: 'Introduction', link: '#intro'},
+        {name: 'About Me', link: '#about'},
+        {name: 'Resume', link: '#resume'},
+        {name: 'Projects', link: '#projects'},
+        {name: 'Contact', link: '#contact'}
+    ]
 
     const changePosition = () => {
         setIsAbs(prev => !prev);
@@ -14,46 +23,48 @@ const Header = () => {
 
         const scrollHandler = () => {
             if(window.scrollY > 20) {
-                setScrolled(true)
+                setScrolled('scrolled')
             } else {
-                setScrolled(false)
+                setScrolled('')
             }
+
+            if(window.scrollY === scrollPosition || isAbs) return;
+
+            if(window.scrollY > scrollPosition && window.scrollY > 50) {
+                setStyle({
+                    transform: 'translateY(-100%)',
+                })
+            } else {
+                setStyle({})
+            }
+
+            setScrollPosition(window.scrollY);
         }
 
         window.addEventListener('scroll', scrollHandler);
         return () => {
             window.removeEventListener('scroll', scrollHandler);
         }
-    }, [])
+    }, [scrollPosition, isAbs])
 
     return (
         <header>
-            {isAbs && <div className="blur-bg for-phone" onClick={changePosition} />}
-            <div className={`for-phone nav-items ${isAbs? 'down': 'up'}`}>
-                <ul>
-                    <li className="flex-center">Home</li>
-                    <li className="flex-center">About Us</li>
-                    <li className="flex-center">Contact</li>
-                    <li className="flex-center"><Button width="90px" height="40px" fontSize="16px">Resume</Button></li>
-                </ul>
-            </div>
-            <nav className={`nav-bar${isAbs && window.innerWidth < 770? ' shown': scrolled? ' scrolled': ''}`}>
-                <h2 className="home-logo">E</h2>
-                <ul className="for-others">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                    <li><Button width="90px" height="40px" fontSize="16px">Resume</Button></li>
-                </ul>
-                <ul className="for-phone">
-                    <li>
-                        <div className="header-icon" onClick={changePosition}>
-                            <div className="icon-line line1" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)', top: '50%'}: {position: 'absolute', top: '5px'}}></div>
-                            <div className="icon-line line2" style={isAbs? {position: 'absolute', transform: 'rotate(-45deg)', top: '50%'}: {position: 'absolute', top: '50%'}}></div>
-                            <div className="icon-line line3" style={isAbs? {position: 'absolute', transform: 'rotate(45deg)', top: '50%'}: {position: 'absolute', bottom: '5px'}}></div>
-                        </div>
+            <div className={`blur-bg ${isAbs? 'bring-forward': ''}`} onClick={changePosition} />
+            <nav className={`nav-bar ${scrolled} ${isAbs? 'show-items': ''}`} style={style}>
+                <h2 className="home-logo">N</h2>
+                <ul className='nav-items'>
+                    {
+                        linkItems.map(linkItem => <li className={`nav-item flex-center ${currentPageTitle.includes(linkItem.link)? 'active-link': ''}`} onClick={changePosition}><a href={linkItem.link}>{linkItem.name}</a></li>)
+                    }
+                    <li style={currentPageTitle.includes('resume') ? { opacity: 0, pointerEvents: 'none'} : {}}>
+                        <Button width="100px" height="40px" fontSize="16px">Resume</Button>
                     </li>
                 </ul>
+                <div className={`header-icon ${isAbs? 'icon-rotated': ''}`} onClick={changePosition}>
+                    <div className="icon-line line1"></div>
+                    <div className="icon-line line2"></div>
+                    <div className="icon-line line3"></div>
+                </div>
             </nav>
         </header>
     )

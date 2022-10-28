@@ -1,9 +1,9 @@
 header {
   position: fixed;
+  height: 60px;
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 80px;
   background-color: transparent;
 }
 
@@ -15,26 +15,44 @@ header, .header-icon, .home-logo {
   width: 30px;
   height: 30px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header-icon .icon-line {
+  position: absolute;
   width: 90%;
-  height: 0;
-  border: 1px solid white;
-  position: relative;
+  height: 3px;
+  background-color: white;
+}
+
+.icon-line.line1 {
+  top: 5px;
+}
+
+.icon-line.line2 {
+  bottom: 5px;
+}
+
+.icon-line.line3 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.icon-rotated {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon-rotated .icon-line {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.icon-rotated .line2 {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .scrolled {
@@ -47,6 +65,13 @@ header, .header-icon, .home-logo {
 
 header nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul a {
+  color: white;
+  text-decoration: none;
 }
 
 header h2 {
@@ -65,61 +90,54 @@ header h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px;
-}
-
-.nav-bar ul li {
-  margin: 0 15px;
-  color: rgba(255, 255, 255, 0.704);
-}
-
-.nav-bar ul li:hover {
-  color: white;
+  padding: 15px 30px;
 }
 
 .nav-items {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-size: 20px;
-  width: 70vw;
-  height: 100vh;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: black;
-}
-
-.nav-items ul {
-  height: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 1.3rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
-.shown {
-  background-color: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.nav-item {
+  width: 100%;
+}
+
+.nav-items li .btn {
+  margin: 20px;
+}
+
+.nav-items .nav-item a {
+  position: relative;
+  width: 60%;
+  text-align: center;
+  padding: 8px;
+  margin: 12px;
+  border-left: 6px solid white;
+}
+
+.nav-item.active-link a, .nav-item a:focus {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .blur-bg {
@@ -130,15 +148,29 @@ header h2 {
   top: 0;
   left: 0;
   position: fixed;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.up {
-  -webkit-transform: translateX(100vw);
-          transform: translateX(100vw);
+.bring-forward {
+  opacity: 1;
+  pointer-events: all;
 }
 
-.down {
-  -webkit-transform: translateX(0vw);
-          transform: translateX(0vw);
+.home-logo {
+  rotate: -30deg;
+  border-bottom: 3px solid red;
+  border-collapse: 3px;
+}
+
+.show-items {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.show-items .nav-items {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 /*# sourceMappingURL=header.css.map */
