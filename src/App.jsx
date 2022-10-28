@@ -87,14 +87,15 @@ function App() {
         <Background />
       </div>
       {
-        state.deviceWidth > 770 &&
+        state.deviceWidth > 770 ?
         <>
           <MouseTracker setState={setState} />
-        </>
+          <NewHeader state={state} setState={setState} />
+        </> :
+        <><Header currentPageTitle={state.link} /></>
       }
-      <NewHeader state={state} setState={setState} />
       <main>
-        <article className={`page-content ${state.isMenuHovered && window.innerWidth > 770 ? 'thin-content': ''}`} onMouseOver={handleHover}>
+        <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
           <Introduction />
           <div id="body">
             <AboutMe />
