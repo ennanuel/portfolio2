@@ -1,6 +1,6 @@
 @media (max-width: 770px) {
   html .section, body .section {
-    padding: 50px 5%;
+    padding: 5%;
   }
   html .introduction, body .introduction {
     margin: 100px auto;
