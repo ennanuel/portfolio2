@@ -11,7 +11,7 @@
     width: 100%;
     margin: 30px auto;
   }
-  html .about, html .second, body .about, body .second {
+  html .about p, html .about, html .second, body .about p, body .about, body .second {
     width: 100%;
   }
   html .intro-title, body .intro-title {
