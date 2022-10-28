@@ -1,5 +1,5 @@
 .about h2 span {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 251, 0, 0.9);
 }
 
 main .intro-container {
@@ -80,13 +80,13 @@ main .intro-container {
   padding: 0;
   margin: 0;
   line-height: 1.1em;
-  color: rgba(255, 255, 255, 0.609);
+  color: rgba(255, 251, 0, 0.5);
 }
 
 .about p::before {
   content: "";
   width: 100%;
-  background: repeating-linear-gradient(45deg, #ffffff3c, #ffffff3c 2px, transparent 2px, transparent 10px);
+  background: repeating-linear-gradient(45deg, #eeff003c, #eeff003c 2px, transparent 2px, transparent 10px);
   height: 100%;
   position: absolute;
   z-index: -1;

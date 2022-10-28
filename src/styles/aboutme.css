@@ -40,7 +40,7 @@
   width: 100%;
   aspect-ratio: 1;
   z-index: 1;
-  border: 2px solid white;
+  border: 2px solid #fff700;
   position: absolute;
   top: 15px;
   left: 15px;
@@ -54,7 +54,7 @@
   padding: 10px;
   width: 100%;
   aspect-ratio: 1;
-  background: white;
+  background: #ffdd00;
   position: relative;
 }
 
@@ -78,7 +78,7 @@
 
 .skills li {
   list-style: none;
-  color: rgba(255, 255, 255, 0.513);
+  color: rgba(255, 230, 0, 0.513);
 }
 
 .skills li::before {

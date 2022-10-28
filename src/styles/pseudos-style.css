@@ -1,8 +1,8 @@
 :root {
   --background: rgb(0, 0, 0);
-  --text-color: rgb(255, 255, 255);
-  --menu-linear-gradient: rgba(255, 255, 255, 0.6);
-  --menu-btn-bg: rgb(255, 255, 255);
+  --text-color: rgb(255, 217, 0);
+  --menu-linear-gradient: rgba(242, 255, 0, 0.6);
+  --menu-btn-bg: rgb(255, 221, 0);
   --light-secondary: rgb(90, 73, 15);
   --article-bg: rgba(0, 0, 0, 0.5);
 }

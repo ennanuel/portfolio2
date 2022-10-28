@@ -15,12 +15,12 @@ const BackgroundBox = () => {
         animate();
 
         clearInterval(changeColor);
-        changeColor = setInterval(animate, 2000);
+        changeColor = setInterval(animate, 3000);
     }, [])
 
     return (
         <div className="block flex-center full-hw">
-        <div className="content full-hw" style={ {opacity, background: 'rgb(30, 30, 30)'} } />
+        <div className="content full-hw" style={ {opacity, background: 'rgb(53, 46, 1)'} } />
         </div>
     )
 }

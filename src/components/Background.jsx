@@ -12,7 +12,6 @@ const Background = () => {
     }
 
     const background = () => {
-        return;
 
         if(width < height || width < 720) {
             setState( (prev) => ({...prev, content: null}))
@@ -43,7 +42,7 @@ const Background = () => {
                 const divs = [];
     
                 for(let i = 0; i < 4; i++) {
-                    divs.push(createDiv(5));
+                    divs.push(createDiv(2));
                 }
     
                 box.push(<div key={uuidv4()} className="box-container" style={boxStyle}>{divs}</div>);

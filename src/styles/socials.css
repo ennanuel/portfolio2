@@ -1,12 +1,14 @@
 .socials {
   position: fixed;
+  padding: 10px;
   bottom: 0;
   left: 20px;
   height: 30%;
   width: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: var(--border);
+}
+
+.socials .social {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=socials.css.map */

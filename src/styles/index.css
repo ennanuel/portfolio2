@@ -84,7 +84,7 @@ body .social i, html .social i {
 body .social:before, html .social:before {
   content: '';
   background-color: #0c0c0c;
-  border: 1px solid rgba(255, 255, 255, 0.552);
+  border: 1px solid rgba(255, 242, 0, 0.552);
   position: absolute;
   width: 100%;
   aspect-ratio: 1;
@@ -97,7 +97,7 @@ body .social::after, html .social::after {
   content: "";
   width: 100%;
   aspect-ratio: 1;
-  background-color: white;
+  background-color: #ffe600;
   -webkit-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
@@ -167,7 +167,7 @@ body .bl-box, html .bl-box {
 }
 
 body .number, html .number {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 0, 0.7);
   font-size: 0.8em;
 }
 
@@ -175,7 +175,7 @@ body p, html p {
   font-size: 16px;
   margin-bottom: 15px;
   font-weight: lighter;
-  color: rgba(255, 255, 255, 0.742);
+  color: rgba(255, 251, 0, 0.742);
   line-height: 1.4;
 }
 
@@ -189,7 +189,7 @@ body .section, html .section {
 }
 
 body .highlight, html .highlight {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 242, 0, 0.85);
 }
 
 body .full-border, html .full-border {

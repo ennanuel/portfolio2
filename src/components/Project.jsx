@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodeCommit, faExternalLink } from '@fortawesome/free-solid-svg-icons'
-import React from 'react'
+import projectImage from '../assets/images/pexels-lukas-296115.jpg'
 
 const Project = ({left}) => {
   return (
     <div className="project">
-      <div className={`project-img full-border ${left? 'left-project': 'right-project'}`}></div>
+      <div className={`project-img full-border block flex-center ${left? 'left-project': 'right-project'}`}>
+        <img src={projectImage} alt="project image" />
+      </div>
       <div className={`project-info ${left? 'right-project flex-end': 'left-project flex-start'}`}>
         <div className="bb-10 project-title">
             <h3>Featured Project</h3>

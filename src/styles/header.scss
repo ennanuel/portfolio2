@@ -22,7 +22,7 @@ header, .header-icon, .home-logo {
   position: absolute;
   width: 90%;
   height: 3px;
-  background-color: white;
+  background-color: rgb(255, 238, 0);
 }
 
 .icon-line.line1 {
@@ -65,7 +65,7 @@ header nav ul {
 }
 
 header ul a {
-  color: white;
+  color: rgb(255, 221, 0);
   text-decoration: none;
 }
 
@@ -111,7 +111,7 @@ header h2 {
   text-align: center;
   padding: 8px;
   margin: 12px;
-  border-left: 6px solid white;
+  border-left: 6px solid rgba(255, 255, 0, 0.724)
 }
 
 .nav-item.active-link a, .nav-item a:active {
