@@ -88,7 +88,7 @@ header h2 {
   align-items: center;
   font-size: 1.3rem;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -114,7 +114,7 @@ header h2 {
   border-left: 6px solid white;
 }
 
-.nav-item.active-link a, .nav-item a:focus {
+.nav-item.active-link a, .nav-item a:active {
   transform: scale(1.15)
 }
 

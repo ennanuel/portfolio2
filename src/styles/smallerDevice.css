@@ -62,6 +62,10 @@
   .project .project-img {
     width: 100%;
   }
+  .project .title .title-content {
+    -webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+  }
   .other-projects-container {
     padding: 0px 10%;
   }
