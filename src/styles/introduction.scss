@@ -23,7 +23,7 @@ main .intro-container {
 
 .intro-title{
   padding: 10px !important;
-  font-size: 26px !important;
+  font-size: 1.6em !important;
   top: -15px !important;
   left: -5% !important;
 }
@@ -49,6 +49,7 @@ main .intro-container {
   align-items: center;
   justify-content: center;
 }
+
 .about p {
   width: 80%;
   margin: 25px auto;
@@ -59,7 +60,10 @@ main .intro-container {
 }
 
 .about h2 {
-  font-size: 50px;
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+  line-height: 1.1em;
   color:rgba(255, 255, 255, 0.609);
 }
 
