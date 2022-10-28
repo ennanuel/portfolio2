@@ -112,8 +112,7 @@ body:hover .mouse-tracker {
 
 .menu:before {
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.75)));
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.75) 100%);
+  background: rgba(0, 0, 0, 0.9);
   top: 0;
   left: 0;
   content: '';

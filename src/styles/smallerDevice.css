@@ -1,44 +1,44 @@
 @media (max-width: 770px) {
-  .introduction {
+  html .section, body .section {
+    padding: 50px 5%;
+  }
+  html .introduction, body .introduction {
     margin: 100px auto;
     border: 1px solid var(--border);
   }
-  .lets-connect {
+  html .lets-connect, body .lets-connect {
     max-width: 300px;
     width: 100%;
     margin: 30px auto;
   }
-  .about, .second {
+  html .about, html .second, body .about, body .second {
     width: 100%;
   }
-  .intro-title {
+  html .intro-title, body .intro-title {
     left: 10px;
   }
-  .task-bar, .socials, .bg-text, .for-others {
+  html .task-bar, html .socials, html .bg-text, html .for-others, body .task-bar, body .socials, body .bg-text, body .for-others {
     display: none !important;
   }
-  h1 {
+  html h1, body h1 {
     font-size: 20px;
   }
-  .about h2 {
+  html .about h2, body .about h2 {
     margin-top: 20px;
     font-size: 35px;
   }
-  .profile-image {
+  html .profile-image, body .profile-image {
     margin: 20px;
   }
-  .for-phone {
+  html .for-phone, body .for-phone {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
-  .section {
-    padding: 100px 7%;
-  }
-  .project {
+  html .project, body .project {
     background-color: rgba(0, 0, 0, 0.344);
   }
-  .project .project-info {
+  html .project .project-info, body .project .project-info {
     position: relative;
     width: 100%;
     text-align: left;
@@ -49,39 +49,45 @@
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
   }
-  .project .project-info .project-description, .project .project-info .tech-used {
+  html .project .project-info .project-description, html .project .project-info .tech-used, body .project .project-info .project-description, body .project .project-info .tech-used {
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
     padding-left: 0;
     width: 100%;
   }
-  .project .project-info .tech-used, .project .project-info .links {
+  html .project .project-info .tech-used, html .project .project-info .links, body .project .project-info .tech-used, body .project .project-info .links {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
   }
-  .project .project-info .tech, .project .project-info .links .link {
+  html .project .project-info .tech, html .project .project-info .links .link, body .project .project-info .tech, body .project .project-info .links .link {
     margin: 0 10px 0 0 !important;
   }
-  .project .project-img {
+  html .project .project-img, body .project .project-img {
     width: 100%;
   }
-  .title .title-content {
-    -webkit-transform: translate(10px, -10px);
-            transform: translate(10px, -10px);
-  }
-  .other-projects-container {
+  html .other-projects-container, body .other-projects-container {
     padding: 0px 10%;
   }
 }
 
 @media (max-width: 500px) {
-  .introduction {
+  html .introduction, body .introduction {
     border-bottom: none;
   }
-  .other-projects-container {
+  html .other-projects-container, body .other-projects-container {
     padding: 0;
+  }
+  html .menu, body .menu {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html .menu p, html .menu li, body .menu p, body .menu li {
+    width: 100%;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=smallerDevice.css.map */

@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCodeCommit, faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 const Project = ({left}) => {
@@ -20,8 +22,8 @@ const Project = ({left}) => {
             <div className={`tech${left? ' ml': ' mr'}`}>HTML/CSS</div>
         </div>
         <div className={`bb-10 links ${left? 'flex-end': 'flex-start'}`}>
-            <div className={`link social git-link full-border${left? ' ml': ' mr'}`}></div>
-            <div className={`link social project-link full-border${left? ' ml': ' mr'}`}></div>
+            <div className={`link git-link ${left? ' ml': ' mr'}`}><FontAwesomeIcon icon={faCodeCommit} /></div>
+            <div className={`link project-link ${left? ' ml': ' mr'}`}><FontAwesomeIcon icon={faExternalLink} /></div>
         </div>
       </div>
     </div>

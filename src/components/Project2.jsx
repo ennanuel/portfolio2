@@ -1,13 +1,17 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb } from '@fortawesome/free-regular-svg-icons'
+import { faExternalLink, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+
 
 const Project2 = () => {
   return (
     <div className="other-project">
       <div className="project-top">
-        <div className="file-img"></div>
+        <div className="file-img"><i><FontAwesomeIcon icon={faLightbulb} /></i></div>
         <div className="links">
-            <div className="link full-border social"></div>
-            <div className="link full-border social"></div>
+            <div className="link flex-center"><i><FontAwesomeIcon icon={faCodeBranch} /></i></div>
+            <div className="link flex-center"><i><FontAwesomeIcon icon={faExternalLink} /></i></div>
         </div>
       </div>
       <div className='project-info'>

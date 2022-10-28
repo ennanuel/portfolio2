@@ -46,28 +46,48 @@ body, html {
   height: 100%;
   width: 100%;
 }
-  
+
 .social {
-  background-color: rgba(0, 0, 0, 1);
-  border: 1px solid;
-  width: 30px;
-  height: 30px;
-  transform: rotate(45deg);
-  margin: 0px auto 30px;
+  aspect-ratio: 1;
+  position: relative;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.social::before {
-  content: "";
-  width: 0;
-  height: 0;
-  background-color: white;
-  transition-duration: 0.3s;
+.social i {
+  position: relative;
+  z-index: 1;
 }
-
-.social:hover::before {
+  
+.social:before {
+  content: '';
+  background-color: rgb(12, 12, 12);
+  border: 1px solid rgba(255, 255, 255, 0.552);
+  position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 999;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.social::after {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  transform: rotate(45deg) scale(0);
+  position: absolute;
+  z-index: 0;
+}
+
+.social:hover {
+  color: black;
+
+  &::after {
+    transform: rotate(45deg) scale(1);
+  }
 }
 
 

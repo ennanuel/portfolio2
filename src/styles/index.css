@@ -62,28 +62,55 @@ body .full-hw, html .full-hw {
 }
 
 body .social, html .social {
-  background-color: black;
-  border: 1px solid;
-  width: 30px;
-  height: 30px;
+  aspect-ratio: 1;
+  position: relative;
+  padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .social i, html .social i {
+  position: relative;
+  z-index: 1;
+}
+
+body .social:before, html .social:before {
+  content: '';
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.552);
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin: 0px auto 30px;
+  z-index: 0;
 }
 
-body .social::before, html .social::before {
+body .social::after, html .social::after {
   content: "";
-  width: 0;
-  height: 0;
+  width: 100%;
+  aspect-ratio: 1;
   background-color: white;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transform: rotate(45deg) scale(0);
+          transform: rotate(45deg) scale(0);
+  position: absolute;
+  z-index: 0;
 }
 
-body .social:hover::before, html .social:hover::before {
-  width: 100%;
-  height: 100%;
-  z-index: 999;
+body .social:hover, html .social:hover {
+  color: black;
+}
+
+body .social:hover::after, html .social:hover::after {
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
 }
 
 body .block, html .block {
