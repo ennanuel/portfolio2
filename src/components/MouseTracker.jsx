@@ -21,7 +21,7 @@ const MouseTracker = ({setState}) => {
                 const link = e.target.closest('.link')? e.target.closest('.link').getAttribute('link'): null;
 
                 offsetX = offsetY = 10 + mousetracker.offsetWidth / 2;
-                text = link? link.match(/[a-z]/gi).join(''): ''
+                text = link? link.match(/[a-z]+/gi).join(' '): ''
             } else {
                 setContent('')
             }

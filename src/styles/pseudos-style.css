@@ -20,8 +20,6 @@ body {
 }
 
 body:hover .mouse-tracker {
-  max-width: 120px;
-  min-width: 30px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -37,13 +35,15 @@ body:hover .mouse-tracker {
 }
 
 .mouse-tracker {
+  max-width: 120px;
   border-radius: 50%;
-  width: 10px;
+  min-width: 30px;
   aspect-ratio: 1;
   opacity: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
   background: var(--text-color);
+  text-align: center;
   position: fixed;
   pointer-events: none;
   z-index: 1000000;

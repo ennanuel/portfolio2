@@ -57,7 +57,7 @@
             justify-content: space-between !important;
     
             .project-description, .tech-used {
-                background-color: transparent;
+                background: transparent;
                 box-shadow: none;
                 padding-left: 0;
                 width: 100%;
@@ -74,6 +74,10 @@
     
         .project-img {
             width: 100%;
+
+            &:after {
+              background-color: rgba(67, 59, 0, 0.8);
+            }
         }
     
       }
@@ -90,7 +94,11 @@
 
 
     .introduction {
-        border-bottom: none;
+      border-bottom: none;
+    }
+
+    #intro.section {
+      padding: 0;
     }
 
     .other-projects-container {

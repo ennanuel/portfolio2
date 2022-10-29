@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCodeCommit, faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import projectImage from '../assets/images/pexels-lukas-296115.jpg'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const Project = ({left}) => {
   return (
@@ -24,8 +23,8 @@ const Project = ({left}) => {
             <div className={`tech${left? ' ml': ' mr'}`}>HTML/CSS</div>
         </div>
         <div className={`bb-10 links ${left? 'flex-end': 'flex-start'}`}>
-            <div className={`link git-link ${left? ' ml': ' mr'}`}><FontAwesomeIcon icon={faCodeCommit} /></div>
-            <div className={`link project-link ${left? ' ml': ' mr'}`}><FontAwesomeIcon icon={faExternalLink} /></div>
+            <div className={`link git-link ${left? ' ml': ' mr'}`}><FaGithub /></div>
+            <div className={`link project-link ${left? ' ml': ' mr'}`}><FaExternalLinkAlt /></div>
         </div>
       </div>
     </div>
