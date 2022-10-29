@@ -18,8 +18,16 @@
   z-index: 1;
 }
 
-.btn:hover {
+.btn:hover span {
   color: black;
+}
+
+.btn span {
+  color: #d9ff00;
+}
+
+.btn span i {
+  margin-left: 1em;
 }
 
 .btn::before {

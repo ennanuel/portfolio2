@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaGithub, FaExternalLinkAlt, FaRegLightbulb } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaRegLightbulb } from 'react-icons/fa'
+import { FiGithub } from 'react-icons/fi'
 
 
 const Project2 = () => {
@@ -8,7 +9,7 @@ const Project2 = () => {
       <div className="project-top">
         <div className="file-img"><i><FaRegLightbulb /></i></div>
         <div className="links">
-            <div className="link flex-center"><i><FaGithub /></i></div>
+            <div className="link flex-center"><i><FiGithub /></i></div>
             <div className="link flex-center"><i><FaExternalLinkAlt /></i></div>
         </div>
       </div>

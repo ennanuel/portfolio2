@@ -4,11 +4,20 @@
     padding: 10px;
     bottom: 0;
     left: 20px;
-    height: 30%;
+    height: 35%;
     width: 50px;
     color: var(--border);
+    font-size: 1.1em;
 
     .social {
       margin-bottom: 10px;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      i{
+        top: 3px;
+      }
     }
   }

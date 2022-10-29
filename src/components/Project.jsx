@@ -1,5 +1,5 @@
 import projectImage from '../assets/images/pexels-lukas-296115.jpg'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FiGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const Project = ({left}) => {
   return (
@@ -23,7 +23,7 @@ const Project = ({left}) => {
             <div className={`tech${left? ' ml': ' mr'}`}>HTML/CSS</div>
         </div>
         <div className={`bb-10 links ${left? 'flex-end': 'flex-start'}`}>
-            <div className={`link git-link ${left? ' ml': ' mr'}`}><FaGithub /></div>
+            <div className={`link git-link ${left? ' ml': ' mr'}`}><FiGithub /></div>
             <div className={`link project-link ${left? ' ml': ' mr'}`}><FaExternalLinkAlt /></div>
         </div>
       </div>
