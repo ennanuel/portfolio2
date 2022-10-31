@@ -10,8 +10,6 @@ main .intro-container {
 .introduction {
   width: 85%;
   max-width: 900px;
-  margin: auto;
-  position: relative;
   min-height: 300px;
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.3);
@@ -27,34 +25,33 @@ main .intro-container {
   top: -15px !important;
   left: -5% !important;
 }
+
+
 .info {
-  margin: 0px;
   padding: 20px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .about {
-  width: 60%;
   position: relative;
   padding-right: 0;
 }
 
 .lets-connect {
-  width: 35%;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+}
+
+.lets-connect .btn {
+  max-width: 300px;
+  margin: 20px 0;
 }
 
 .about p {
   width: 80%;
-  margin: 25px auto;
   position: relative;
-  padding: 30px;
+  padding: 2em;
   background-color: #0000006f;
   text-align: center;
 }
@@ -66,6 +63,7 @@ main .intro-container {
   line-height: 1.1em;
   color:rgba(255, 251, 0, 0.5);
 }
+
 
 .about p::before {
   content: "";

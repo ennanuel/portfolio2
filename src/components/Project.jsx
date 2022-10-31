@@ -1,5 +1,6 @@
 import projectImage from '../assets/images/pexels-lukas-296115.jpg'
-import { FiGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FiGithub } from 'react-icons/fi'
 
 const Project = ({left}) => {
   return (

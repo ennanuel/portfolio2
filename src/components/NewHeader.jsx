@@ -1,4 +1,5 @@
 import Button from "./Button"
+import { BiMenuAltLeft } from 'react-icons/bi'
 
 
 const NewHeader = ({state, setState}) => {
@@ -60,7 +61,7 @@ const NewHeader = ({state, setState}) => {
 
                 <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
             </ul>
-            <div className={`menu-btn ${state.showMenuBtn? '': 'hide'}`} onMouseOver={handleHover}>Menu</div>
+            <div className={`menu-btn flex-center ${state.showMenuBtn? '': 'hide'}`} onMouseOver={handleHover}><BiMenuAltLeft /></div>
             <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
             {
                 linkItems.map((linkItem, i) => {

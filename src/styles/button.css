@@ -24,6 +24,8 @@
 
 .btn span {
   color: #d9ff00;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .btn span i {

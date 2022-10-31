@@ -201,4 +201,28 @@ body footer, html footer {
   width: 100%;
   padding: 20px;
 }
+
+@-webkit-keyframes change-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes change-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=index.css.map */

@@ -23,7 +23,9 @@ const Background = () => {
             const rand = Math.round(Math.random());
             if(rand === 0 || c < 1) {
                 const elemKey = uuidv4();
-                return <BackgroundBox key={elemKey} />;
+                const randomNum = (Math.random() * 3).toFixed(1)
+
+                return <BackgroundBox animDelay={randomNum} key={elemKey} />;
             } else {
                 const boxes = [];
                 for(let i = 0; i < 4; i++) {
@@ -42,7 +44,7 @@ const Background = () => {
                 const divs = [];
     
                 for(let i = 0; i < 4; i++) {
-                    divs.push(createDiv(2));
+                    divs.push(createDiv(3));
                 }
     
                 box.push(<div key={uuidv4()} className="box-container" style={boxStyle}>{divs}</div>);

@@ -217,20 +217,33 @@ body:hover .mouse-tracker {
 
 .menu-btn {
   border: 1px solid var(--text-color);
-  border-left: none;
-  padding: 10px;
+  padding: 5px;
   position: absolute;
-  left: 100%;
+  left: 105%;
   top: 30px;
   opacity: 1;
   cursor: pointer;
   background: black;
   color: var(--text-color);
+  font-size: 2em;
+  height: 40px;
+  aspect-ratio: 1;
 }
 
-.hide {
-  opacity: 0;
-  pointer-events: none;
+.menu-btn i {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-btn:before {
+  content: '';
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: tranlateY(-50%);
+          transform: tranlateY(-50%);
+  border-top: 1px solid;
 }
 
 .current-section {
@@ -256,6 +269,11 @@ body:hover .mouse-tracker {
   gap: 15px;
   cursor: pointer;
   z-index: 100000;
+}
+
+.hide {
+  left: -50%;
+  pointer-events: none;
 }
 
 .current-section:hover {
@@ -338,8 +356,8 @@ body:hover .mouse-tracker {
 }
 
 .section-circle:hover:after {
-  -webkit-box-shadow: 0 0 5px white;
-          box-shadow: 0 0 5px white;
+  -webkit-box-shadow: 0 0 5px #ffee00;
+          box-shadow: 0 0 5px #ffee00;
   -webkit-transform: rotate(45deg) scale(2);
           transform: rotate(45deg) scale(2);
   background: var(--text-color);
@@ -353,7 +371,7 @@ body:hover .mouse-tracker {
 .active-section-circle.section-circle:after {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  background: white;
+  background: #ffea00;
 }
 
 .page-content .section {
@@ -396,9 +414,9 @@ body:hover .mouse-tracker {
   font-weight: bold;
   z-index: 1000000;
   font-size: 7vw;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 197, 5, 0.598);
   pointer-events: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 234, 0, 0.4);
   opacity: 0;
 }
 

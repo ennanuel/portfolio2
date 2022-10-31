@@ -19,5 +19,9 @@
     padding: 5em;
     scale: 1;
     transition-duration: 3s;
+    animation-name: change-opacity;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
   

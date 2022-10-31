@@ -19,6 +19,8 @@
 }
 
 .socials .social i {
+  -webkit-transition: 0s;
+  transition: 0s;
   top: 3px;
 }
 /*# sourceMappingURL=socials.css.map */

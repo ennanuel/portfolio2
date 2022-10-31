@@ -37,7 +37,7 @@ const Resume = ({deviceWidth}) => {
 
         <h2>Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
-        <Button width="300px">Download Resume<br /><i><BsDownload /></i></Button>
+        <Button width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
 
       </div>
 
