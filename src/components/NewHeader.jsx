@@ -6,7 +6,7 @@ import { useIsVisible } from "react-is-visible"
 
 const NewHeader = ({state, setState, setDelay}) => {
     const nodeRef = useRef()
-    const isVisible = useIsVisible(nodeRef)
+    const isVisible = useIsVisible(nodeRef, {once: true})
 
     const linkItems = [
         {name: 'Introduction', link: '#intro'},

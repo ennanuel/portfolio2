@@ -42,10 +42,10 @@ const Resume = ({deviceWidth}) => {
   }, [deviceWidth])
 
   return (
-    <section id="resume" title="02. Resume" className="section resume flex-center">
+    <section ref={nodeRef} id="resume" title="02. Resume" className="section resume flex-center">
       <Title number="02.">Resume</Title>
         
-        <div ref={nodeRef} className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
+        <div className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
         <h2>Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
