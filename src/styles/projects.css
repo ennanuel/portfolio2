@@ -189,9 +189,11 @@
   padding: 15px;
   -webkit-box-shadow: 0 0 3px black;
           box-shadow: 0 0 3px black;
-  background-color: rgba(255, 238, 0, 0.1);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  background-color: #343100;
+  -webkit-transform: translateY(0) translateX(0);
+          transform: translateY(0) translateX(0);
+  -webkit-animation-duration: 0.5s !important;
+          animation-duration: 0.5s !important;
 }
 
 .other-projects-container .other-project h2 {

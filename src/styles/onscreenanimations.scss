@@ -8,6 +8,16 @@
     opacity: 0;
 }
 
+.slide-out-left-full {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-out-right-full {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
 .hide-element {
     opacity: 0;
 }

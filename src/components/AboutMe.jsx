@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
           <section id="about" title="01. About Me" className="about-me section flex-center">
             <Title number="01." left={true}>About Me</Title>
-                <article className={`me ${!isVisible ? 'slide-out-right': ''}`}>
+                <article className={`me ${isVisible ? 'animate__animated animate__fadeInRight': 'hide-element'}`}>
                       
                   <h2 className="bio-title">Short Biography</h2>
                   <div className="bio" ref={nodeRef}>

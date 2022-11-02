@@ -153,8 +153,9 @@
         justify-content: space-between;
         padding: 15px;
         box-shadow: 0 0 3px black;
-        background-color: rgba(255, 238, 0, 0.1);
-        transform: translateY(0);
+        background-color: rgb(52, 49, 0);
+        transform: translateY(0) translateX(0);
+        animation-duration: 0.5s !important;
 
         h2 {
             font-weight: normal;

@@ -180,6 +180,10 @@ footer {
   padding: 20px;
 } 
 
+.contact, .project-img, .project-info, .me, .section-content, .face {
+  animation-duration: 0.7s !important;
+}
+
 }
 
 @keyframes change-opacity {

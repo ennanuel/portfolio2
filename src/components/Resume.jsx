@@ -45,7 +45,7 @@ const Resume = ({deviceWidth}) => {
     <section id="resume" title="02. Resume" className="section resume flex-center">
       <Title number="02.">Resume</Title>
         
-        <div ref={nodeRef} className={`section-content flex-center ${isVisible? '': 'slide-out-left'}`} style={{flexDirection: 'column', height: '100%'}}>
+        <div ref={nodeRef} className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
         <h2>Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
@@ -55,7 +55,7 @@ const Resume = ({deviceWidth}) => {
 
         {
           deviceWidth > 770 &&
-          <div className={`face ${isVisible? '': 'hide-element'} ${isSmiling? 'show-emotion': ''}`}>
+          <div className={`face ${isVisible? 'animate__animated animate__fadeIn': 'hide-element'} ${isSmiling? 'show-emotion': ''}`}>
 
             <div className="eyes">
               <div className="eye">

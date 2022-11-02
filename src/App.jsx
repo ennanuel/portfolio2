@@ -90,7 +90,7 @@ function App() {
           <div id="body">
             <AboutMe />
             <Resume deviceWidth={state.deviceWidth} />
-            <Projects />
+            <Projects deviceWidth={state.deviceWidth} />
             <GetInTouch />
           </div>
         </article>

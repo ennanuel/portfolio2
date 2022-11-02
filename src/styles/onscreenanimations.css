@@ -10,6 +10,18 @@
   opacity: 0;
 }
 
+.slide-out-left-full {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-out-right-full {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
 .hide-element {
   opacity: 0;
 }
