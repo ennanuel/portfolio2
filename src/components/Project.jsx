@@ -11,13 +11,13 @@ const Project = ({left, deviceWidth}) => {
   return (
     <div className="project">
 
-      <div ref={nodeRef} className={`project-img full-border block flex-center ${left? 'left-project': 'right-project'} ${!isVisible? 'hide-element': deviceWidth < 770? 'animate__animated animate__fadeIn': left ? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight'}`}>
+      <div ref={nodeRef} className={`project-img full-border block flex-center anim-duration ${left? 'left-project': 'right-project'} ${!isVisible? 'hide-element': deviceWidth < 770? 'animate__animated animate__fadeIn': left ? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight'}`}>
 
         <img src={projectImage} alt="project image" />
 
       </div>
 
-      <div ref={nodeRef} className={`project-info ${left? 'right-project flex-end': 'left-project flex-start'} ${!isVisible? 'hide-element': deviceWidth < 770? 'animate__animated animate__fadeIn': left ? 'animate__animated animate__fadeInRight': 'animate__animated animate__fadeInLeft'}`}>
+      <div ref={nodeRef} className={`project-info anim-duration ${left? 'right-project flex-end': 'left-project flex-start'} ${!isVisible? 'hide-element': deviceWidth < 770? 'animate__animated animate__fadeIn': left ? 'animate__animated animate__fadeInRight': 'animate__animated animate__fadeInLeft'}`}>
 
         <div className="bb-10 project-title">
             <h3>Featured Project</h3>

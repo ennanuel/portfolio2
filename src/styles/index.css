@@ -202,7 +202,7 @@ body footer, html footer {
   padding: 20px;
 }
 
-body .contact, body .project-img, body .project-info, body .me, body .section-content, body .face, html .contact, html .project-img, html .project-info, html .me, html .section-content, html .face {
+body .anim-duration, html .anim-duration {
   -webkit-animation-duration: 0.7s !important;
           animation-duration: 0.7s !important;
 }

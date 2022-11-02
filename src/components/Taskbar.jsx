@@ -9,7 +9,7 @@ const Taskbar = ({ setDelay }) => {
 
     return (
         <div className="task-bar" ref={nodeRef}>
-            {dots.map( (dot, i) => <div className={`dot ${dot} ${isVisible? 'animate__animated animate__fadeInRight': 'hidden'}`} style={setDelay()} />)}
+            {dots.map( (dot, i) => <div className={`dot anim-duration ${dot} ${isVisible? 'animate__animated animate__fadeInRight': 'hidden'}`} style={setDelay()} />)}
         </div>
     )
 }

@@ -16,18 +16,18 @@ const Introduction = ({ setDelay }) => {
     <div ref={nodeRef} id="intro" className="intro-container flex-center section" title="Introduction">
       <section className="introduction full-border">
         <Taskbar setDelay={setDelay} />
-        <div className={`title full-border intro-title ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
+        <div className={`title full-border intro-title anim-duration ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
           <span>Hi, my name is</span>
         </div>
         <article className="info">
           <div className="about">
-            <h2 className={`${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}><span>Ezema Emmanuel.</span><br />I build stuff for the web.</h2>
-            <p className={`full-border ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
+            <h2 className={`anim-duration ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}><span>Ezema Emmanuel.</span><br />I build stuff for the web.</h2>
+            <p className={`full-border anim-duration ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
               <BoxDecor />
               I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <Highlight>Upstatement</Highlight>.
             </p>
           </div>
-          <div className={`lets-connect ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
+          <div className={`lets-connect anim-duration ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`} style={setDelay()}>
             <Button width="100%">Let's Connect</Button>
           </div>
         </article>

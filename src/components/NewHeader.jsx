@@ -66,7 +66,7 @@ const NewHeader = ({state, setState, setDelay}) => {
 
                 <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
             </ul>
-            <div className={`menu-btn flex-center ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} ref={nodeRef} onMouseOver={handleHover} style={setDelay()}><BiMenuAltLeft /></div>
+            <div className={`menu-btn flex-center anim-duration ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} ref={nodeRef} onMouseOver={handleHover} style={setDelay()}><BiMenuAltLeft /></div>
             <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
             {
                 linkItems.map((linkItem, i) => {

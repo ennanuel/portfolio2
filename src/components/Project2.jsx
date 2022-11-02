@@ -12,7 +12,7 @@ const Project2 = ({ delay, deviceWidth }) => {
   const style = { animationDelay: '0.' + delay + 's'}
 
   return (
-    <div ref={nodeRef} className={`other-project ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={delay && deviceWidth >= 770? style: {}}>
+    <div ref={nodeRef} className={`other-project anim-duration ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={delay && deviceWidth >= 770? style: {}}>
       <div className="project-top">
         <div className="file-img"><i><FaRegLightbulb /></i></div>
         <div className="links">

@@ -11,7 +11,7 @@ const Socials = ({setDelay}) => {
 
 
   return (
-    <div ref={nodeRef} className={`socials link ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} style={setDelay()}>
+    <div ref={nodeRef} className={`socials link anim-duration ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} style={setDelay()}>
     <div className="line"></div>
       {
         socialLinks.map((socialLink, i) => 
