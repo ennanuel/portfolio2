@@ -6,6 +6,7 @@ let num = 0
 function App() {
   const setDelay = () => {
     console.log(num)
+    if(num > 15) return;
     num++
     return {animationDelay: (num/10).toFixed(1) + 's'}
   }
