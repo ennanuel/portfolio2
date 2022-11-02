@@ -1,0 +1,16 @@
+.slide-out-left {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0;
+}
+
+.slide-out-right {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+.hide-element {
+  opacity: 0;
+}
+/*# sourceMappingURL=onscreenanimations.css.map */

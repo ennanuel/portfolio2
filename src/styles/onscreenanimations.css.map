@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,SAAS,EAAE,eAAe;EAC1B,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,gBAAgB,CAAC;EACb,SAAS,EAAE,gBAAgB;EAC3B,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "onscreenanimations.scss"
+    ],
+    "names": [],
+    "file": "onscreenanimations.css"
+}

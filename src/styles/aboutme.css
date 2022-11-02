@@ -12,6 +12,10 @@
 
 .me {
   width: 100%;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .me .second {

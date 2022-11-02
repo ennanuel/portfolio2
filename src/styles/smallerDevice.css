@@ -7,9 +7,14 @@
     border: 1px solid var(--border);
   }
   html .lets-connect, body .lets-connect {
-    max-width: 300px;
     width: 100%;
     margin: 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   html .about p, html .about, html .second, body .about p, body .about, body .second {
     width: 100%;
@@ -17,11 +22,21 @@
   html .intro-title, body .intro-title {
     left: 10px;
   }
+  html .intro .info .lets-connect, body .intro .info .lets-connect {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
   html .task-bar, html .socials, html .bg-text, html .for-others, body .task-bar, body .socials, body .bg-text, body .for-others {
     display: none !important;
   }
   html h1, body h1 {
     font-size: 20px;
+  }
+  html .about p, body .about p {
+    padding: 15px;
+    text-align: left;
   }
   html .about h2, body .about h2 {
     margin-top: 20px;

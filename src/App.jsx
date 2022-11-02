@@ -1,14 +1,5 @@
-import Background from './components/Background'
-import Introduction from './components/Introduction'
-import Footer from './components/Footer'
-import AboutMe from './components/AboutMe'
-import Resume from './components/Resume'
-import Projects from './components/Projects'
-import GetInTouch from './components/GetInTouch'
-import NewHeader from './components/NewHeader'
-import MouseTracker from './components/MouseTracker'
 import { useState, useEffect } from 'react'
-import Header from './components/Header'
+import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker, Header } from './components';
 
 let isFirstTime = true;
 
@@ -63,7 +54,6 @@ function App() {
       const observer = new IntersectionObserver( entries => {
         entries.forEach( entry => {
           if(entry.isIntersecting) {
-            console.log(state.isMenuHovered)
             if(state.isMenuHovered) return;
 
             const newLink = '#' + entry.target.id

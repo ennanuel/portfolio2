@@ -1,0 +1,13 @@
+.slide-out-left {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.slide-out-right {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.hide-element {
+    opacity: 0;
+}
