@@ -9,7 +9,7 @@ import { BsDownload } from 'react-icons/bs'
 const Resume = ({deviceWidth}) => {
   const [style, setStyle] = useState({transform: ''})
   const nodeRef = useRef()
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, {once: true})
   const [isSmiling, setIsSmiling] = useState(false)
 
   const handleHover = () => {

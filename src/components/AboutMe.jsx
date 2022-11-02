@@ -8,15 +8,15 @@ import '../styles/aboutme.css'
 const AboutMe = () => {
 
   const nodeRef = useRef()
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, {once: true})
  
   return (
           <section id="about" title="01. About Me" className="about-me section flex-center">
             <Title number="01." left={true}>About Me</Title>
-                <article className={`me ${isVisible ? 'animate__animated animate__fadeInRight': 'hide-element'}`}>
+                <article ref={nodeRef} className={`me ${isVisible ? 'animate__animated animate__fadeInRight': 'hide-element'}`}>
                       
                   <h2 className="bio-title">Short Biography</h2>
-                  <div className="bio" ref={nodeRef}>
+                  <div className="bio">
                       
                     <div className="bio-text">
                       <p>Hello! My name is Emmanuel and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!

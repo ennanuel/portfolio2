@@ -25,7 +25,7 @@ const Projects = ({ deviceWidth }) => {
         <p className="archive-link">view the archive</p>
 
         <div className="other-projects-container">
-          {vals.map( (val) => <Project2 delay={val} deviceWidth={deviceWidth} />)}
+          {vals.map( (val, i) => <Project2 key={i} delay={i} deviceWidth={deviceWidth} />)}
         </div>
         <Button width="150px">Show More</Button>
       </div>

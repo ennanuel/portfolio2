@@ -1,8 +1,13 @@
 import Button from "./Button"
 import { BiMenuAltLeft } from 'react-icons/bi'
+import { useRef } from "react"
+import { useIsVisible } from "react-is-visible"
 
 
-const NewHeader = ({state, setState}) => {
+const NewHeader = ({state, setState, setDelay}) => {
+    const nodeRef = useRef()
+    const isVisible = useIsVisible(nodeRef)
+
     const linkItems = [
         {name: 'Introduction', link: '#intro'},
         {name: 'About Me', link: '#about'},
@@ -61,8 +66,8 @@ const NewHeader = ({state, setState}) => {
 
                 <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
             </ul>
-            <div className={`menu-btn flex-center ${state.showMenuBtn? '': 'hide'}`} onMouseOver={handleHover}><BiMenuAltLeft /></div>
-            <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
+            <div className={`menu-btn flex-center ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} ref={nodeRef} onMouseOver={handleHover} style={setDelay()}><BiMenuAltLeft /></div>
+            <div className={`current-section link ${state.showMenuBtn? 'hide': ''} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate" style={setDelay()}>
             {
                 linkItems.map((linkItem, i) => {
                     const handleClick = () => {

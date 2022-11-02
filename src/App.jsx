@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker, Header } from './components';
 
-let isFirstTime = true;
+let num = 0
 
 function App() {
+  const setDelay = () => {
+    console.log(num)
+    num++
+    return {animationDelay: (num/10).toFixed(1) + 's'}
+  }
+
 
   const [state, setState] = useState({
     link: '#',
@@ -12,7 +18,7 @@ function App() {
     showMenuBtn: true,
     initialYPosition: 50,
     scroll: true,
-    deviceWidth: window.innerWidth
+    deviceWidth: window.innerWidth,
   })
 
   const handleHover = () => {
@@ -47,24 +53,6 @@ function App() {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
 
-    if(isFirstTime) {
-      isFirstTime = false;
-
-      const sections = document.querySelectorAll('.section')
-      const observer = new IntersectionObserver( entries => {
-        entries.forEach( entry => {
-          if(entry.isIntersecting) {
-            if(state.isMenuHovered) return;
-
-            const newLink = '#' + entry.target.id
-            setState(prev => ({...prev, link: newLink}))
-          }
-        })
-      });
-
-      [...sections].forEach(section => observer.observe(section))
-    }
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
@@ -80,13 +68,13 @@ function App() {
         state.deviceWidth > 770 ?
         <>
           <MouseTracker setState={setState} />
-          <NewHeader state={state} setState={setState} />
+          <NewHeader setDelay={setDelay} state={state} setState={setState} />
         </> :
-        <><Header currentPageTitle={state.link} /></>
+        <><Header setDelay={setDelay} currentPageTitle={state.link} /></>
       }
       <main>
         <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
-          <Introduction />
+          <Introduction setDelay={setDelay} />
           <div id="body">
             <AboutMe />
             <Resume deviceWidth={state.deviceWidth} />
@@ -95,7 +83,7 @@ function App() {
           </div>
         </article>
       </main>
-      <Footer />
+      <Footer setDelay={setDelay} />
     </div>
   )
 }

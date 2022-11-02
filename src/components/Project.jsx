@@ -6,7 +6,7 @@ import { FiGithub } from 'react-icons/fi'
 
 const Project = ({left, deviceWidth}) => {
   const nodeRef = useRef()
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, {once: true})
 
   return (
     <div className="project">

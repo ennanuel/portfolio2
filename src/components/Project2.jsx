@@ -7,7 +7,7 @@ import { useIsVisible } from 'react-is-visible'
 
 const Project2 = ({ delay, deviceWidth }) => {
   const nodeRef = useRef()
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, {once: true})
 
   const style = { animationDelay: '0.' + delay + 's'}
 
