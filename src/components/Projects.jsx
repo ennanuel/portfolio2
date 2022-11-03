@@ -4,9 +4,18 @@ import Project from './Project'
 import '../styles/projects.css'
 import Project2 from './Project2'
 import Button from './Button'
+import { useEffect } from 'react'
 
 const Projects = ({ deviceWidth }) => {
   const vals = [1, 2, 3, 4, 5, 6]
+
+  useEffect(() => {
+    const otherProjects = document.querySelectorAll('.other-project');
+
+    [...otherProjects].forEach( (otherProject, i) => {
+      otherProject.style.animationDelay = (i/20).toFixed(2) + 's'
+    })
+  }, [])
 
   return (
     <section id="projects" title="03. Projects" className="section projects">
@@ -25,7 +34,7 @@ const Projects = ({ deviceWidth }) => {
         <p className="archive-link">view the archive</p>
 
         <div className="other-projects-container">
-          {vals.map( (val, i) => <Project2 key={i} delay={i} deviceWidth={deviceWidth} />)}
+          {vals.map( (i) => <Project2 key={i}/>)}
         </div>
         <Button width="150px">Show More</Button>
       </div>

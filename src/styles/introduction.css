@@ -1,5 +1,5 @@
 .about h2 span {
-  color: rgba(255, 251, 0, 0.9);
+  color: var(--header2-color);
 }
 
 main .intro-container {
@@ -13,7 +13,7 @@ main .intro-container {
   min-height: 300px;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--light-background);
 }
 
 .introduction:hover .about p::before {
@@ -55,7 +55,7 @@ main .intro-container {
 .about p {
   position: relative;
   padding: 2em;
-  background-color: #0000006f;
+  background-color: var(--light-background);
   text-align: left;
   max-width: 600px;
   margin: 30px 0;
@@ -66,13 +66,13 @@ main .intro-container {
   padding: 0;
   margin: 0;
   line-height: 1.1em;
-  color: rgba(255, 251, 0, 0.5);
+  color: var(--header2-secondary-color);
 }
 
 .about p::before {
   content: "";
   width: 100%;
-  background: repeating-linear-gradient(45deg, #eeff003c, #eeff003c 2px, transparent 2px, transparent 10px);
+  background: repeating-linear-gradient(45deg, var(--linear-color1), var(--linear-color1) 2px, var(--linear-color2) 2px, var(--linear-color2) 10px);
   height: 100%;
   position: absolute;
   z-index: -1;

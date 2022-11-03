@@ -3,7 +3,7 @@ import Button from "./Button";
 import '../styles/header.css'
 
 
-const Header = ({currentPageTitle}) => {
+const Header = ({currentPageTitle, setDelay}) => {
     const [scrolled, setScrolled] = useState('');
     const [scrollPosition, setScrollPosition] = useState(0);
     const [style, setStyle] = useState({})

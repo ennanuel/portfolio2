@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker, Header } from './components';
 
-let num = 0
+let isFirstTime = true;
 
 function App() {
-  const setDelay = () => {
-    console.log(num)
-    if(num > 15) return;
-    num++
-    return {animationDelay: (num/10).toFixed(1) + 's'}
-  }
-
 
   const [state, setState] = useState({
     link: '#',
@@ -20,6 +13,7 @@ function App() {
     initialYPosition: 50,
     scroll: true,
     deviceWidth: window.innerWidth,
+    isVisible: false
   })
 
   const handleHover = () => {
@@ -54,6 +48,16 @@ function App() {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
 
+    if(isFirstTime) {
+      isFirstTime = false
+
+      const elements = document.querySelectorAll('.delay');
+
+      [...elements].forEach((element, i) => {
+        element.style.animationDelay = (i/10).toFixed(1) + 's'
+      })
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
@@ -69,13 +73,13 @@ function App() {
         state.deviceWidth > 770 ?
         <>
           <MouseTracker setState={setState} />
-          <NewHeader setDelay={setDelay} state={state} setState={setState} />
+          <NewHeader state={state} setState={setState} />
         </> :
-        <><Header setDelay={setDelay} currentPageTitle={state.link} /></>
+        <><Header currentPageTitle={state.link} /></>
       }
       <main>
         <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
-          <Introduction setDelay={setDelay} />
+          <Introduction setState={setState} />
           <div id="body">
             <AboutMe />
             <Resume deviceWidth={state.deviceWidth} />
@@ -84,7 +88,7 @@ function App() {
           </div>
         </article>
       </main>
-      <Footer setDelay={setDelay} />
+      <Footer isVisible={state.isVisible} />
     </div>
   )
 }

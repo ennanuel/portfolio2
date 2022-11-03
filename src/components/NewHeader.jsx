@@ -1,12 +1,9 @@
 import Button from "./Button"
 import { BiMenuAltLeft } from 'react-icons/bi'
-import { useRef } from "react"
-import { useIsVisible } from "react-is-visible"
+import { BsSunFill, BsMoonFill } from 'react-icons/bs'
 
 
-const NewHeader = ({state, setState, setDelay}) => {
-    const nodeRef = useRef()
-    const isVisible = useIsVisible(nodeRef, {once: true})
+const NewHeader = ({state, setState}) => {
 
     const linkItems = [
         {name: 'Introduction', link: '#intro'},
@@ -16,6 +13,12 @@ const NewHeader = ({state, setState, setDelay}) => {
         {name: 'Contact', link: '#contact'}
     ]
 
+    const handleThemeChange = () => {
+        const themeSwitch = document.querySelector('.theme-switch')
+        if(themeSwitch.style.float === 'left') {
+            themeSwitch.style.float = 'right'
+        } else { themeSwitch.style.float = 'left' }
+    }
 
     const handleHover = () => {
         setState(prev => ({
@@ -34,9 +37,10 @@ const NewHeader = ({state, setState, setDelay}) => {
     
     return (
         <header className={`menu link for-other ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
-            <div className="change-color link" link="theme">
-                <div id="white" className="link" link="white theme"></div>
-                <div id="black" className="link" link="black theme"></div>
+            <div className="change-color link" onClick={handleThemeChange} link="theme">
+                <div className="link theme-switch" link="change theme color"/>
+                <div className="dark-icon theme-icon"><i><BsMoonFill /></i></div>
+                <div className="light-icon theme-icon"><i><BsSunFill /></i></div>
             </div>
 
             <ul>
@@ -66,7 +70,7 @@ const NewHeader = ({state, setState, setDelay}) => {
 
                 <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
             </ul>
-            <div className={`menu-btn flex-center anim-duration ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} ref={nodeRef} onMouseOver={handleHover} style={setDelay()}><BiMenuAltLeft /></div>
+            <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${state.isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} onMouseOver={handleHover}><BiMenuAltLeft /></div>
             <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
             {
                 linkItems.map((linkItem, i) => {

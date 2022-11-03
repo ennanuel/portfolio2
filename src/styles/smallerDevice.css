@@ -83,7 +83,7 @@
     width: 100%;
   }
   html .project .project-img:after, body .project .project-img:after {
-    background-color: rgba(67, 59, 0, 0.8);
+    background-color: var(--project-img-color);
   }
   html .other-projects-container, body .other-projects-container {
     padding: 0px 10%;

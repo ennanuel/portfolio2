@@ -16,8 +16,8 @@
   width: 60%;
   height: 100%;
   top: 0;
-  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
-          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
+  -webkit-box-shadow: 1px 1px 20px var(--box-shadow);
+          box-shadow: 1px 1px 20px var(--box-shadow);
 }
 
 .project .project-img:after {
@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: rgba(255, 221, 0, 0.303);
+  background-color: var(--project-img-color);
 }
 
 .project .project-img:hover:after {
@@ -74,9 +74,9 @@
 .project .project-description {
   width: 130%;
   padding: 25px;
-  background-color: #423b00;
-  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
-          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
+  background-color: var(--project-description-color);
+  -webkit-box-shadow: 1px 1px 20px var(--box-shadow);
+          box-shadow: 1px 1px 20px var(--box-shadow);
   line-height: 1.3;
 }
 
@@ -103,7 +103,7 @@
   display: flex;
   padding-top: 10px;
   gap: 20px;
-  color: rgba(255, 242, 0, 0.5);
+  color: var(--project-link-color);
 }
 
 .links .link {
@@ -112,7 +112,7 @@
 }
 
 .links .link:hover {
-  color: yellow;
+  color: var(--text);
 }
 
 .tech-used {
@@ -122,7 +122,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 200%;
-  color: rgba(255, 238, 0, 0.487);
+  color: var(--project-link-color);
   font-size: 12px;
   gap: 15px;
 }
@@ -134,7 +134,7 @@
 .project-title h3 {
   font-size: 16px;
   font-weight: normal;
-  color: #806b00;
+  color: var(--project-title-color);
   margin: 0;
 }
 
@@ -147,7 +147,7 @@
 .projects .projects-text {
   font-weight: bold;
   text-align: center;
-  color: rgba(255, 221, 0, 0.739);
+  color: var(--project-text-color);
   font-size: 3rem;
 }
 
@@ -157,7 +157,7 @@
 
 .project-description {
   font-size: 14px;
-  color: rgba(255, 242, 0, 0.5);
+  color: var(--project-link-color);
 }
 
 .other-projects {
@@ -187,13 +187,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px;
-  -webkit-box-shadow: 0 0 3px black;
-          box-shadow: 0 0 3px black;
-  background-color: #343100;
-  -webkit-transform: translateY(0) translateX(0);
-          transform: translateY(0) translateX(0);
-  -webkit-animation-duration: 0.5s !important;
-          animation-duration: 0.5s !important;
+  -webkit-box-shadow: 0 0 8px var(--box-shadow);
+          box-shadow: 0 0 8px var(--box-shadow);
+  background-color: var(--project-description-color);
 }
 
 .other-projects-container .other-project h2 {
@@ -206,10 +202,10 @@
 }
 
 .other-projects-container .other-project:hover {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-  -webkit-box-shadow: 0 0 7px black;
-          box-shadow: 0 0 7px black;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 0 15px var(--box-shadow);
+          box-shadow: 0 0 15px var(--box-shadow);
 }
 
 .other-projects-container .project-top {

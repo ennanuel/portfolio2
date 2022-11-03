@@ -3,7 +3,7 @@
     margin: auto;
     width: 70%;
     height: 60px;
-    background-color:rgba(0, 0, 0, 0.623);
+    background-color: var(--task-bar-bg);
     color: var(--text);
     position: relative;
     font-size: 20px;
@@ -20,11 +20,11 @@
   }
   
   .btn:hover span {
-    color: black;
+    color: var(--main-background);
   }
 
   .btn span {
-    color: rgb(217, 255, 0);
+    color: var(--text);
     transition: none;
   }
 
@@ -37,14 +37,15 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(217, 255, 0);
-    color: black;
+    background: var(--text);
+    color: var(--main-background);
     top: 0;
     right: 0;
-    transform: translateX(100%);
+    transform: scaleX(0);
+    transform-origin: right;
   }
   
   .btn:hover::before {
-    transform: translateX(0);
+    transform: scaleX(100%);
   }
   

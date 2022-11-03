@@ -5,14 +5,12 @@ import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 
 
-const Project2 = ({ delay, deviceWidth }) => {
+const Project2 = () => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
 
-  const style = { animationDelay: '0.' + delay + 's'}
-
   return (
-    <div ref={nodeRef} className={`other-project anim-duration ${isVisible? 'animate__animated animate__fadeInLeft': 'hide-element'}`} style={delay && deviceWidth >= 770? style: {}}>
+    <div ref={nodeRef} className={`other-project anim-duration ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`}>
       <div className="project-top">
         <div className="file-img"><i><FaRegLightbulb /></i></div>
         <div className="links">

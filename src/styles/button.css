@@ -2,7 +2,7 @@
   margin: auto;
   width: 70%;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.623);
+  background-color: var(--task-bar-bg);
   color: var(--text);
   position: relative;
   font-size: 20px;
@@ -19,11 +19,11 @@
 }
 
 .btn:hover span {
-  color: black;
+  color: var(--main-background);
 }
 
 .btn span {
-  color: #d9ff00;
+  color: var(--text);
   -webkit-transition: none;
   transition: none;
 }
@@ -37,16 +37,18 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #d9ff00;
-  color: black;
+  background: var(--text);
+  color: var(--main-background);
   top: 0;
   right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .btn:hover::before {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: scaleX(100%);
+          transform: scaleX(100%);
 }
 /*# sourceMappingURL=button.css.map */

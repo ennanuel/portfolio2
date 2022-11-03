@@ -21,7 +21,7 @@ header, .header-icon, .home-logo {
   position: absolute;
   width: 90%;
   height: 3px;
-  background-color: #ffee00;
+  background-color: var(--text);
 }
 
 .icon-line.line1 {
@@ -56,11 +56,11 @@ header, .header-icon, .home-logo {
 }
 
 .scrolled {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--box-shadow);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  -webkit-box-shadow: 0 1px 5px black;
-          box-shadow: 0 1px 5px black;
+  -webkit-box-shadow: 0 1px 5px var(--main-background);
+          box-shadow: 0 1px 5px var(--main-background);
 }
 
 header nav ul {
@@ -70,7 +70,7 @@ header nav ul {
 }
 
 header ul a {
-  color: #ffdd00;
+  color: var(--highlight-text);
   text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ header h2 {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--menu-bg);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -132,7 +132,7 @@ header h2 {
   text-align: center;
   padding: 8px;
   margin: 12px;
-  border-left: 6px solid rgba(255, 255, 0, 0.724);
+  border-left: 6px solid var(--border);
 }
 
 .nav-item.active-link a, .nav-item a:active {

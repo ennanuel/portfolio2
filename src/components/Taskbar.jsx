@@ -1,15 +1,11 @@
 import '../styles/taskbar.css'
-import { useIsVisible } from 'react-is-visible'
-import { useRef } from 'react'
 
-const Taskbar = ({ setDelay }) => {
-    const nodeRef = useRef();
-    const isVisible = useIsVisible(nodeRef)
+const Taskbar = ({ isVisible }) => {
     const dots = ['red-dot', 'yellow-dot', 'green-dot']
 
     return (
-        <div className="task-bar" ref={nodeRef}>
-            {dots.map( (dot, i) => <div className={`dot anim-duration ${dot} ${isVisible? 'animate__animated animate__fadeInRight': 'hidden'}`} style={setDelay()} />)}
+        <div className="task-bar">
+            {dots.map( (dot, i) => <div key={i} className={`dot delay anim-duration ${dot} ${isVisible? 'animate__animated animate__fadeInUp': 'hidden'}`} style={{animationDelay: '0.' + i + 's'}} />)}
         </div>
     )
 }

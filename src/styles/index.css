@@ -7,7 +7,7 @@
 }
 
 #body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--section-container-bg);
 }
 
 .for-phone {
@@ -83,8 +83,8 @@ body .social i, html .social i {
 
 body .social:before, html .social:before {
   content: '';
-  background-color: #0c0c0c;
-  border: 1px solid rgba(255, 242, 0, 0.552);
+  background-color: var(--social-icon-bg);
+  border: 1px solid var(--border);
   position: absolute;
   width: 100%;
   aspect-ratio: 1;
@@ -97,7 +97,7 @@ body .social::after, html .social::after {
   content: "";
   width: 100%;
   aspect-ratio: 1;
-  background-color: #ffe600;
+  background-color: var(--social-icon-after);
   -webkit-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
   position: absolute;
@@ -118,7 +118,7 @@ body .block, html .block {
 }
 
 body #background, html #background {
-  background-color: #000000;
+  background-color: var(--main-background);
   overflow: hidden;
   width: 100.1vw;
   height: 100.1vh;
@@ -143,7 +143,7 @@ body .square, html .square {
   position: absolute;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background: black;
+  background: var(--main-background);
 }
 
 body .tl-box, html .tl-box {
@@ -167,7 +167,7 @@ body .bl-box, html .bl-box {
 }
 
 body .number, html .number {
-  color: rgba(255, 255, 0, 0.7);
+  color: var(--project-text-color);
   font-size: 0.8em;
 }
 
@@ -175,7 +175,7 @@ body p, html p {
   font-size: 16px;
   margin-bottom: 15px;
   font-weight: lighter;
-  color: rgba(255, 251, 0, 0.742);
+  color: var(--project-text-coloe);
   line-height: 1.4;
 }
 
@@ -189,7 +189,7 @@ body .section, html .section {
 }
 
 body .highlight, html .highlight {
-  color: rgba(255, 242, 0, 0.85);
+  color: var(--highlight-text);
 }
 
 body .full-border, html .full-border {
@@ -197,7 +197,7 @@ body .full-border, html .full-border {
 }
 
 body footer, html footer {
-  background-color: black;
+  background-color: var(--main-background);
   width: 100%;
   padding: 20px;
 }
@@ -205,6 +205,31 @@ body footer, html footer {
 body .anim-duration, html .anim-duration {
   -webkit-animation-duration: 0.7s !important;
           animation-duration: 0.7s !important;
+  -webkit-animation-fill-mode: none !important;
+          animation-fill-mode: none !important;
+}
+
+body ::webkit-scrollbar, html ::webkit-scrollbar {
+  width: 12px;
+}
+
+body ::webkit-scrollbar-thumb, html ::webkit-scrollbar-thumb {
+  background-color: gold;
+  border-radius: 10px;
+}
+
+body ::webkit-scrollbar-track, html ::webkit-scrollbar-track {
+  background: blue;
+}
+
+body ::-moz-selection, html ::-moz-selection {
+  background-color: var(--linear-color1);
+  color: var(--highlight-text);
+}
+
+body ::selection, html ::selection {
+  background-color: var(--linear-color1);
+  color: var(--highlight-text);
 }
 
 @-webkit-keyframes change-opacity {

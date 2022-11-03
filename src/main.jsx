@@ -9,5 +9,5 @@ import './styles/onscreenanimations.css'
 import 'animate.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+  <App />
 )

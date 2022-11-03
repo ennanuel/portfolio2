@@ -11,7 +11,7 @@
         width: 60%;
         height: 100%;
         top: 0;
-        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
+        box-shadow: 1px 1px 20px var(--box-shadow);
 
         &:after {
             content: '';
@@ -21,7 +21,7 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            background-color: rgba(255, 221, 0, 0.303);
+            background-color: var(--project-img-color);
         }
 
         &:hover:after {
@@ -58,8 +58,8 @@
     .project-description {
         width: 130%;
         padding: 25px;
-        background-color: rgb(66, 59, 0);
-        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.665);
+        background-color: var(--project-description-color);
+        box-shadow: 1px 1px 20px var(--box-shadow);
         line-height: 1.3;
     }
     
@@ -79,13 +79,13 @@
     display: flex;
     padding-top: 10px;
     gap: 20px;
-    color: rgba(255, 242, 0, 0.5);
+    color: var(--project-link-color);
 
     .link {
         transition: 0.3s;
 
         &:hover {
-            color: rgb(255, 255, 0);
+            color: var(--text);
         }
     }
 }
@@ -94,7 +94,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 200%;
-    color: rgba(255, 238, 0, 0.487);
+    color: var(--project-link-color);
     font-size: 12px;
     gap: 15px;
 }
@@ -105,7 +105,7 @@
     h3 {
         font-size: 16px;
         font-weight: normal;
-        color: rgb(128, 107, 0);
+        color: var(--project-title-color);
         margin: 0;
     }
 
@@ -121,7 +121,7 @@
     .projects-text {
         font-weight: bold;
         text-align: center;
-        color:rgba(255, 221, 0, 0.739);
+        color:var(--project-text-color);
         font-size: 3rem;
     }
 
@@ -132,7 +132,7 @@
 
 .project-description {
     font-size: 14px;
-    color: rgba(255, 242, 0, 0.5)
+    color: var(--project-link-color)
 }
 
 .other-projects {
@@ -152,10 +152,9 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 15px;
-        box-shadow: 0 0 3px black;
-        background-color: rgb(52, 49, 0);
-        transform: translateY(0) translateX(0);
-        animation-duration: 0.5s !important;
+        box-shadow: 0 0 8px var(--box-shadow);
+        background-color: var(--project-description-color);
+        
 
         h2 {
             font-weight: normal;
@@ -167,8 +166,8 @@
         }
 
         &:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 7px black;
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px var(--box-shadow);
         }
     }
 
