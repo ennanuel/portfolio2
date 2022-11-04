@@ -5,6 +5,15 @@
       .section {
         padding: 5%;
       }
+
+      .show-menu .go-back-btn {
+          opacity: 1;
+          pointer-events: all;
+      }
+
+      .menu-item .active::before {
+          transform: scaleX(1);
+      }
     
       .introduction {
         margin: 100px auto;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker, Header } from './components';
+import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
 
 let isFirstTime = true;
 
@@ -13,7 +13,8 @@ function App() {
     initialYPosition: 50,
     scroll: true,
     deviceWidth: window.innerWidth,
-    isVisible: false
+    isVisible: false,
+    dynamicBg: true
   })
 
   const handleHover = () => {
@@ -67,16 +68,14 @@ function App() {
   return (
     <div className="App">
       <div id="background" className="flex-center">
-        <Background />
+
+        <Background showDynamicBg={state.dynamicBg} />
+
       </div>
-      {
-        state.deviceWidth > 770 ?
-        <>
-          <MouseTracker setState={setState} />
-          <NewHeader state={state} setState={setState} />
-        </> :
-        <><Header currentPageTitle={state.link} /></>
-      }
+
+      { state.deviceWidth > 770 && <MouseTracker setState={setState} /> }
+
+      <NewHeader state={state} setState={setState} />
       <main>
         <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
           <Introduction setState={setState} />

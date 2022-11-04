@@ -2,6 +2,14 @@
   html .section, body .section {
     padding: 5%;
   }
+  html .show-menu .go-back-btn, body .show-menu .go-back-btn {
+    opacity: 1;
+    pointer-events: all;
+  }
+  html .menu-item .active::before, body .menu-item .active::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
   html .introduction, body .introduction {
     margin: 100px auto;
     border: 1px solid var(--border);

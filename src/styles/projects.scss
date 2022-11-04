@@ -154,6 +154,8 @@
         padding: 15px;
         box-shadow: 0 0 8px var(--box-shadow);
         background-color: var(--project-description-color);
+        position: relative;
+        top: 0;
         
 
         h2 {
@@ -166,7 +168,7 @@
         }
 
         &:hover {
-            transform: translateY(-10px);
+            top: -10px;
             box-shadow: 0 0 15px var(--box-shadow);
         }
     }

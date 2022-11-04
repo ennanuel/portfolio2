@@ -181,27 +181,31 @@ footer {
 
 .anim-duration {
   animation-duration: 0.7s !important;
-  animation-fill-mode: none !important;
 }
 
-::webkit-scrollbar {
+}
+
+//scrollbar and text selection
+
+::-webkit-scrollbar {
   width: 12px;
+  position: absolute;
+  right: 0;
 }
 
-::webkit-scrollbar-thumb {
-  background-color: gold;
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
   border-radius: 10px;
+  border: 3px solid var(--main-background);
 }
 
-::webkit-scrollbar-track {
-  background: blue;
+::-webkit-scrollbar-track {
+  background: var(--main-background);
 }
 
 ::selection {
   background-color: var(--linear-color1);
   color: var(--highlight-text);
-}
-
 }
 
 @keyframes change-opacity {

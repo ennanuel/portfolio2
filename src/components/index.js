@@ -7,7 +7,6 @@ import Projects from './Projects'
 import GetInTouch from './GetInTouch'
 import NewHeader from './NewHeader'
 import MouseTracker from './MouseTracker'
-import Header from './Header'
 
 
-export {    Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker, Header    };
+export {    Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker    };

@@ -4,16 +4,15 @@ import { v4 as uuidv4 } from 'uuid'
 import '../styles/background.css'
 
 let isFirstTime = true;
-const Background = () => {
+const Background = ({showDynamicBg}) => {
     const [{width, height, isResized, content, visible}, setState] = useState({});
     
     const resize = (height, width) => {
         setState((prev) => ({...prev, height, width, isResized: true}));
     }
 
-    const background = () => {
-
-        if(width < height || width < 720) {
+    const background = (showBg) => {
+        if(width < height || width < 720 || !showBg ) {
             setState( (prev) => ({...prev, content: null}))
             return;
         }
@@ -69,7 +68,7 @@ const Background = () => {
         if(isResized !== true) return;
         setState(prev => ({...prev, isResized: false}))
 
-        background()
+        background(showDynamicBg)
         
         window.addEventListener('resize', resizeHandler);
 
@@ -90,7 +89,7 @@ const Background = () => {
             clearInterval(changeBackground)
         };
 
-    }, [height, width])
+    }, [height, width, showDynamicBg])
 
 
     return (

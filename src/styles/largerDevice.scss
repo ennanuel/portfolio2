@@ -1,0 +1,20 @@
+@media (min-width: 771px) {
+    .thin-content .section {
+        width: 80%;
+        float: right;
+        max-height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0 20px;
+        background: transparent;
+    }
+
+    .thin-content .section:before {
+        opacity: 1;
+    }
+    
+
+    .current-section:hover {
+        transform: translate(10px, -50%) scale(1);
+    }
+}
