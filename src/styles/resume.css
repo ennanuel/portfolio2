@@ -20,40 +20,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 7%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 30px 5%;
   gap: 20px;
 }
 
 .eyes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.glass-line {
-  width: 30px;
-  height: 2px;
-  display: inline-block;
-  background: var(--text);
+  gap: 30px;
 }
 
 .eye {
@@ -62,7 +34,7 @@
   -webkit-transition: 0.1s;
   transition: 0.1s;
   display: inline-block;
-  border: 1px solid var(--face-borders);
+  border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
 }
@@ -71,64 +43,11 @@
   width: 40%;
   aspect-ratio: 1;
   background-color: black;
-  border: 2px solid var(--face-borders);
+  border: 2px solid var(--border);
   position: absolute;
   top: 0;
   left: 0;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-}
-
-.nose {
-  width: 80px;
-  aspect-ratio: 2;
-  border: 2px solid var(--face-borders);
-  border-bottom: none;
-  position: relative;
-}
-
-.mouth {
-  position: absolute;
-  width: 50%;
-  height: 80px;
-  aspect-ratio: 3;
-  top: 100%;
-  background: var(--face-borders);
-  border: 3px solid var(--face-borders);
-  -webkit-transform: scale(1, 0.05) translateY(0);
-          transform: scale(1, 0.05) translateY(0);
-}
-
-.show-emotion .mouth {
-  -webkit-transform: scale(0.5, 1) translateY(50%);
-          transform: scale(0.5, 1) translateY(50%);
-  background: var(--box-shadow);
-}
-
-.show-emotion .mouth:before {
-  content: '';
-  width: 120%;
-  height: 20px;
-  border: 2px solid var(--face-borders);
-  border-top: 0;
-  position: absolute;
-  bottom: -10px;
-}
-
-.face .eyes:before {
-  content: '';
-  width: 100%;
-  opacity: 0;
-  border-top: 5px solid var(--face-borders);
-  top: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  position: absolute;
-}
-
-.show-emotion .eyes:before {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  opacity: 1;
 }
 /*# sourceMappingURL=resume.css.map */

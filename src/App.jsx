@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
+import PseudoPage from './components/PseudoPage';
 
 let isFirstTime = true;
 
@@ -73,20 +74,21 @@ function App() {
 
       </div>
 
-      { state.deviceWidth > 770 && <MouseTracker setState={setState} /> }
+      { state.deviceWidth > 770 && <MouseTracker /> }
 
       <NewHeader state={state} setState={setState} />
-      <main>
-        <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
-          <Introduction setState={setState} />
-          <div id="body">
-            <AboutMe />
-            <Resume deviceWidth={state.deviceWidth} />
-            <Projects deviceWidth={state.deviceWidth} />
-            <GetInTouch />
-          </div>
-        </article>
-      </main>
+        <PseudoPage shouldShow={state.isMenuHovered} />
+        <main>
+          <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
+            <Introduction setState={setState} />
+            <div id="body">
+              <AboutMe />
+              <Resume deviceWidth={state.deviceWidth} />
+              <Projects deviceWidth={state.deviceWidth} />
+              <GetInTouch />
+            </div>
+          </article>
+        </main>
       <Footer isVisible={state.isVisible} />
     </div>
   )

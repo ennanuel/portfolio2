@@ -42,7 +42,8 @@
     top: 0;
     right: 0;
     transform: scaleX(0);
-    transform-origin: right;
+    transform-origin: left;
+    transition: transform 0.3s;
   }
   
   .btn:hover::before {

@@ -1,11 +1,3 @@
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  scroll-behavior: smooth;
-}
-
 body {
   color: var(--text);
 }
@@ -61,8 +53,9 @@ body:hover .mouse-tracker {
 .menu {
   position: fixed;
   top: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  left: 100%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   padding: 30px;
   height: 100vh;
   min-width: 20%;
@@ -85,6 +78,10 @@ body:hover .mouse-tracker {
           align-items: flex-start;
   gap: 15px;
   z-index: 100000;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .menu ul {
@@ -102,17 +99,17 @@ body:hover .mouse-tracker {
 }
 
 .menu:before {
-  position: absolute;
-  background: var(--menu-bg);
-  top: 0;
-  left: 0;
   content: '';
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  background-color: var(--task-bar-bg);
+  position: absolute;
+  top: 0;
+  right: 0;
   opacity: 0;
   pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .disable-dynamic-bg {
@@ -156,12 +153,13 @@ body:hover .mouse-tracker {
 }
 
 .change-color .theme-switch {
-  background-color: var(--text);
+  background-color: var(--highlight-text);
   position: absolute;
   height: 98%;
   aspect-ratio: 1;
   left: 0;
   top: 0;
+  z-index: 11;
 }
 
 .change-color .theme-icon {
@@ -180,8 +178,17 @@ body:hover .mouse-tracker {
 }
 
 .show-menu {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.show-menu .go-back-btn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.show-menu:before {
+  opacity: 1;
 }
 
 .show-menu .menu-btn {
@@ -240,8 +247,9 @@ body:hover .mouse-tracker {
   border: 1px solid var(--border);
   padding: 5px;
   position: absolute;
-  left: 105%;
-  top: 30px;
+  right: 100%;
+  top: 0;
+  margin: 10px;
   opacity: 1;
   cursor: pointer;
   background: var(--main-background);
@@ -249,6 +257,12 @@ body:hover .mouse-tracker {
   font-size: 2em;
   height: 40px;
   aspect-ratio: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .menu-btn i {
@@ -256,15 +270,9 @@ body:hover .mouse-tracker {
   padding: 0;
 }
 
-.menu-btn:before {
-  content: '';
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  -webkit-transform: tranlateY(-50%);
-          transform: tranlateY(-50%);
-  border-top: 1px solid;
+.menu-btn:hover {
+  background-color: var(--text);
+  color: var(--main-background);
 }
 
 .go-back-btn {
@@ -272,14 +280,17 @@ body:hover .mouse-tracker {
   aspect-ratio: 1/1.3;
   position: absolute;
   top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   opacity: 0;
   pointer-events: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   border: 1px solid var(--border);
   font-size: 2em;
-  background: var(--main-background);
+  background-color: var(--box-shadow);
+}
+
+.go-back-btn:hover {
+  background-color: var(--border);
 }
 
 [title]:before {
@@ -314,7 +325,7 @@ body:hover .mouse-tracker {
   -webkit-transform: translate(0, -50%) scale(0.8);
           transform: translate(0, -50%) scale(0.8);
   top: 50%;
-  left: 100%;
+  right: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,11 +342,15 @@ body:hover .mouse-tracker {
   gap: 15px;
   cursor: pointer;
   z-index: 100000;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .hide {
-  left: -50%;
-  pointer-events: none;
+  -webkit-transform: translateX(300px) !important;
+          transform: translateX(300px) !important;
 }
 
 .section-circle {
@@ -354,6 +369,10 @@ body:hover .mouse-tracker {
   background: var(--menu-linear-gradient);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 [data-content]:before {
@@ -364,7 +383,7 @@ body:hover .mouse-tracker {
   padding: 5px;
   overflow: hidden;
   position: absolute;
-  left: 100%;
+  right: 100%;
   top: -10px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
@@ -431,21 +450,17 @@ body:hover .mouse-tracker {
   background: var(--social-icon-after);
 }
 
+.page-content {
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
 .page-content .section {
   width: 100%;
   min-height: 100vh;
   position: relative;
-}
-
-.page-content {
-  height: 100%;
-}
-
-.show-menu:before {
-  opacity: 1;
-}
-
-.thin-content article.title {
-  display: none;
 }
 /*# sourceMappingURL=pseudos-style.css.map */

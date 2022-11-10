@@ -1,10 +1,11 @@
 import BgText from './BgText'
 import Title from './Title'
-import Project from './Project'
 import '../styles/projects.css'
 import Project2 from './Project2'
 import Button from './Button'
 import { useEffect } from 'react'
+import NewProject from './NewProject'
+
 
 const Projects = ({ deviceWidth }) => {
   const vals = [1, 2, 3, 4, 5, 6]
@@ -22,12 +23,7 @@ const Projects = ({ deviceWidth }) => {
       <Title number="03." left={true}>Projects</Title>
       
       <h2 className="projects-text">Some Things I've Built</h2>
-
-      <Project deviceWidth={deviceWidth} />
-      <Project deviceWidth={deviceWidth} left={true} />
-      <Project deviceWidth={deviceWidth} />
-      <Project deviceWidth={deviceWidth} left={true} />
-      <Project deviceWidth={deviceWidth} />
+      {[true, false, true].map((elem, i) => <NewProject left={elem} number={i} />)}
 
       <div className="other-projects">
         <h2 className="projects-text">Other Noteworthy Projects</h2>

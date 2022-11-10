@@ -2,15 +2,12 @@ import { useEffect, useState } from "react"
 
 let firstMount = true;
 
-const MouseTracker = ({setState}) => {
+const MouseTracker = () => {
     const [style, setStyle] = useState({transform: ''})
     const [content, setContent] = useState('')
 
     useEffect(() => {
         const handleMouseMove2 = (e) => {
-            if(e.clientX <= 0) {
-                setState(prev => ({...prev, isMenuHovered: true, showingFullContent: false}))
-            }
 
 
             const mousetracker = document.querySelector('.mouse-tracker');

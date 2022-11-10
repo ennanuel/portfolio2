@@ -10,11 +10,6 @@ const Resume = ({deviceWidth}) => {
   const [style, setStyle] = useState({transform: ''})
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
-  const [isSmiling, setIsSmiling] = useState(false)
-
-  const handleHover = () => {
-    setIsSmiling(true)
-  }
 
   const handleMouseOut = () => {
     setIsSmiling(false)
@@ -49,29 +44,23 @@ const Resume = ({deviceWidth}) => {
 
         <h2>Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
-        <Button onMouseOver={handleHover} onMouseOut={handleMouseOut} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+        <Button onMouseOut={handleMouseOut} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
 
         </div>
 
         {
           deviceWidth > 770 &&
-          <div className={`face ${isVisible? 'animate__animated animate__fadeIn': 'hide-element'} ${isSmiling? 'show-emotion': ''}`}>
+          <div className={`face ${isVisible? 'animate__animated animate__fadeIn': 'hide-element'}`}>
 
-            <div className="eyes">
+            <div className="eyes flex-center">
               <div className="eye">
                 <div className="pupil" style={style} />
               </div>
 
-              <div className="glass-line" />
-
               <div className="eye">
                 <div className="pupil" style={style} />
               </div>
-              </div>
-
-              <div className="nose"></div>
-
-            <div className='mouth flex-center'></div>
+            </div>
 
           </div>
         }

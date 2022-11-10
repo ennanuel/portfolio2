@@ -12,8 +12,6 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
   z-index: -2;
   opacity: 1;
   -webkit-transition-duration: 2s;
@@ -25,16 +23,7 @@
   position: relative;
   background-color: var(--project-description-color);
   padding: 5em;
-  scale: 1;
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
-  -webkit-animation-name: change-opacity;
-          animation-name: change-opacity;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation: change-opacity 6s infinite alternate;
+          animation: change-opacity 6s infinite alternate;
 }
 /*# sourceMappingURL=background.css.map */

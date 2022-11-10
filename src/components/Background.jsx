@@ -11,8 +11,8 @@ const Background = ({showDynamicBg}) => {
         setState((prev) => ({...prev, height, width, isResized: true}));
     }
 
-    const background = (showBg) => {
-        if(width < height || width < 720 || !showBg ) {
+    const background = () => {
+        if(width < height || width < 720 || !showDynamicBg ) {
             setState( (prev) => ({...prev, content: null}))
             return;
         }
@@ -68,7 +68,7 @@ const Background = ({showDynamicBg}) => {
         if(isResized !== true) return;
         setState(prev => ({...prev, isResized: false}))
 
-        background(showDynamicBg)
+        background()
         
         window.addEventListener('resize', resizeHandler);
 

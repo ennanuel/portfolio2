@@ -2,7 +2,6 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  transition-duration: 0.3s;
 }
 
 #body {
@@ -26,7 +25,8 @@ body, html {
   overflow-x: hidden;
   width: 100vw;
   color: var(--text);
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 
 #root {
   width: 100vw;
@@ -80,6 +80,7 @@ body, html {
   transform: rotate(45deg) scale(0);
   position: absolute;
   z-index: 0;
+  transition: transform 0.3s;
 }
 
 .social:hover {
@@ -152,7 +153,6 @@ body, html {
 p {
   font-size: 16px;
   margin-bottom: 15px;
-  font-weight:lighter;
   color: var(--project-text-coloe);
   line-height: 1.4;
 }
@@ -161,7 +161,6 @@ p {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  min-height: 80vh;
   border-top: 1px solid var(--border);
   margin-bottom: 10%;
 }
@@ -212,10 +211,37 @@ footer {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.1;
-  }
   100% {
-    opacity: 1;
+    opacity: 0.5;
   }
+}
+
+
+.pseudo-page {
+  position: absolute;
+  width: 70%;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  transition: 0.3s;
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: transform 0.3s;
+
+  .fake-pages {
+    width: 100%;
+    min-height: 100vh;
+    border-bottom: 1px solid var(--border);
+    font-size: 6em;
+    font-weight: bold;
+    color: var(--border);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 50px 150px;
+  }
+}
+
+.show-pseudo-page {
+  transform: translateX(0);
 }

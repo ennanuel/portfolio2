@@ -1,6 +1,6 @@
 import Button from "./Button"
 import { BiMenuAltLeft } from 'react-icons/bi'
-import { AiFillCaretLeft } from 'react-icons/ai'
+import { AiFillCaretRight } from 'react-icons/ai'
 import { useRef } from "react"
 import { useIsVisible } from 'react-is-visible'
 import Customize from "./Customize"
@@ -8,7 +8,7 @@ import Customize from "./Customize"
 
 const NewHeader = ({state, setState}) => {
     const nodeRef = useRef()
-    const isVisible = useIsVisible(nodeRef)
+    const isVisible = useIsVisible(nodeRef, {once: true})
 
     const linkItems = [
         {name: 'Introduction', link: '#intro'},
@@ -52,7 +52,7 @@ const NewHeader = ({state, setState}) => {
             {
                 linkItems.map((linkItem, i) => {
                     const handleLinkHover = () => {
-                        location.href = linkItem.link
+                        location.href = linkItem.link + '0'
                     }
 
                     const handleClick = () => {
@@ -74,8 +74,8 @@ const NewHeader = ({state, setState}) => {
 
                 <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
             </ul>
-            <div className='go-back-btn flex-center'><i className="flex-center" onClick={handleClick}><AiFillCaretLeft /></i></div>
-            <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeInLeft': 'hidden'}`} ref={nodeRef} onMouseOver={handleHover} onClick={handleHover}><BiMenuAltLeft /></div>
+            <div className='go-back-btn flex-center'><i className="flex-center" onClick={handleClick}><AiFillCaretRight /></i></div>
+            <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} ref={nodeRef} onClick={handleHover}><BiMenuAltLeft /></div>
             <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
             {
                 linkItems.map((linkItem, i) => {

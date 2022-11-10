@@ -7,7 +7,6 @@
 .background-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    transform: rotate(45deg);
     z-index: -2;
     opacity: 1;
     transition-duration: 2s;
@@ -18,11 +17,6 @@
     position: relative;
     background-color: var(--project-description-color);
     padding: 5em;
-    scale: 1;
-    transition-duration: 3s;
-    animation-name: change-opacity;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+    animation: change-opacity 6s infinite alternate;
 }
   

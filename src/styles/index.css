@@ -2,8 +2,6 @@
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 
 #body {
@@ -34,6 +32,7 @@ body, html {
   width: 100vw;
   color: var(--text);
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body #root, html #root {
@@ -102,6 +101,10 @@ body .social::after, html .social::after {
           transform: rotate(45deg) scale(0);
   position: absolute;
   z-index: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 body .social:hover, html .social:hover {
@@ -174,7 +177,6 @@ body .number, html .number {
 body p, html p {
   font-size: 16px;
   margin-bottom: 15px;
-  font-weight: lighter;
   color: var(--project-text-coloe);
   line-height: 1.4;
 }
@@ -183,7 +185,6 @@ body .section, html .section {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  min-height: 80vh;
   border-top: 1px solid var(--border);
   margin-bottom: 10%;
 }
@@ -236,11 +237,8 @@ body .anim-duration, html .anim-duration {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.1;
-  }
   100% {
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 
@@ -248,11 +246,49 @@ body .anim-duration, html .anim-duration {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.1;
-  }
   100% {
-    opacity: 1;
+    opacity: 0.5;
   }
+}
+
+.pseudo-page {
+  position: absolute;
+  width: 70%;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.pseudo-page .fake-pages {
+  width: 100%;
+  min-height: 100vh;
+  border-bottom: 1px solid var(--border);
+  font-size: 6em;
+  font-weight: bold;
+  color: var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 50px 150px;
+}
+
+.show-pseudo-page {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 /*# sourceMappingURL=index.css.map */

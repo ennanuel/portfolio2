@@ -14,6 +14,7 @@ main .intro-container {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   background-color: var(--light-background);
+  position: relative;
 }
 
 .introduction:hover .about p::before {
@@ -80,5 +81,9 @@ main .intro-container {
   left: 15px;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 /*# sourceMappingURL=introduction.css.map */

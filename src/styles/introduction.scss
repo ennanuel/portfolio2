@@ -13,6 +13,7 @@ main .intro-container {
   min-height: 300px;
   backdrop-filter: blur(3px);
   background-color: var(--light-background);
+  position: relative;
 };
 
 .introduction:hover .about p::before {
@@ -76,4 +77,5 @@ main .intro-container {
   top: 15px;
   left: 15px;
   transform: translate(0, 0);
+  transition: transform 0.3s;
 }

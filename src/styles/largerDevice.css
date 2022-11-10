@@ -1,19 +1,15 @@
 @media (min-width: 771px) {
-  .thin-content .section {
-    width: 80%;
-    float: right;
-    max-height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0 20px;
-    background: transparent;
+  .thin-content {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    pointer-events: none;
   }
-  .thin-content .section:before {
-    opacity: 1;
+  .go-back-btn {
+    right: 120%;
   }
   .current-section:hover {
-    -webkit-transform: translate(10px, -50%) scale(1);
-            transform: translate(10px, -50%) scale(1);
+    -webkit-transform: translate(-10px, -50%) scale(1);
+            transform: translate(-10px, -50%) scale(1);
   }
 }
 /*# sourceMappingURL=largerDevice.css.map */
