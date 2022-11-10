@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
+import DarkVariables from './components/DarkVariables';
+import LightVariables from './components/LightVariables';
 import PseudoPage from './components/PseudoPage';
 
 let isFirstTime = true;
@@ -16,7 +18,8 @@ function App() {
     deviceWidth: window.innerWidth,
     isVisible: false,
     showDynamicBg: true,
-    changeBg: true
+    changeBg: true,
+    lightTheme: false
   })
 
   const handleHover = () => {
@@ -68,30 +71,35 @@ function App() {
   }, [state])
 
   return (
-    <div className="App">
-      <div id="background" className="flex-center">
+    <>
+    {
+      state.lightTheme? <LightVariables /> : <DarkVariables/>
+    }
+      <div className="App">
+        <div id="background" className="flex-center">
 
-        <Background state={state} setMainState={setState} />
+          <Background state={state} setMainState={setState} />
 
+        </div>
+
+        { state.deviceWidth > 770 && <MouseTracker /> }
+
+        <NewHeader state={state} setState={setState} />
+          <PseudoPage shouldShow={state.isMenuHovered} />
+          <main>
+            <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
+              <Introduction setState={setState} />
+              <div id="body">
+                <AboutMe />
+                <Resume deviceWidth={state.deviceWidth} />
+                <Projects deviceWidth={state.deviceWidth} />
+                <GetInTouch />
+              </div>
+            </article>
+          </main>
+        <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
       </div>
-
-      { state.deviceWidth > 770 && <MouseTracker /> }
-
-      <NewHeader state={state} setState={setState} />
-        <PseudoPage shouldShow={state.isMenuHovered} />
-        <main>
-          <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
-            <Introduction setState={setState} />
-            <div id="body">
-              <AboutMe />
-              <Resume deviceWidth={state.deviceWidth} />
-              <Projects deviceWidth={state.deviceWidth} />
-              <GetInTouch />
-            </div>
-          </article>
-        </main>
-      <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
-    </div>
+    </>
   )
 }
 

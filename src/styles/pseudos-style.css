@@ -140,6 +140,10 @@ body:hover .mouse-tracker {
   height: 100%;
   aspect-ratio: 1;
   font-size: 1.5em;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .disable-dynamic-bg .disable-btn i {
@@ -173,6 +177,10 @@ body:hover .mouse-tracker {
   left: 0;
   top: 0;
   z-index: 11;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
 }
 
 .change-color .theme-icon {

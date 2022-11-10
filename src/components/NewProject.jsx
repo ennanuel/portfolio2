@@ -17,9 +17,9 @@ const NewProject = ({left, number}) => {
       </div>
       <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
         <img src={image1} />
-        <div className="link-container flex-center">
-          <i className="flex-center full-border"><FaExternalLinkAlt /></i>
-          <i className="flex-center full-border"><FiGithub /></i>
+        <div className="link link-container flex-center">
+          <i className="link flex-center full-border" link="Go to Project"><FaExternalLinkAlt /></i>
+          <i className="link flex-center full-border" link="Github Repo"><FiGithub /></i>
         </div>
       </div>
       <div className={`new-project-text flex-center ${left? 'start-from-right': 'start-from-left'}`}>

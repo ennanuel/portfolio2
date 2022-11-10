@@ -1,31 +1,19 @@
-import { useState } from 'react'
 import { MdDisabledVisible } from 'react-icons/md'
 import { BsSunFill, BsMoonFill, BsFillEyeFill } from 'react-icons/bs'
 
 const Customize = ({state, setState}) => {
-    const [themeColor, setThemeColor] = useState(false);
 
     const style = {
-        transform: `translateX(${themeColor? '0': '100%'})`
+        transform: `translateX(${state.lightTheme? '0': '100%'})`
     }
 
 
     const alterDynamicBg = () => {
-        setState((prev) => ({...prev, showDynamicBg: !prev.showDynamicBg, changeBg: true}));
-        console.log(state.showDynamicBg)
+        setState((prev) => ({...prev, showDynamicBg: !prev.showDynamicBg, changeBg: true}))
     }
 
     const handleThemeChange = () => {
-        const pageStyle = document.getElementById('theme-style');
-        let hrefLink = './src/styles/lightvariables.css'
-
-        if(themeColor) {
-            hrefLink = './src/styles/variables.css'
-        }
-
-        pageStyle.href = hrefLink
-
-        setThemeColor(prev => !prev)
+        setState((prev) => ({...prev, lightTheme: !prev.lightTheme}))
     }
 
 

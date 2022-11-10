@@ -19,7 +19,12 @@ const MouseTracker = () => {
 
                 offsetX = offsetY = 10 + mousetracker.offsetWidth / 2;
                 text = link? link.match(/[a-z]+/gi).join(' '): ''
-            } else {
+
+                if(e.target.closest('.link-rev')) {
+                    offsetX = -(10 + mousetracker.offsetWidth / 2);
+                }
+            }
+            else {
                 setContent('')
             }
                 

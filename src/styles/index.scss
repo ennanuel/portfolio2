@@ -233,9 +233,10 @@ footer {
     width: 100%;
     min-height: 100vh;
     border-bottom: 1px solid var(--border);
-    font-size: 6em;
+    font-size: 15vh;
     font-weight: bold;
-    color: var(--border);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;

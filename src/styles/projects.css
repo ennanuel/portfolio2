@@ -240,13 +240,21 @@
   position: relative;
 }
 
+.new-project .new-project-links .link-container i svg {
+  position: relative;
+  z-index: 1;
+}
+
 .new-project .new-project-links .link-container i:before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: var(--text);
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
   opacity: 0;
+  z-index: 0;
 }
 
 .new-project .new-project-links .link-container i:hover {
@@ -309,9 +317,14 @@
   position: absolute;
   bottom: 0;
   margin: 15px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .new-project:before {
@@ -359,6 +372,7 @@
 }
 
 .new-project:hover .project-number {
-  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 /*# sourceMappingURL=projects.css.map */

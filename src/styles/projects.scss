@@ -198,13 +198,20 @@
                 padding: 10px;
                 position: relative;
 
+                svg {
+                    position: relative;
+                    z-index: 1;
+                }
+
                 &:before {
                     content: '';
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     background-color: var(--text);
+                    transition: 0.3s opacity;
                     opacity: 0;
+                    z-index: 0;
                 }
 
                 &:hover {
@@ -262,8 +269,9 @@
         position: absolute;
         bottom: 0;
         margin: 15px;
-        opacity: 0;
-        transition: opacity 0.3s;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.3s;
     }
 
     &:before {
@@ -300,7 +308,7 @@
         }
 
         .project-number {
-            opacity: 1;
+            transform: scaleY(1);
         }
     }
 }

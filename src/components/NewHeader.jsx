@@ -44,7 +44,7 @@ const NewHeader = ({state, setState}) => {
     }
     
     return (
-        <header className={`menu link ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
+        <header className={`menu link link-rev ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
             <Customize state={state} setState={setState} />
 
             <ul>
@@ -74,9 +74,9 @@ const NewHeader = ({state, setState}) => {
 
                 <li><Button fontSize="16px">Resume</Button></li>
             </ul>
-            <div className='go-back-btn flex-center'><i className="flex-center" onClick={handleClick}><AiFillCaretRight /></i></div>
+            <div className='go-back-btn flex-center link link-rev' link="exit menu"><i className="flex-center" onClick={handleClick}><AiFillCaretRight /></i></div>
             <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} ref={nodeRef} onClick={handleHover}><BiMenuAltLeft /></div>
-            <div className={`current-section link ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
+            <div className={`current-section link link-rev ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
             {
                 linkItems.map((linkItem, i) => {
                     const handleClick = () => {
@@ -85,7 +85,7 @@ const NewHeader = ({state, setState}) => {
                         setState(prev => ({...prev, link: linkItem.link}))
                     }
 
-                    return <div key={i} className={`section-circle link ${state.link === linkItem.link? 'active-section-circle': ''} ${state.link.includes(linkItem.link)? 'show-circle-content': ''}`} onClick={handleClick} link={linkItem.link} data-content={linkItem.name} />
+                    return <div key={i} className={`section-circle link link-rev ${state.link === linkItem.link? 'active-section-circle': ''} ${state.link.includes(linkItem.link)? 'show-circle-content': ''}`} onClick={handleClick} link={linkItem.link} data-content={linkItem.name} />
                 })
             }
             </div>
