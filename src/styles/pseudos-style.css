@@ -210,6 +210,13 @@ body:hover .mouse-tracker {
   font-size: 2.5em;
   cursor: pointer;
   position: relative;
+  text-align: right;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .menu-item p:hover {

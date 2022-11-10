@@ -48,6 +48,10 @@
   position: absolute;
   top: 15px;
   left: 15px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
