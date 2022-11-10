@@ -285,7 +285,7 @@ body .anim-duration, html .anim-duration {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 50px 150px;
+  padding: 50px;
 }
 
 .show-pseudo-page {
