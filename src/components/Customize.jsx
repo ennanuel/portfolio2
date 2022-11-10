@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { MdDisabledVisible } from 'react-icons/md'
 import { BsSunFill, BsMoonFill, BsFillEyeFill } from 'react-icons/bs'
 
-const Customize = ({dynamicBg, setState}) => {
+const Customize = ({state, setState}) => {
     const [themeColor, setThemeColor] = useState(false);
 
     const style = {
@@ -11,7 +11,8 @@ const Customize = ({dynamicBg, setState}) => {
 
 
     const alterDynamicBg = () => {
-        setState(prev => ({...prev, dynamicBg: !dynamicBg}));
+        setState((prev) => ({...prev, showDynamicBg: !prev.showDynamicBg, changeBg: true}));
+        console.log(state.showDynamicBg)
     }
 
     const handleThemeChange = () => {
@@ -36,8 +37,8 @@ const Customize = ({dynamicBg, setState}) => {
             <div className="light-icon theme-icon flex-center"><i><BsSunFill /></i></div>
         </div>
 
-        <div className="disable-dynamic-bg link" link={dynamicBg ? 'disable dynamic background': 'enable dynamic background'}>
-            <div className="disable-btn flex-center" onClick={alterDynamicBg}><i>{dynamicBg ? <MdDisabledVisible /> : <BsFillEyeFill />}</i></div>
+        <div className="disable-dynamic-bg link" link={state.showDynamicBg ? 'disable dynamic background': 'enable dynamic background'}>
+            <div className="disable-btn flex-center" onClick={alterDynamicBg}><i>{state.showDynamicBg ? <MdDisabledVisible /> : <BsFillEyeFill />}</i></div>
         </div>
     </>
   )

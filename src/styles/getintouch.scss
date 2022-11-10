@@ -24,3 +24,73 @@
     margin-bottom: 0 !important;
     padding-bottom: 15%;
 }
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    padding: 1px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+
+    .form-content {
+        background-color: var(--project-description-color);
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    label {
+        padding-left: 10px;
+        color: var(--border);
+        font-size: 0.8em;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .contact-input {
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        margin: 5px auto 40px;
+        padding-left: 20px;
+        background-color: var(--box-shadow);
+        color: var(--text);
+        border: none;
+        border-top: 1px solid var(--border);
+
+        &:focus {
+            border: 1px solid var(--border);
+        }
+    }
+
+    .textarea {
+        height: 100px;
+        padding: 20px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 150%;
+        aspect-ratio: 1;
+        background: linear-gradient(var(--highlight-text), transparent 60%);
+        animation: rotate 5s forwards ease infinite;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

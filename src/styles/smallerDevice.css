@@ -75,6 +75,19 @@
     -webkit-transform: scale(1);
             transform: scale(1);
     width: 100%;
+    top: 0;
+  }
+  html .new-project .new-project-links, body .new-project .new-project-links {
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  html .new-project .new-project-links .link-container, body .new-project .new-project-links .link-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 20px;
+    gap: 10px;
   }
   html .new-project img, body .new-project img {
     opacity: 1 !important;

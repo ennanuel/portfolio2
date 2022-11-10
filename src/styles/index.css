@@ -266,6 +266,7 @@ body .anim-duration, html .anim-duration {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
 }
 
 .pseudo-page .fake-pages {
@@ -290,5 +291,6 @@ body .anim-duration, html .anim-duration {
 .show-pseudo-page {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */

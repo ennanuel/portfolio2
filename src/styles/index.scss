@@ -227,6 +227,7 @@ footer {
   transform: translateX(-100%);
   pointer-events: none;
   transition: transform 0.3s;
+  opacity: 0;
 
   .fake-pages {
     width: 100%;
@@ -244,4 +245,5 @@ footer {
 
 .show-pseudo-page {
   transform: translateX(0);
+  opacity: 1;
 }

@@ -15,7 +15,8 @@ function App() {
     scroll: true,
     deviceWidth: window.innerWidth,
     isVisible: false,
-    dynamicBg: true
+    showDynamicBg: true,
+    changeBg: true
   })
 
   const handleHover = () => {
@@ -70,7 +71,7 @@ function App() {
     <div className="App">
       <div id="background" className="flex-center">
 
-        <Background showDynamicBg={state.dynamicBg} />
+        <Background state={state} setMainState={setState} />
 
       </div>
 
@@ -89,7 +90,7 @@ function App() {
             </div>
           </article>
         </main>
-      <Footer isVisible={state.isVisible} />
+      <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
     </div>
   )
 }

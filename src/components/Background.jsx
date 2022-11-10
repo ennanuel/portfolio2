@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import '../styles/background.css'
 
 let isFirstTime = true;
-const Background = ({showDynamicBg}) => {
+const Background = ({state, setMainState}) => {
     const [{width, height, isResized, content, visible}, setState] = useState({});
     
     const resize = (height, width) => {
@@ -12,7 +12,7 @@ const Background = ({showDynamicBg}) => {
     }
 
     const background = () => {
-        if(width < height || width < 720 || !showDynamicBg ) {
+        if(width < height || width < 720 || !state.showDynamicBg ) {
             setState( (prev) => ({...prev, content: null}))
             return;
         }
@@ -49,7 +49,7 @@ const Background = ({showDynamicBg}) => {
                 box.push(<div key={uuidv4()} className="box-container" style={boxStyle}>{divs}</div>);
             }
     
-            setState( (prev) => ({ ...prev, content: box}));
+            setState( (prev) => ({ ...prev, content: box})  )
     
     };
             
@@ -65,8 +65,9 @@ const Background = ({showDynamicBg}) => {
             isFirstTime = false;
         }
 
-        if(isResized !== true) return;
+        if(isResized !== true && !state.changeBg) return;
         setState(prev => ({...prev, isResized: false}))
+        setMainState(prev => ({...prev, changeBg: false}))
 
         background()
         
@@ -89,7 +90,7 @@ const Background = ({showDynamicBg}) => {
             clearInterval(changeBackground)
         };
 
-    }, [height, width, showDynamicBg])
+    }, [height, width, state])
 
 
     return (

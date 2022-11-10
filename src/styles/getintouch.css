@@ -29,4 +29,90 @@
   margin-bottom: 0 !important;
   padding-bottom: 15%;
 }
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  padding: 30px;
+  padding: 1px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.contact-form .form-content {
+  background-color: var(--project-description-color);
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form label {
+  padding-left: 10px;
+  color: var(--border);
+  font-size: 0.8em;
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+.contact-form .contact-input {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin: 5px auto 40px;
+  padding-left: 20px;
+  background-color: var(--box-shadow);
+  color: var(--text);
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.contact-form .contact-input:focus {
+  border: 1px solid var(--border);
+}
+
+.contact-form .textarea {
+  height: 100px;
+  padding: 20px;
+}
+
+.contact-form:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 150%;
+  aspect-ratio: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--highlight-text)), color-stop(60%, transparent));
+  background: linear-gradient(var(--highlight-text), transparent 60%);
+  -webkit-animation: rotate 5s forwards ease infinite;
+          animation: rotate 5s forwards ease infinite;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 /*# sourceMappingURL=getintouch.css.map */

@@ -11,10 +11,6 @@ const Resume = ({deviceWidth}) => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
 
-  const handleMouseOut = () => {
-    setIsSmiling(false)
-  }
-
   useEffect(() => {
 
    const handleMouseMove0 = (e) => {
@@ -44,7 +40,7 @@ const Resume = ({deviceWidth}) => {
 
         <h2>Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
-        <Button onMouseOut={handleMouseOut} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+        <Button width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
 
         </div>
 

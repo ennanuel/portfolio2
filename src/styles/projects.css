@@ -141,6 +141,12 @@
   margin: 20px auto 100px;
   position: relative;
   background: var(--project-description-color);
+  -webkit-box-shadow: 0 0 10px var(--box-shadow);
+          box-shadow: 0 0 10px var(--box-shadow);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   overflow: hidden;
 }
 
@@ -197,7 +203,6 @@
 .new-project .new-project-title h4 {
   font-size: 0.8em;
   position: relative;
-  top: 10px;
 }
 
 .new-project .new-project-links {
@@ -327,6 +332,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 3em;
+}
+
+.new-project:hover {
+  -webkit-box-shadow: 0 0 30px var(--box-shadow);
+          box-shadow: 0 0 30px var(--box-shadow);
 }
 
 .new-project:hover .new-project-text {

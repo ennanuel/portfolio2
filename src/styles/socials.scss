@@ -8,6 +8,9 @@
     width: 50px;
     color: var(--border);
     font-size: 1.1em;
+    transform: translateY(0);
+    transition: transform 0.3s;
+
 
     .social {
       margin-bottom: 10px;
@@ -21,4 +24,8 @@
         top: 3px;
       }
     }
+  }
+
+  .hide-socials {
+    transform: translateY(100%);
   }

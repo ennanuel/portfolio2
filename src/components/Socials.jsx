@@ -2,13 +2,13 @@ import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
 import '../styles/socials.css'
 
-const Socials = ({isVisible}) => {
+const Socials = ({isVisible, isMenuHovered}) => {
 
   const socialLinks = [{link: 'twitter', element: <FiTwitter />}, {link: 'email', element: <MdOutlineAlternateEmail />}, {link: 'github', element: <FiGithub />}, {link: 'linkedIn', element: <FiLinkedin />}]
 
 
   return (
-    <div className={`socials link anim-duration delay ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`}>
+    <div className={`socials link anim-duration delay ${isVisible? 'animate__animated animate__fadeIn': 'hidden'} ${isMenuHovered? 'hide-socials': ''}`}>
     <div className="line"></div>
       {
         socialLinks.map((socialLink, i) => 

@@ -11,7 +11,7 @@ const NewHeader = ({state, setState}) => {
     const isVisible = useIsVisible(nodeRef, {once: true})
 
     const linkItems = [
-        {name: 'Introduction', link: '#intro'},
+        {name: 'Intro', link: '#intro'},
         {name: 'About Me', link: '#about'},
         {name: 'Resume', link: '#resume'},
         {name: 'Projects', link: '#projects'},
@@ -44,8 +44,8 @@ const NewHeader = ({state, setState}) => {
     }
     
     return (
-        <header className={`menu link for-other ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
-            <Customize dynamicBg={state.dynamicBg} setState={setState} />
+        <header className={`menu link ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
+            <Customize state={state} setState={setState} />
 
             <ul>
 
@@ -72,7 +72,7 @@ const NewHeader = ({state, setState}) => {
                 })
             }
 
-                <li><Button width="100px" height="40px" fontSize="16px">Resume</Button></li>
+                <li><Button fontSize="16px">Resume</Button></li>
             </ul>
             <div className='go-back-btn flex-center'><i className="flex-center" onClick={handleClick}><AiFillCaretRight /></i></div>
             <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} ref={nodeRef} onClick={handleHover}><BiMenuAltLeft /></div>

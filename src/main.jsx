@@ -9,5 +9,7 @@ import './styles/smallerDevice.css'
 import './styles/largerDevice.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App />
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 )

@@ -87,15 +87,28 @@ body:hover .mouse-tracker {
 .menu ul {
   list-style: none;
   padding: 0;
-}
-
-.menu ul li {
-  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin: 0;
 }
 
 .menu ul .btn {
-  width: 80% !important;
-  height: 50px !important;
+  width: 100px !important;
+  height: 40px;
 }
 
 .menu:before {
@@ -237,6 +250,8 @@ body:hover .mouse-tracker {
   left: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
