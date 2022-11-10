@@ -200,7 +200,8 @@ body:hover .mouse-tracker {
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: scaleX(0)
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
 .menu-item .active {
