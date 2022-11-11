@@ -42,7 +42,7 @@
 }
 
 .contact-form .form-content {
-  background-color: var(--project-description-color);
+  background-color: var(--contact-form-bg);
   padding: 30px;
   position: relative;
   z-index: 1;
