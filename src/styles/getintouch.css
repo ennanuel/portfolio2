@@ -51,7 +51,6 @@
 .contact-form label {
   padding-left: 10px;
   color: var(--border);
-  font-size: 0.8em;
 }
 
 .contact-form .btn {
@@ -62,7 +61,7 @@
   display: block;
   width: 100%;
   min-height: 50px;
-  margin: 5px auto 40px;
+  margin: 5px auto 25px;
   padding-left: 20px;
   background-color: var(--box-shadow);
   color: var(--text);

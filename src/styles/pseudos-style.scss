@@ -134,8 +134,9 @@ body:hover .mouse-tracker {
         position: absolute;
         height: 98%;
         aspect-ratio: 1;
-        left: 0;
+        scale: 1.05;
         top: 0;
+        left: 0;
         z-index: 11;
         transition: 0.3s transform;
     }
