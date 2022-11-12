@@ -8,7 +8,7 @@ import ContactForm from './ContactForm'
 
 const GetInTouch = () => {
   const nodeRef = useRef()
-  const isVisible = useIsVisible(nodeRef)
+  const isVisible = useIsVisible(nodeRef, {once: true})
   const [showForm, setShowForm] = useState(false);
 
   const handleClick = () => {
