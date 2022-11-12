@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), vitePluginRequire({
     // @fileRegex RegExp
 		// optional：default file processing rules are as follows
-	  // fileRegex:/(.jsx?|.tsx?|.vue)$/,
+	  fileRegex:/(.jsx?|.tsx?|.jpg?|.png?|.vue)$/,
   })],
   server: {
     proxy: {

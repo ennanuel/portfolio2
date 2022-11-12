@@ -14,7 +14,7 @@ const NewProject = ({left, number, content}) => {
         <h3>{content.name}</h3>
       </div>
       <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-        <img src={`../assets/images/${content.image}`} alt={content.description} />
+        <img src={require('../assets/images/5f974615c915040f6f578f80_5aZKFLu5gpGWkCkFgG2CE_wcKQd6eS7VffrsOd42B025nPmyLVWM_fqRYZD7ROuMKf75Fp2da-mf3usrlPsUgqjfaFfN05JZh_75PTfaSLN76RT4QubsDiHypeE5t9omBN2QMlBo.png')} alt="Project Image" />
         <div className="link link-container flex-center">
           <a className="link flex-center full-border" link="Go to Project" href={content.mainLink}><FaExternalLinkAlt /></a>
           <a className="link flex-center full-border" link="Github Repo" href={content.gitLink}><FiGithub /></a>
