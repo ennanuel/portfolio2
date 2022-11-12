@@ -6,7 +6,6 @@ import { FiGithub } from 'react-icons/fi'
 const NewProject = ({left, number, content}) => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
-  const link = '../assets/images/' + content.image
 
   return (
     <div className={`new-project left-new-project ${isVisible? left? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight': 'hidden'}`} ref={nodeRef}>
@@ -15,7 +14,7 @@ const NewProject = ({left, number, content}) => {
         <h3>{content.name}</h3>
       </div>
       <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-        <img src={link} alt={content.description} />
+        <img src={`../assets/images/${content.image}`} alt={content.description} />
         <div className="link link-container flex-center">
           <a className="link flex-center full-border" link="Go to Project" href={content.mainLink}><FaExternalLinkAlt /></a>
           <a className="link flex-center full-border" link="Github Repo" href={content.gitLink}><FiGithub /></a>
