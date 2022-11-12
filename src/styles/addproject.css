@@ -1,0 +1,99 @@
+.add-project-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "imgPreview imgPreview" "projName type" "gitLink mainLink" "stack stack" "description image" "submit submit";
+  grid-gap: 20px;
+}
+
+.add-project-form img {
+  grid-area: imgPreveiw;
+}
+
+.add-project-form #name-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: projName;
+}
+
+.add-project-form #type-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: type;
+}
+
+.add-project-form #gitLink-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: gitLink;
+}
+
+.add-project-form #mainLink-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: mainLink;
+}
+
+.add-project-form #stack-container {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: stack;
+}
+
+.add-project-form #description-container {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: description;
+  -ms-grid-row: 100;
+  grid-row: 100px;
+}
+
+.add-project-form #image-container {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: image;
+  height: 80px;
+}
+
+.add-project-form .project-input {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--project-description-color);
+  border: none;
+  color: var(--text);
+}
+
+.add-project-form img {
+  width: 100%;
+}
+
+.add-project-form label {
+  margin: 20px;
+  color: var(--border);
+}
+
+.add-project-form textarea {
+  height: 100px;
+}
+
+.add-project-form input[type="submit"] {
+  width: 70%;
+  height: 50px;
+  margin: auto;
+  color: gold;
+  background-color: black;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: submit;
+}
+
+.add-project-form input[type="submit"]:focus {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=addproject.css.map */

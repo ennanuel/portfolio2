@@ -18,26 +18,26 @@ const NewHeader = ({state, setState}) => {
         {name: 'Contact', link: '#contact'}
     ]
 
-    const handleHover = () => {
+    const handleMenuClick = () => {
         setState(prev => ({
             ...prev, isMenuHovered: true, showingFullContent: false
         }))
     }
     
-    const handleClick = () => {
+    const exitMenu = () => {
         setState(prev => ({
             ...prev, isMenuHovered: false, showingFullContent: true
         }))
     }
     
 
-    const handleMouseOver = () => {
+    const stopScrollEffect = () => {
         if(state.deviceWidth < 770) return;
         
         setState(prev => ({...prev, scroll: false}))
     }
 
-    const handleMouseOut = () => {
+    const resumeScrollEffect = () => {
         if(state.deviceWidth < 770) return;
 
         setState(prev => ({...prev, scroll: true}))
@@ -52,12 +52,12 @@ const NewHeader = ({state, setState}) => {
             {
                 linkItems.map((linkItem, i) => {
                     const handleLinkHover = () => {
-                        location.href = linkItem.link + '0'
+                        setState(prev => ({...prev, currentPage: i}))
                     }
 
                     const handleClick = () => {
                         location.href = linkItem.link
-                        setState(prev => ({...prev, link: linkItem.link, isMenuHovered: false}))
+                        setState(prev => ({...prev, link: linkItem.link, isMenuHovered: false, currentPage: i}))
                     }
 
                     return <li key={i} className="menu-item">
@@ -74,9 +74,33 @@ const NewHeader = ({state, setState}) => {
 
                 <li><Button fontSize="16px">Resume</Button></li>
             </ul>
-            <div className='go-back-btn flex-center link link-rev' link="exit menu"><i className="flex-center" onClick={handleClick}><AiFillCaretRight /></i></div>
-            <div className={`menu-btn flex-center anim-duration delay ${state.showMenuBtn? '': 'hide'} ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`} ref={nodeRef} onClick={handleHover}><BiMenuAltLeft /></div>
-            <div className={`current-section link link-rev ${state.showMenuBtn? 'hide': ''}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} link="Navigate">
+
+            <div 
+                className='go-back-btn flex-center link link-rev' 
+                link="exit menu"
+            >
+                <i className="flex-center" onClick={exitMenu}><AiFillCaretRight /></i>
+            </div>
+
+            <div 
+                className={
+                `menu-btn flex-center anim-duration delay 
+                ${state.showMenuBtn? '': 'hide'} 
+                ${isVisible? 'animate__animated animate__fadeIn': 'hidden'}`
+                } 
+                ref={nodeRef} 
+                onClick={handleMenuClick}
+            >
+                    <BiMenuAltLeft />
+            </div>
+
+            <div className={
+                `current-section link link-rev 
+                ${state.showMenuBtn? 'hide': ''}`
+                } onMouseOver={stopScrollEffect} 
+                onMouseOut={resumeScrollEffect} 
+                link="Navigate"
+            >
             {
                 linkItems.map((linkItem, i) => {
                     const handleClick = () => {

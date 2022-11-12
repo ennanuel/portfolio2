@@ -16,6 +16,7 @@ const LightVariables = () => {
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(0, 247, 255, 0.3);
     --project-description-color: rgb(0, 61, 66);
+    --contact-form-bg: rbg(0, 61, 66);
     --project-link-color: rgba(0, 217, 255, 0.5);
     --project-title-color: rgb(0, 119, 128);
     --project-text-color: rgba(0, 238, 255, 0.7);

@@ -1,0 +1,81 @@
+.add-project-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+        "imgPreview imgPreview"
+        "projName type"
+        "gitLink mainLink"
+        "stack stack"
+        "description image"
+        "submit submit";
+    grid-gap: 20px;
+
+
+    img {
+        grid-area: imgPreveiw;
+    }
+
+    #name-container {
+        grid-area: projName;
+    }
+    #type-container {
+        grid-area: type;
+    }
+    #gitLink-container {
+        grid-area: gitLink;
+    }
+    #mainLink-container {
+        grid-area: mainLink;
+    }
+    #stack-container {
+        grid-area: stack;
+    }
+    #description-container {
+        grid-area: description;
+        grid-row: 100px;
+    }
+    #image-container {
+        grid-area: image;
+        height: 80px;
+    }
+
+
+
+    .project-input {
+        width: 100%;
+        display: block;
+        padding: 10px 20px;
+        background-color: var(--project-description-color);
+        border: none;
+        color: var(--text)
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    label {
+        margin: 20px;
+        color: var(--border);
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    input[type="submit"] {
+        width: 70%;
+        height: 50px;
+        margin: auto;
+        color: gold;
+        background-color: black;
+        grid-area: submit;
+
+        &:focus {
+            background-color: white;
+            color: black;
+        }
+    }
+}

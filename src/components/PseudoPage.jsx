@@ -1,9 +1,6 @@
-import image1 from '../assets/images/pexels-lukas-296115.jpg'
-import image2 from '../assets/images/44068430.jpg'
-
-const PseudoPage = ({shouldShow}) => {
+const PseudoPage = ({shouldShow, y}) => {
   return (
-    <div className={`pseudo-page ${shouldShow && 'show-pseudo-page'}`}>
+    <div className={`pseudo-page ${shouldShow && 'show-pseudo-page'}`} style={shouldShow ? {transform: `translate(0, -${y * 100}vh)`}: {}}>
 
         <section className="fake-pages" id="intro0">
             Introduction

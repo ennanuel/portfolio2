@@ -16,7 +16,7 @@ const DarkVariables = () => {
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(255, 255, 0, 0.3);
     --project-description-color: rgb(66, 59, 0);
-    --contact-form-bg: rbg(30, 30, 0);
+    --contact-form-bg: rgb(30, 30, 0);
     --project-link-color: rgba(255, 242, 0, 0.5);
     --project-title-color: rgb(128, 107, 0);
     --project-text-color: rgba(255, 221, 0, 0.7);

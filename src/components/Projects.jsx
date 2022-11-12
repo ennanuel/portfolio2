@@ -6,9 +6,8 @@ import Button from './Button'
 import { useEffect } from 'react'
 import NewProject from './NewProject'
 
-
-const Projects = ({ deviceWidth }) => {
-  const vals = [1, 2, 3, 4, 5, 6]
+let left = true;
+const Projects = ({ projects }) => {
 
   useEffect(() => {
     const otherProjects = document.querySelectorAll('.other-project');
@@ -23,14 +22,27 @@ const Projects = ({ deviceWidth }) => {
       <Title number="03." left={true}>Projects</Title>
       
       <h2 className="projects-text">Some Things I've Built</h2>
-      {[true, false, true].map((elem, i) => <NewProject left={elem} number={i} />)}
+      {
+        projects.map((project, i) => {
+          if(project.type !== 'main') return;
+
+          left = !left
+          return <NewProject key={i} content={project} left={left} number={i} />
+        })
+      }
 
       <div className="other-projects">
         <h2 className="projects-text">Other Noteworthy Projects</h2>
         <p className="archive-link">view the archive</p>
 
         <div className="other-projects-container">
-          {vals.map( (i) => <Project2 key={i}/>)}
+          {
+            projects.map( (project, i) => {
+              if(project.type !== 'secondary') return;
+              
+              return <Project2 key={i} content={project} />
+            })
+          }
         </div>
         <Button width="150px">Show More</Button>
       </div>

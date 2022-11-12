@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
+import AddProject from './components/AddProject';
 import DarkVariables from './components/DarkVariables';
 import LightVariables from './components/LightVariables';
 import PseudoPage from './components/PseudoPage';
@@ -19,18 +20,10 @@ function App() {
     isVisible: false,
     showDynamicBg: true,
     changeBg: true,
-    lightTheme: false
+    lightTheme: false,
+    currentPage: 0,
+    projects: []
   })
-
-  const handleHover = () => {
-    if(state.showingFullContent) return;
-
-    setState(prev => ({...prev, isMenuHovered: false, showingFullContent: true}))
-    
-    setTimeout(() => {
-      location.href = state.link;
-    }, 300);
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,16 +44,40 @@ function App() {
       setState(prev => ({...prev, deviceWidth: window.innerWidth}))
     }
 
+    const fetchRequest = async () => {
+      const apiUrl = 'https://portfolio-projects-14ccd-default-rtdb.firebaseio.com/projects.json';
+
+      const res = await fetch(apiUrl)
+      const data = await res.json()
+      setState(prev => ({...prev, projects: data? data: []}))
+    }
+
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
 
     if(isFirstTime) {
       isFirstTime = false
+      fetchRequest();
 
       const elements = document.querySelectorAll('.delay');
 
       [...elements].forEach((element, i) => {
         element.style.animationDelay = (i/10).toFixed(1) + 's'
+      })
+
+      const observe = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
+            if(!entry.isIntersecting) return;
+            const link = '#' + entry.target.id
+            const currentPage = entry.target.getAttribute('i')
+            setState(prev => ({...prev, link, currentPage}))
+        })
+      })
+
+      const sections = document.querySelectorAll('.section')
+      sections.forEach((section, i) => {
+        section.setAttribute('i', i)
+        observe.observe(section)
       })
     }
 
@@ -85,15 +102,16 @@ function App() {
         { state.deviceWidth > 770 && <MouseTracker /> }
 
         <NewHeader state={state} setState={setState} />
-          <PseudoPage shouldShow={state.isMenuHovered} />
+          <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
           <main>
-            <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`} onMouseOver={handleHover}>
+            <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
               <Introduction setState={setState} />
               <div id="body">
                 <AboutMe />
                 <Resume deviceWidth={state.deviceWidth} />
-                <Projects deviceWidth={state.deviceWidth} />
+                <Projects projects={state.projects} />
                 <GetInTouch />
+                <AddProject content={state.projects} />
               </div>
             </article>
           </main>

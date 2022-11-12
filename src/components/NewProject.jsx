@@ -1,42 +1,37 @@
-import image1 from '../assets/images/pexels-lukas-296115.jpg'
 import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 
-const NewProject = ({left, number}) => {
+const NewProject = ({left, number, content}) => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
-
+  const link = '../assets/images/' + content.image
 
   return (
     <div className={`new-project left-new-project ${isVisible? left? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight': 'hidden'}`} ref={nodeRef}>
       <div className={`new-project-title flex-center ${left? 'start-from-left': 'start-from-right'}`}>
         <h4>Featured Project</h4>
-        <h3>New Project</h3>
+        <h3>{content.name}</h3>
       </div>
       <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-        <img src={image1} />
+        <img src={link} alt={content.description} />
         <div className="link link-container flex-center">
-          <i className="link flex-center full-border" link="Go to Project"><FaExternalLinkAlt /></i>
-          <i className="link flex-center full-border" link="Github Repo"><FiGithub /></i>
+          <a className="link flex-center full-border" link="Go to Project" href={content.mainLink}><FaExternalLinkAlt /></a>
+          <a className="link flex-center full-border" link="Github Repo" href={content.gitLink}><FiGithub /></a>
         </div>
       </div>
       <div className={`new-project-text flex-center ${left? 'start-from-right': 'start-from-left'}`}>
-        <p>
-        a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...a lot of text for this project...
-        </p>
+        <p>{content.description}</p>
         <div className={`bb-10 tech-used`}>
-            <div className={`tech`}>PHP</div>
-            <div className={`tech`}>MySQL</div>
-            <div className={`tech`}>JavaScript</div>
-            <div className={`tech`}>ReactJS</div>
-            <div className={`tech`}>SASS</div>
+          {
+            content.stack.map(stack => <div className="tech">{stack}</div>)
+          }
         </div>
       </div>
-      <img src={image1} className="new-project-bg-img" />
+      <img src={content.image} className="new-project-bg-img" />
       <div className={`project-number full-border flex-center ${left? 'start-from-right': 'start-from-left'}`}>
-        {number < 10 ? '0' + number + '.' : number + '.'}
+        {number < 10 ? '0' + (number + 1) + '.' : (number + 1) + '.'}
       </div>
     </div>
   )
