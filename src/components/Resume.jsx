@@ -5,6 +5,7 @@ import '../styles/resume.css'
 import { useEffect, useState, useRef } from "react"
 import { useIsVisible } from 'react-is-visible'
 import { BsDownload } from 'react-icons/bs'
+import Pdf from '../cv/CV.pdf'
 
 const Resume = ({deviceWidth}) => {
   const [style, setStyle] = useState({transform: ''})
@@ -12,7 +13,7 @@ const Resume = ({deviceWidth}) => {
   const isVisible = useIsVisible(nodeRef, {once: true})
 
   const downloadCV = () => {
-    location.href = '../cv/CV.pdf'
+    window.open(Pdf)
   }
 
   useEffect(() => {

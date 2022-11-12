@@ -65,17 +65,32 @@
         height: 100px;
     }
 
-    input[type="submit"] {
+    button {
         width: 70%;
         height: 50px;
         margin: auto;
-        color: gold;
+        color: white;
         background-color: black;
         grid-area: submit;
 
-        &:focus {
-            background-color: white;
-            color: black;
+        span {
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 5px solid black;
+            border-top: 5px solid white;
+            animation: rotate 0.5s infinite forwards ease-out;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(1turn)
+            }
+            to {
+                transform: rotate(0deg)
+            }
         }
     }
 }

@@ -14,12 +14,12 @@ const Project2 = ({content}) => {
       <div className="project-top">
         <div className="file-img"><i><FaRegLightbulb /></i></div>
         <div className="links">
-            <div className="link flex-center" link="Github Repo"><a href={content.gitLink}><FiGithub /></a></div>
-            <div className="link flex-center" link="Main Link"><a href={content.mainLink}><FaExternalLinkAlt /></a></div>
+            <div className="link flex-center" link="Github Repo"><a target="_blank" href={content.gitLink}><FiGithub /></a></div>
+            <div className="link flex-center" link="Main Link"><a target="_blank" href={content.mainLink}><FaExternalLinkAlt /></a></div>
         </div>
       </div>
       <div className='project-info'>
-        <h2>{content.projName}</h2>
+        <h2>{content.name}</h2>
         <p className="other-project-description ">{content.description}</p>
       </div>
       <div className='tech-used'>

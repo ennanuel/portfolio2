@@ -6,7 +6,7 @@ import Button from './Button'
 import { useEffect } from 'react'
 import NewProject from './NewProject'
 
-let left = true;
+let left = false;
 const Projects = ({ projects }) => {
 
   useEffect(() => {

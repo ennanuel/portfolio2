@@ -111,7 +111,7 @@ function App() {
                 <Resume deviceWidth={state.deviceWidth} />
                 <Projects projects={state.projects} />
                 <GetInTouch />
-                <AddProject content={state.projects} />
+                {/* <AddProject /> */}
               </div>
             </article>
           </main>

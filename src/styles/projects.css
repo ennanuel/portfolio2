@@ -4,12 +4,16 @@
   display: flex;
   padding-top: 10px;
   gap: 20px;
-  color: var(--project-link-color);
 }
 
 .links .link {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: var(--project-link-color);
+}
+
+.links .link a {
+  color: inherit;
 }
 
 .links .link:hover {
@@ -186,7 +190,7 @@
   transition: transform 0.3s, -webkit-transform 0.3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 20px 30px;
+  padding-top: 20px;
 }
 
 .new-project .new-project-title h3, .new-project .new-project-title h4 {
@@ -198,6 +202,8 @@
 
 .new-project .new-project-title h3 {
   font-size: 2em;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .new-project .new-project-title h4 {
@@ -233,19 +239,20 @@
   padding: 0;
 }
 
-.new-project .new-project-links .link-container i {
+.new-project .new-project-links .link-container a {
   height: 40px;
   width: 40px;
   padding: 10px;
   position: relative;
+  color: var(--text);
 }
 
-.new-project .new-project-links .link-container i svg {
+.new-project .new-project-links .link-container a svg {
   position: relative;
   z-index: 1;
 }
 
-.new-project .new-project-links .link-container i:before {
+.new-project .new-project-links .link-container a:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -257,11 +264,11 @@
   z-index: 0;
 }
 
-.new-project .new-project-links .link-container i:hover {
+.new-project .new-project-links .link-container a:hover {
   color: var(--main-background) !important;
 }
 
-.new-project .new-project-links .link-container i:hover:before {
+.new-project .new-project-links .link-container a:hover:before {
   opacity: 1;
 }
 
@@ -315,7 +322,7 @@
   aspect-ratio: 1;
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  bottom: 0;
+  top: 0;
   margin: 15px;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -325,28 +332,6 @@
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.new-project:before {
-  content: 'New Project';
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--project-img-color);
-  color: var(--project-description-color);
-  font-weight: bold;
-  font-size: 3em;
 }
 
 .new-project:hover {
@@ -376,5 +361,27 @@
 .new-project:hover .project-number {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+[outertitle]:before {
+  content: attr(outertitle);
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--project-img-color);
+  color: var(--project-description-color);
+  font-weight: bold;
+  font-size: 3em;
 }
 /*# sourceMappingURL=projects.css.map */

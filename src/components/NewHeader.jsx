@@ -4,11 +4,17 @@ import { AiFillCaretRight } from 'react-icons/ai'
 import { useRef } from "react"
 import { useIsVisible } from 'react-is-visible'
 import Customize from "./Customize"
+import Pdf from '../cv/CV.pdf'
 
 
 const NewHeader = ({state, setState}) => {
     const nodeRef = useRef()
     const isVisible = useIsVisible(nodeRef, {once: true})
+
+    const downloadCV = () => {
+        window.open(Pdf)
+        exitMenu()
+    }
 
     const linkItems = [
         {name: 'Intro', link: '#intro'},
@@ -55,9 +61,9 @@ const NewHeader = ({state, setState}) => {
                         setState(prev => ({...prev, currentPage: i}))
                     }
 
-                    const handleClick = () => {
+                    const handleClick = (i) => {
                         location.href = linkItem.link
-                        setState(prev => ({...prev, link: linkItem.link, isMenuHovered: false, currentPage: i}))
+                        setState(prev => ({...prev, link: linkItem.link, isMenuHovered: false, showingFullContent: true, currentPage: i}))
                     }
 
                     return <li key={i} className="menu-item">
@@ -72,7 +78,7 @@ const NewHeader = ({state, setState}) => {
                 })
             }
 
-                <li><Button fontSize="16px">Resume</Button></li>
+                <li><Button fontSize="16px" onClick={downloadCV}>Resume</Button></li>
             </ul>
 
             <div 

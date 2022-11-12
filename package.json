@@ -26,8 +26,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-is-visible": "^1.2.0",
-    "uuid": "^9.0.0",
-    "vite-plugin-require": "^1.0.7"
+    "react-router-dom": "^6.4.3",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

@@ -2,10 +2,14 @@
     display: flex;
     padding-top: 10px;
     gap: 20px;
-    color: var(--project-link-color);
 
     .link {
         transition: 0.3s;
+        color: var(--project-link-color);
+
+        a {
+            color: inherit;
+        }
 
         &:hover {
             color: var(--text);
@@ -151,7 +155,7 @@
         transform: scaleX(0);
         transition: transform 0.3s;
         flex-wrap: wrap;
-        padding: 20px 30px;
+        padding-top: 20px;
 
         h3, h4 {
             font-weight: normal;
@@ -162,6 +166,8 @@
 
         h3 {
             font-size: 2em;
+            white-space: nowrap;
+            width: 100%
         }
 
         h4 {
@@ -192,11 +198,12 @@
             max-height: 20px;
             padding: 0;
 
-            i {
+            a {
                 height: 40px;
                 width: 40px;
                 padding: 10px;
                 position: relative;
+                color: var(--text);
 
                 svg {
                     position: relative;
@@ -267,27 +274,11 @@
         aspect-ratio: 1;
         background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
-        bottom: 0;
+        top: 0;
         margin: 15px;
         transform: scaleY(0);
         transform-origin: bottom;
         transition: transform 0.3s;
-    }
-
-    &:before {
-        content: 'New Project';
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: var(--project-img-color);
-        color: var(--project-description-color);
-        font-weight: bold;
-        font-size: 3em;
     }
 
     &:hover {
@@ -313,4 +304,20 @@
             transform: scaleY(1);
         }
     }
+}
+
+[outertitle]:before {
+    content: attr(outertitle);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--project-img-color);
+    color: var(--project-description-color);
+    font-weight: bold;
+    font-size: 3em;
 }
