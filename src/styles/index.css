@@ -185,8 +185,28 @@ body .section, html .section {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  border-top: 1px solid var(--border);
-  margin-bottom: 10%;
+  margin-bottom: 100px;
+}
+
+body .section:after, html .section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background-color: var(--border);
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+body .section:hover:after, html .section:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 body .highlight, html .highlight {

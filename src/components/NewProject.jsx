@@ -10,6 +10,7 @@ const NewProject = ({left, number, content}) => {
 
   return (
     <div outertitle={content.name} className={`new-project left-new-project ${isVisible? left? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight': 'hidden'}`} ref={nodeRef}>
+      <div className={'progress-box'}><div className={`${content.progress === 'finished'? 'finished': 'ongoing'} status`}></div>{content.progress}</div>
       <div className={`new-project-title flex-center ${left? 'start-from-left': 'start-from-right'}`}>
         <h4>Featured Project</h4>
         <h3>{content.name}</h3>

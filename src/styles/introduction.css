@@ -1,9 +1,13 @@
+#intro:before {
+  opacity: 0;
+}
+
 .about h2 span {
   color: var(--header2-color);
 }
 
 main .intro-container {
-  min-height: 110vh;
+  min-height: 110vh !important;
   padding: 0;
 }
 

@@ -33,6 +33,9 @@ const DarkVariables = () => {
     --scrollbar-bg: rgb(20, 15, 0);
     --number-color: black;
     --secondary-border-color: black;
+    --background-tile-color: rgb(66, 59, 0);
+    --taskbar-btn-color: rgb(42, 157, 143);
+    --contact-form-bg: rgb(38, 70, 83);
 }`}
     </style>
   )

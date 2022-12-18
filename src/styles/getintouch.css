@@ -78,40 +78,39 @@
   padding: 20px;
 }
 
-.contact-form:before {
+.contact-form:after {
   content: '';
   position: absolute;
+  height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
-  height: 150%;
-  aspect-ratio: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--highlight-text)), color-stop(60%, transparent));
-  background: linear-gradient(var(--highlight-text), transparent 60%);
-  -webkit-animation: rotate 5s forwards ease-in infinite;
-          animation: rotate 5s forwards ease-in infinite;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--highlight-text)));
+  background: linear-gradient(transparent, var(--highlight-text));
+  animation: rotate 10s infinite reverse;
 }
 
 @-webkit-keyframes rotate {
   from {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
   from {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=getintouch.css.map */

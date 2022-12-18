@@ -3,7 +3,9 @@ import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch
 import AddProject from './components/AddProject';
 import DarkVariables from './components/DarkVariables';
 import LightVariables from './components/LightVariables';
+import MovingBackground from './components/MovingBackground';
 import PseudoPage from './components/PseudoPage';
+import Wating from './components/Wating';
 
 let isFirstTime = true;
 
@@ -90,7 +92,7 @@ function App() {
   return (
     <>
     {
-      state.lightTheme? <LightVariables /> : <DarkVariables/>
+      !state.lightTheme? <LightVariables /> : <DarkVariables/>
     }
       <div className="App">
         <div id="background" className="flex-center">
@@ -103,18 +105,18 @@ function App() {
 
         <NewHeader state={state} setState={setState} />
           <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
-          <main>
+          {true ? <main>
             <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
               <Introduction setState={setState} />
               <div id="body">
                 <AboutMe />
-                <Resume deviceWidth={state.deviceWidth} />
+                <Resume deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
                 <Projects projects={state.projects} />
                 <GetInTouch />
                 {/* <AddProject /> */}
               </div>
             </article>
-          </main>
+          </main>: <Wating />}
         <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
       </div>
     </>

@@ -6,8 +6,8 @@ import axios from 'axios'
 const AddProject = ({}) => {
     const [showImage, setShowImage] = useState(true);
     const [imgSrc, setImageSrc] = useState(null);
-    const [values, setValues] = useState({name: '', type: 'main', image: null, stack: [], gitLink: '', mainLink: '', description: ''})
-    const [mainValues, setMainValues] = useState({name: '', type: '', image: '', stack: '', gitLink: '', mainLink: '', description: '', showCircles: false})
+    const [values, setValues] = useState({name: '', type: 'main', image: null, stack: [], gitLink: '', mainLink: '', description: '', progress: ''})
+    const [mainValues, setMainValues] = useState({name: '', type: '', image: '', stack: '', gitLink: '', mainLink: '', description: '', progress: '', showCircles: false})
     const [uploadedImg, setUploadedImg] = useState(null);
     const apiUrl = 'https://portfolio-projects-14ccd-default-rtdb.firebaseio.com/projects.json';
 
@@ -46,7 +46,7 @@ const AddProject = ({}) => {
             body: JSON.stringify(projects)
             });
 
-            setMainValues({name: '', type: '', image: '', stack: '', gitLink: '', mainLink: '', description: '', showCircles: false})
+            setMainValues({name: '', type: '', image: '', stack: '', gitLink: '', mainLink: '', description: '', progress: '', showCircles: false})
 
         } catch(err) {
           if(err.response.status === 500) {
@@ -124,6 +124,14 @@ const AddProject = ({}) => {
         <div className="input-container" id="mainLink-container">
           <label htmlFor="mainLink">Project Link</label>
           <input value={mainValues.mainLink} name="mainLink" onChange={changeState} id="mainLink" className="project-input" type="text" required />
+        </div>
+
+        <div className="input-container" id="progress">
+          <input type="radio" name="progress" onChange={changeState} id="finished" value="finished" />
+          <label htmlFor="finished">Finished</label>
+          <br />
+          <input type="radio" name="progress" onChange={changeState} id="ongoing" value="ongoing" />
+          <label htmlFor="ongoing">Ongoing</label>
         </div>
         
         <div className="input-container" id="description-container">

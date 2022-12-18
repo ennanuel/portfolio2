@@ -6,7 +6,6 @@ import Taskbar from "./Taskbar"
 import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 import '../styles/introduction.css'
-import { useState } from "react"
 import { useEffect } from "react"
 
 

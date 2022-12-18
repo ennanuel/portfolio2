@@ -161,8 +161,26 @@ p {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  border-top: 1px solid var(--border);
-  margin-bottom: 10%;
+  margin-bottom: 100px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: var(--border);
+    transform: scaleX(0.8);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    
+    &:after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .highlight {

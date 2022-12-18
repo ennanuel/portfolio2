@@ -1,4 +1,4 @@
-.box {
+.box, .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (50%)[2];
@@ -21,7 +21,7 @@
 
 .content {
   position: relative;
-  background-color: var(--project-description-color);
+  background-color: var(--background-tile-color);
   padding: 5em;
   -webkit-animation: change-opacity 6s infinite alternate;
           animation: change-opacity 6s infinite alternate;

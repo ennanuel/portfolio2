@@ -11,6 +11,7 @@ const Projects = ({ projects }) => {
 
   useEffect(() => {
     const otherProjects = document.querySelectorAll('.other-project');
+    console.log(projects);
 
     [...otherProjects].forEach( (otherProject, i) => {
       otherProject.style.animationDelay = (i/20).toFixed(2) + 's'
@@ -23,9 +24,7 @@ const Projects = ({ projects }) => {
       
       <h2 className="projects-text">Some Things I've Built</h2>
       {
-        projects.map((project, i) => {
-          if(project.type !== 'main') return;
-
+        projects.filter( project => project.type === 'main' ).map((project, i) => {
           left = !left
           return <NewProject key={i} content={project} left={left} number={i} />
         })
@@ -37,11 +36,7 @@ const Projects = ({ projects }) => {
 
         <div className="other-projects-container">
           {
-            projects.map( (project, i) => {
-              if(project.type !== 'secondary') return;
-              
-              return <Project2 key={i} content={project} />
-            })
+            projects.filter( project => project.type === 'secondary' ).map( (project, i) => <Project2 key={i} content={project} />  )
           }
         </div>
         <Button width="150px">Show More</Button>

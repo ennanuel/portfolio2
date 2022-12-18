@@ -4,7 +4,7 @@
   padding: 20px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "imgPreview imgPreview" "projName type" "gitLink mainLink" "stack stack" "description image" "submit submit";
+      grid-template-areas: "imgPreview imgPreview" "projName type" "gitLink mainLink" "stack stack" "description progress" "description image" "submit submit";
   grid-gap: 20px;
 }
 
@@ -45,6 +45,7 @@
 
 .add-project-form #description-container {
   -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: description;
   -ms-grid-row: 100;
@@ -52,10 +53,16 @@
 }
 
 .add-project-form #image-container {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 2;
   grid-area: image;
   height: 80px;
+}
+
+.add-project-form #progress {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: progress;
 }
 
 .add-project-form .project-input {
@@ -86,7 +93,7 @@
   margin: auto;
   color: white;
   background-color: black;
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: submit;

@@ -1,0 +1,31 @@
+.moving-background {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    overflow: hidden;
+    position: absolute;
+
+    .box-bg {
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s;
+    }
+
+    .first-box-bg {
+        background-color: #0e1b20;
+    }
+
+    .second-box-bg {
+        background-color: #1a323c;
+    }
+
+    .third-box-bg {
+        background-color: #23424f;
+    }
+
+    .fourth-box-bg {
+        background-color: #315b6c;
+    }
+}

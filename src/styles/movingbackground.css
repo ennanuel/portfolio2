@@ -1,0 +1,35 @@
+.moving-background {
+  width: 100%;
+  height: 100%;
+  background: grey;
+  overflow: hidden;
+  position: absolute;
+}
+
+.moving-background .box-bg {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.moving-background .first-box-bg {
+  background-color: #0e1b20;
+}
+
+.moving-background .second-box-bg {
+  background-color: #1a323c;
+}
+
+.moving-background .third-box-bg {
+  background-color: #23424f;
+}
+
+.moving-background .fourth-box-bg {
+  background-color: #315b6c;
+}
+/*# sourceMappingURL=movingbackground.css.map */

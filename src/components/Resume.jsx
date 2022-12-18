@@ -6,8 +6,9 @@ import { useEffect, useState, useRef } from "react"
 import { useIsVisible } from 'react-is-visible'
 import { BsDownload } from 'react-icons/bs'
 import Pdf from '../cv/CV.pdf'
+import MovingBackground from "./MovingBackground"
 
-const Resume = ({deviceWidth}) => {
+const Resume = ({deviceWidth, showDynamicBg}) => {
   const [style, setStyle] = useState({transform: ''})
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
@@ -40,6 +41,7 @@ const Resume = ({deviceWidth}) => {
   return (
     <section ref={nodeRef} id="resume" title="02. Resume" className="section resume flex-center">
       <Title number="02.">Resume</Title>
+        {showDynamicBg && <MovingBackground />}
         
         <div className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
