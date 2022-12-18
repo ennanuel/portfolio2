@@ -50,7 +50,7 @@ const NewHeader = ({state, setState}) => {
     }
     
     return (
-        <header className={`menu link link-rev ${state.isMenuHovered? 'show-menu': ''}`} link="Menu">
+        <header className={`menu link link-rev ${state.isMenuHovered ? 'show-menu': ''}`} link="Menu">
             <Customize state={state} setState={setState} />
 
             <ul>
@@ -66,11 +66,13 @@ const NewHeader = ({state, setState}) => {
                         setState(prev => ({...prev, link: linkItem.link, isMenuHovered: false, showingFullContent: true, currentPage: i}))
                     }
 
-                    return <li key={i} className="menu-item">
+                    const itemStyle = {animationDelay: (i + 1)/20 + 's'};
+
+                    return <li key={i} className={`menu-item ${state.isMenuHovered ? 'slide-in': ''}`} style={itemStyle}>
                             <p 
                              onMouseOver={handleLinkHover}
                              onClick={handleClick}
-                             className={`link  ${state.link === linkItem.link? 'active': ''}`} 
+                             className={`link ${state.link === linkItem.link? 'active': ''}`} 
                              link={linkItem.link}>
                                 {linkItem.name}
                             </p>
@@ -78,7 +80,7 @@ const NewHeader = ({state, setState}) => {
                 })
             }
 
-                <li><Button fontSize="16px" onClick={downloadCV}>Resume</Button></li>
+                <li className={`menu-item ${state.isMenuHovered ? 'slide-in': ''}`} style={{animationDelay: '0.35s'}}><Button fontSize="16px" onClick={downloadCV}>Resume</Button></li>
             </ul>
 
             <div 

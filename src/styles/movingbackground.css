@@ -1,6 +1,7 @@
 .moving-background {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 200px);
+  top: 0;
   background: grey;
   overflow: hidden;
   position: absolute;

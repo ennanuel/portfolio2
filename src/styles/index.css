@@ -185,7 +185,11 @@ body .section, html .section {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+}
+
+body .section .section-header, html .section .section-header {
+  font-size: 2.8em;
 }
 
 body .section:after, html .section:after {

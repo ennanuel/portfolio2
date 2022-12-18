@@ -22,7 +22,7 @@ const Projects = ({ projects }) => {
     <section id="projects" title="03. Projects" className="section projects">
       <Title number="03." left={true}>Projects</Title>
       
-      <h2 className="projects-text">Some Things I've Built</h2>
+      <h2 className="projects-text section-header">Some Things I've Built</h2>
       {
         projects.filter( project => project.type === 'main' ).map((project, i) => {
           left = !left
@@ -31,7 +31,7 @@ const Projects = ({ projects }) => {
       }
 
       <div className="other-projects">
-        <h2 className="projects-text">Other Noteworthy Projects</h2>
+        <h2 className="projects-text section-header">Other Noteworthy Projects</h2>
         <p className="archive-link">view the archive</p>
 
         <div className="other-projects-container">

@@ -165,18 +165,29 @@ body:hover .mouse-tracker {
         pointer-events: all;
     }
 
+    .menu-btn {
+        opacity: 0 !important;
+    }
+
+    .current-section {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     &:before {
         opacity: 1;
     }
 }
 
-.show-menu .menu-btn {
-    opacity: 0 !important;
+.slide-in {
+    animation-name: dragfront;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
-.show-menu .current-section {
-    opacity: 0;
-    pointer-events: none;
+.menu-item {
+    transform: translateX(200%);
 }
 
 .menu-item p {
@@ -378,6 +389,15 @@ body:hover .mouse-tracker {
     }
     100%{
         opacity: 0
+    }
+}
+
+@keyframes dragfront {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 

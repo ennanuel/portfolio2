@@ -53,7 +53,6 @@
   font-weight: bold;
   text-align: center;
   color: var(--project-text-color);
-  font-size: 3rem;
 }
 
 .projects .archive-link {
@@ -385,22 +384,18 @@
 
 .progress-box .status {
   aspect-ratio: 1;
-  height: 15px;
-  border-radius: 50%;
+  height: 12px;
+  border: 1px solid;
   display: inline-block;
   margin-right: 10px;
 }
 
 .progress-box .finished {
-  background-color: #4dff4d;
-  -webkit-box-shadow: 0px 0px 5px #76ff76;
-          box-shadow: 0px 0px 5px #76ff76;
+  border-color: #4dff4d;
 }
 
 .progress-box .ongoing {
-  background-color: #ff5e00;
-  -webkit-box-shadow: 0px 0px 5px #ff5e00;
-          box-shadow: 0px 0px 5px #ff5e00;
+  border-color: #ff5e00;
 }
 
 [outertitle]:before {

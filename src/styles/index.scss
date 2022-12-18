@@ -161,7 +161,11 @@ p {
   width: 100%;
   position: relative;
   padding: 80px 15%;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+
+  .section-header{
+    font-size: 2.8em;
+  }
 
   &:after {
     content: "";

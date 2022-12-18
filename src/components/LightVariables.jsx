@@ -7,7 +7,7 @@ const LightVariables = () => {
     --section-container-bg: rgba(0, 0, 0, 0.4);
     --border:rgba(233, 196, 106, 0.4);
     --text: rgba(233, 196, 106, 0.9);
-    --highlight-text: rgb(241, 208, 123);
+    --highlight-text: rgb(255, 222, 137);
     --header2-color: rgba(233, 196, 106, 0.9);
     --header2-secondary-color: rgba(233, 196, 106, 0.5);
     --linear-color1: rgba(231, 111, 81, 0.235);

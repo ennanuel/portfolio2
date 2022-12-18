@@ -209,10 +209,6 @@ body:hover .mouse-tracker {
   pointer-events: all;
 }
 
-.show-menu:before {
-  opacity: 1;
-}
-
 .show-menu .menu-btn {
   opacity: 0 !important;
 }
@@ -220,6 +216,26 @@ body:hover .mouse-tracker {
 .show-menu .current-section {
   opacity: 0;
   pointer-events: none;
+}
+
+.show-menu:before {
+  opacity: 1;
+}
+
+.slide-in {
+  -webkit-animation-name: dragfront;
+          animation-name: dragfront;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu-item {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
 }
 
 .menu-item p {
@@ -486,6 +502,28 @@ body:hover .mouse-tracker {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes dragfront {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes dragfront {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

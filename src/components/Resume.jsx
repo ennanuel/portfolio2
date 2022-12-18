@@ -41,11 +41,11 @@ const Resume = ({deviceWidth, showDynamicBg}) => {
   return (
     <section ref={nodeRef} id="resume" title="02. Resume" className="section resume flex-center">
       <Title number="02.">Resume</Title>
-        {showDynamicBg && <MovingBackground />}
+        {(showDynamicBg && deviceWidth > 770) && <MovingBackground />}
         
         <div className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
-        <h2>Checkout My Resume Below!</h2>
+        <h2 className="section-header">Checkout My Resume Below!</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
         <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
 

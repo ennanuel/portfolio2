@@ -49,7 +49,6 @@
         font-weight: bold;
         text-align: center;
         color:var(--project-text-color);
-        font-size: 3rem;
     }
 
     .archive-link {
@@ -326,20 +325,18 @@
 
     .status {
         aspect-ratio: 1;
-        height: 15px;
-        border-radius: 50%;
+        height: 12px;
+        border: 1px solid;
         display: inline-block;
         margin-right: 10px;
     }
 
     .finished {
-        background-color: rgb(77, 255, 77);
-        box-shadow: 0px 0px 5px rgb(118, 255, 118);
+        border-color: rgb(77, 255, 77);
     }
     
     .ongoing {
-        background-color: rgb(255, 94, 0);
-        box-shadow: 0px 0px 5px rgb(255, 94, 0);
+        border-color: rgb(255, 94, 0);
     }
 }
 

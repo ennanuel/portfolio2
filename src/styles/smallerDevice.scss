@@ -4,6 +4,18 @@
 
       .section {
         padding: 5%;
+        margin-bottom: 200px;
+        padding-top: 100px;
+
+
+        .section-header {
+          font-size: 2.2em;
+        }
+
+        &:after {
+          height: 1px;
+          transform: scaleX(1);
+        }
       }
 
       .show-menu .go-back-btn {
@@ -82,8 +94,11 @@
       .new-project {
         gap: 0;
 
+        .new-project-text {
+          padding-top: 0;
+        }
 
-        .new-project-bg-img, .project-number {
+        .new-project-bg-img, .project-number, img {
           display: none;
         }
 
@@ -92,6 +107,14 @@
           transform: scale(1);
           width: 100%;
           top: 0;
+        }
+
+        .new-project-title {
+          margin-bottom: 10px;
+
+          h3, h4 {
+            text-align: left;
+          }
         }
       
         .new-project-links {
