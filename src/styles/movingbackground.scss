@@ -15,18 +15,18 @@
     }
 
     .first-box-bg {
-        background-color: #0e1b20;
+        background-color: var(--moving-bg-box1);
     }
 
     .second-box-bg {
-        background-color: #1a323c;
+        background-color: var(--moving-bg-box2);
     }
 
     .third-box-bg {
-        background-color: #23424f;
+        background-color: var(--moving-bg-box3);
     }
 
     .fourth-box-bg {
-        background-color: #315b6c;
+        background-color: var(--moving-bg-box4);
     }
 }

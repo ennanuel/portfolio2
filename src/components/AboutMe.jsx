@@ -19,17 +19,26 @@ const AboutMe = () => {
                   <div className="bio">
                       
                     <div className={`bio-text ${isVisible ? 'animate__animated animate__fadeInUp': 'hide-element'}`}>
-                      <p>Hello! My name is Emmanuel and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-                      Fast-forward to today, and I’ve had the privilege of working at <Highlight>an advertising agency, a start-up, a huge corporation</Highlight>, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at <Highlight>Upstatement</Highlight> for a variety of clients.
-                      I also recently <Highlight>launched a course</Highlight> that covers everything you need to build a web app with the Spotify API using Node & React.
-                      Here are a few technologies I’ve been working with recently:</p>
+                      <p>
+                        Hello! My name is Emmanuel I'm very passionate about programming and creating web related products. This interest of mine dates back to 2020 when I was introduced to <Highlight>Computer Programming</Highlight> as a  course in the university, turns out I really enjoyed solving challenges using code I wrote! Fast-forward to today and although I've not had the priviledge to program professionally, I still have done some decent projects that have given me <Highlight>profound knowledge in most programming language</Highlight>!
+                      </p>
+                      <p>
+                        My main goal these days is to land a web development job so I can be able to contribute my expertise what I've learnt so far to the growth of a corporation.
+                      </p>
+                      <p>Here are a few technologies I’ve been working with recently:</p>
                       <ul className="skills">
                         <li>JavaScript</li>
                         <li>PHP</li>
+                        <li>TypeScript</li>
                         <li>MySQL</li>
-                        <li>SASS</li>
                         <li>ReactJS</li>
+                        <li>NodeJS</li>
+                        <li>SASS</li>
+                        <li>GraphQL</li>
+                        <li>Tailwind</li>
                         <li>WordPress</li>
+                        <li>Gulp</li>
+                        <li>Git</li>
                       </ul>
                     </div>
             

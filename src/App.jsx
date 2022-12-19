@@ -20,7 +20,7 @@ function App() {
     scroll: true,
     deviceWidth: window.innerWidth,
     isVisible: false,
-    showDynamicBg: true,
+    showDynamicBg: window.innerWidth > 720,
     changeBg: true,
     lightTheme: false,
     currentPage: 0,

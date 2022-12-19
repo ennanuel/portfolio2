@@ -86,7 +86,7 @@
 
 .skills li {
   list-style: none;
-  color: var(--border);
+  color: var(--highlight-text);
 }
 
 .skills li::before {

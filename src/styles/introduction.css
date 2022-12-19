@@ -64,6 +64,7 @@ main .intro-container {
   text-align: left;
   max-width: 600px;
   margin: 30px 0;
+  z-index: 0;
 }
 
 .about h2 {

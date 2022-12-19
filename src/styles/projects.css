@@ -310,7 +310,7 @@
 }
 
 .new-project .new-project-text .tech-used .tech {
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--section-container-bg);
   padding: 3px 5px;
   border: 1px solid var(--border);
   font-size: 0.8em;
@@ -319,7 +319,7 @@
 .new-project .project-number {
   width: 50px;
   aspect-ratio: 1;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--section-container-bg);
   position: absolute;
   top: 0;
   margin: 15px;
@@ -391,11 +391,11 @@
 }
 
 .progress-box .finished {
-  border-color: #4dff4d;
+  border-color: var(--finished-color);
 }
 
 .progress-box .ongoing {
-  border-color: #ff5e00;
+  border-color: var(--in-progress-color);
 }
 
 [outertitle]:before {

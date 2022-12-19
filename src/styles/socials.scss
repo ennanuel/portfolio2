@@ -1,10 +1,13 @@
 
   .socials {
     position: fixed;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     bottom: 0;
     left: 20px;
-    height: 35%;
+    min-height: 35%;
     width: 50px;
     color: var(--border);
     font-size: 1.1em;
@@ -13,7 +16,8 @@
 
 
     .social {
-      margin-bottom: 10px;
+      width: 30px;
+
 
       &:hover {
         transform: translateY(-5px);

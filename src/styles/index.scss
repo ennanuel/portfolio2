@@ -84,7 +84,7 @@ body, html {
 }
 
 .social:hover {
-  color: black;
+  color: var(--main-background);
 
   &::after {
     transform: rotate(45deg) scale(1);
@@ -109,10 +109,11 @@ body, html {
 
 .line {
   height: 100%;
-  width: 0;
-  border-right: 1px solid;
+  width: 1px;
+  background-color: var(--border);
   position: absolute;
-  left: 25px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 
@@ -189,6 +190,27 @@ p {
 
 .highlight {
   color: var(--highlight-text);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+    background-color: var(--highlight-text);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+
+    &:after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .full-border {
@@ -259,6 +281,7 @@ footer {
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px var(--border);
+    color: var(--fake-text-color);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;

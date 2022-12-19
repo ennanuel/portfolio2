@@ -46,7 +46,7 @@ const Resume = ({deviceWidth, showDynamicBg}) => {
         <div className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
         <h2 className="section-header">Checkout My Resume Below!</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in veritatis pariatur voluptatibus suscipit possimus assumenda. Dolore impedi</p>
+        <p>If you haven't had a chance to view my resume, you can click the button below to download my resume.</p>
         <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
 
         </div>

@@ -12,7 +12,7 @@ const Background = ({state, setMainState}) => {
     }
 
     const background = () => {
-        if(width < height || width < 720 || !state.showDynamicBg ) {
+        if(width < height || width < 70 || !state.showDynamicBg ) {
             setState( (prev) => ({...prev, content: null}))
             return;
         }

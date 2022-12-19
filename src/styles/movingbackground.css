@@ -19,18 +19,18 @@
 }
 
 .moving-background .first-box-bg {
-  background-color: #0e1b20;
+  background-color: var(--moving-bg-box1);
 }
 
 .moving-background .second-box-bg {
-  background-color: #1a323c;
+  background-color: var(--moving-bg-box2);
 }
 
 .moving-background .third-box-bg {
-  background-color: #23424f;
+  background-color: var(--moving-bg-box3);
 }
 
 .moving-background .fourth-box-bg {
-  background-color: #315b6c;
+  background-color: var(--moving-bg-box4);
 }
 /*# sourceMappingURL=movingbackground.css.map */

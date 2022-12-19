@@ -76,7 +76,7 @@ body:hover .mouse-tracker {
         content: '';
         width: 100vw;
         height: 100vh;
-        background-color: var(--task-bar-bg);
+        background-color: var(--menu-before-bg);
         position: absolute;
         top: 0;
         right: 0;
@@ -118,23 +118,25 @@ body:hover .mouse-tracker {
 
 .change-color {
     margin: 30px;
-    padding: 3px;
-    width: 60px;
-    aspect-ratio: 1.7;
     position: absolute;
+    height: 35px;
+    aspect-ratio: 2;
     top: 0;
     left: 0;
-    gap: 20px;
-    border: 4px solid var(--text);
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    align-items: center;
+    border: 3px solid var(--text);
 
     
 
     .theme-switch {
-        background-color: var(--highlight-text);
+        background-color: var(--text);
+        margin: 0;
         position: absolute;
-        height: 98%;
-        aspect-ratio: 1;
-        scale: 1.05;
+        width: 50%;
+        height: 100%;
         top: 0;
         left: 0;
         z-index: 11;
@@ -142,18 +144,7 @@ body:hover .mouse-tracker {
     }
 
     .theme-icon {
-        position: absolute;
-        height: 100%;
-        aspect-ratio: 1;
-        top: 2px;
-    }
-
-    .dark-icon {
-        left: 0;
-    }
-
-    .light-icon {
-        right: 0;
+        transform: translateY(2px);
     }
 }
 
@@ -269,7 +260,7 @@ body:hover .mouse-tracker {
     transform: translateY(-50%);
     border: 1px solid var(--border);
     font-size: 2em;
-    background-color: var(--box-shadow);
+    background-color: var(--section-container-bg);
 
     i{
         position: relative;

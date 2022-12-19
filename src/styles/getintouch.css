@@ -46,7 +46,7 @@
 
 .contact-form label {
   padding-left: 10px;
-  color: var(--border);
+  color: var(--text);
 }
 
 .contact-form .btn {

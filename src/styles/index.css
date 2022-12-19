@@ -108,7 +108,7 @@ body .social::after, html .social::after {
 }
 
 body .social:hover, html .social:hover {
-  color: black;
+  color: var(--main-background);
 }
 
 body .social:hover::after, html .social:hover::after {
@@ -133,10 +133,12 @@ body #background, html #background {
 
 body .line, html .line {
   height: 100%;
-  width: 0;
-  border-right: 1px solid;
+  width: 1px;
+  background-color: var(--border);
   position: absolute;
-  left: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: -1;
 }
 
@@ -215,6 +217,30 @@ body .section:hover:after, html .section:hover:after {
 
 body .highlight, html .highlight {
   color: var(--highlight-text);
+  position: relative;
+}
+
+body .highlight:after, html .highlight:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-color: var(--highlight-text);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+body .highlight:hover:after, html .highlight:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 body .full-border, html .full-border {
@@ -301,6 +327,7 @@ body .anim-duration, html .anim-duration {
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px var(--border);
+  color: var(--fake-text-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -19,7 +19,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 30px 5%;
+  margin: 50px 8%;
   gap: 20px;
 }
 
@@ -41,7 +41,7 @@
 .pupil {
   width: 40%;
   aspect-ratio: 1;
-  background-color: black;
+  background-color: var(--header2-secondary-color);
   border: 2px solid var(--border);
   position: absolute;
   top: 0;

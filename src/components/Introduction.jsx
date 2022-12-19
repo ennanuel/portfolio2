@@ -13,6 +13,10 @@ const Introduction = ({setState}) => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
 
+  const handleClick = () => {
+    location.href = '#contact'
+  }
+
   useEffect(() => {
     setState(prev => ({...prev, isVisible}))
   }, [isVisible])
@@ -26,14 +30,16 @@ const Introduction = ({setState}) => {
         </div>
         <article className="info">
           <div className="about">
-            <h2 className={`anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}><span>Ezema Emmanuel.</span><br />I build stuff for the web.</h2>
+            <h2 className={`anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
+              <span>Ezema Emmanuel.</span>
+              <br />I am a Web Developer.</h2>
             <p className={`full-border anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
               <BoxDecor />
-              I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <Highlight>Upstatement</Highlight>.
+              I’m a Web Developer specializing in building (and occasionally designing) exceptional web applications and other web related projects. If you'd like to know more about me please feel free to <Highlight>contact me</Highlight>, I'm available to start work immediately.
             </p>
           </div>
           <div className={`lets-connect anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
-            <Button width="100%">Let's Connect</Button>
+            <Button onClick={handleClick} width="100%">Let's Connect</Button>
           </div>
         </article>
         <BgText r="10px" b="-10px">Intro.</BgText>
