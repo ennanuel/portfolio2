@@ -163,7 +163,6 @@ body:hover .mouse-tracker {
   height: 35px;
   aspect-ratio: 2;
   top: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

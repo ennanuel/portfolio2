@@ -60,6 +60,40 @@ body .full-hw, html .full-hw {
   width: 100%;
 }
 
+body .site-logo, html .site-logo {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  height: 40px;
+  aspect-ratio: 1;
+  position: fixed;
+  top: 10px;
+  left: 25px;
+  z-index: 9999999;
+  opacity: 0.8;
+  background-color: var(--main-background);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+body .site-logo img, html .site-logo img {
+  width: 100%;
+  -webkit-transform: translate(-3px, 1px) scale(1.2);
+          transform: translate(-3px, 1px) scale(1.2);
+}
+
+body .site-logo:hover, html .site-logo:hover {
+  opacity: 1;
+}
+
+body .drag-down, html .drag-down {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
 body .social, html .social {
   aspect-ratio: 1;
   position: relative;

@@ -47,6 +47,33 @@ body, html {
   width: 100%;
 }
 
+.site-logo {
+  transition: transform 0.3s;
+  height: 40px;
+  aspect-ratio: 1;
+  position: fixed;
+  top: 10px;
+  left: 25px;
+  z-index: 9999999;
+  opacity: 0.8;
+  background-color: var(--main-background);
+  transform: translateY(0);
+  animation-fill-mode:none;
+
+  img {
+    width: 100%;
+    transform: translate(-3px, 1px) scale(1.2);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.drag-down {
+  transform: translateY(20px);
+}
+
 .social {
   aspect-ratio: 1;
   position: relative;

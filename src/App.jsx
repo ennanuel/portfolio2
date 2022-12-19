@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
 import AddProject from './components/AddProject';
+import DarkLogo from './components/DarkLogo';
 import DarkVariables from './components/DarkVariables';
+import LightLogo from './components/LightLogo';
 import LightVariables from './components/LightVariables';
 import MovingBackground from './components/MovingBackground';
 import PseudoPage from './components/PseudoPage';
@@ -92,7 +94,7 @@ function App() {
   return (
     <>
     {
-      !state.lightTheme? <LightVariables /> : <DarkVariables/>
+      state.lightTheme? <LightVariables /> : <DarkVariables/>
     }
       <div className="App">
         <div id="background" className="flex-center">
@@ -102,6 +104,10 @@ function App() {
         </div>
 
         { state.deviceWidth > 770 && <MouseTracker /> }
+
+        {
+          state.lightTheme? <LightLogo dragDown={state.showingFullContent} />: <DarkLogo dragDown={state.showingFullContent} />
+        }
 
         <NewHeader state={state} setState={setState} />
           <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
