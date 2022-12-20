@@ -127,6 +127,8 @@ body:hover .mouse-tracker {
     gap: 17px;
     align-items: center;
     border: 3px solid var(--text);
+    overflow: hidden;
+    border-radius: 18px;
 
     
 
@@ -140,6 +142,7 @@ body:hover .mouse-tracker {
         left: 0;
         z-index: 11;
         transition: 0.3s transform;
+        border-radius: 50%;
     }
 
     .theme-icon {

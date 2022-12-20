@@ -20,7 +20,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--project-text-color);
+  background: var(--title-before-bg);
   z-index: 0;
 }
 
