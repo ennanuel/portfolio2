@@ -76,7 +76,12 @@
         left: 50%;
         transform-origin: top left;
         background: linear-gradient(transparent, var(--highlight-text));
-        animation: rotate 10s infinite reverse;
+        animation-name: rotate;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
     }
 }
 

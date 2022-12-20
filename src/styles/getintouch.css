@@ -85,7 +85,17 @@
           transform-origin: top left;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--highlight-text)));
   background: linear-gradient(transparent, var(--highlight-text));
-  animation: rotate 10s infinite reverse;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes rotate {

@@ -23,7 +23,7 @@ const AboutMe = () => {
                         Hello! My name is Emmanuel I'm very passionate about programming and creating web related products. This interest of mine dates back to 2020 when I was introduced to <Highlight>Computer Programming</Highlight> as a  course in the university, turns out I really enjoyed solving challenges using code I wrote! Fast-forward to today and although I've not had the priviledge to program professionally, I still have done some decent projects that have given me <Highlight>profound knowledge in most programming language</Highlight>!
                       </p>
                       <p>
-                        My main goal these days is to land a web development job so I can be able to contribute my expertise what I've learnt so far to the growth of a corporation.
+                        My main goal these days is to land a web development job so I can be able to contribute my skills and what I've learnt so far to the growth of a corporation.
                       </p>
                       <p>Here are a few technologies I’ve been working with recently:</p>
                       <ul className="skills">
