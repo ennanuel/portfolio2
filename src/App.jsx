@@ -5,7 +5,6 @@ import DarkLogo from './components/DarkLogo';
 import DarkVariables from './components/DarkVariables';
 import LightLogo from './components/LightLogo';
 import LightVariables from './components/LightVariables';
-import MovingBackground from './components/MovingBackground';
 import PseudoPage from './components/PseudoPage';
 import Wating from './components/Wating';
 
@@ -24,7 +23,7 @@ function App() {
     isVisible: false,
     showDynamicBg: window.innerWidth > 720,
     changeBg: true,
-    lightTheme: false,
+    lightTheme: true,
     currentPage: 0,
     projects: []
   })

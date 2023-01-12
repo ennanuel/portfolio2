@@ -116,13 +116,16 @@
 
 .new-project {
     width: 100%;
-    max-width: 700px;
-    margin: 20px auto 100px;
+    margin: 100px auto 150px;
     position: relative;
     background: var(--project-description-color);
     box-shadow: 0 0 10px var(--box-shadow);
-    transition: box-shadow 0.3s;
+    transition: box-shadow, transform 0.3s ease;
     overflow: hidden;
+
+    img {
+        display: block;
+    }
 
     .start-from-left {
         left: 0;
@@ -326,7 +329,7 @@
     .status {
         aspect-ratio: 1;
         height: 12px;
-        border: 1px solid;
+        border: 3px solid;
         display: inline-block;
         margin-right: 10px;
     }

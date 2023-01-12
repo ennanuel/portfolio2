@@ -9,7 +9,8 @@ const NewProject = ({left, number, content}) => {
   const imgURL = new URL(`./assets/images/${content.image}`, import.meta.url).href
 
   return (
-    <div outertitle={content.name} className={`new-project left-new-project ${isVisible? left? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight': 'hidden'}`} ref={nodeRef}>
+    <div className={`project-container`}>
+      <div outertitle={content.name} className={`new-project left-new-project ${isVisible? left? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeInRight': 'hidden'}`} ref={nodeRef}>
       <div className={'progress-box'}><div className={`${content.progress === 'finished'? 'finished': 'ongoing'} status`}></div>{content.progress}</div>
       <div className={`new-project-title flex-center ${left? 'start-from-left': 'start-from-right'}`}>
         <h4>Featured Project</h4>
@@ -34,6 +35,8 @@ const NewProject = ({left, number, content}) => {
       <div className={`project-number full-border flex-center ${left? 'start-from-right': 'start-from-left'}`}>
         {number < 10 ? '0' + (number + 1) + '.' : (number + 1) + '.'}
       </div>
+    </div>
+    
     </div>
   )
 }

@@ -5,10 +5,11 @@ import '../styles/background.css'
 
 let isFirstTime = true;
 const Background = ({state, setMainState}) => {
-    const [{width, height, isResized, content, visible}, setState] = useState({});
+    const [{width, height}, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight })
+    const [{isResized, content, visible}, setState] = useState({});
     
     const resize = (height, width) => {
-        setState((prev) => ({...prev, height, width, isResized: true}));
+        setDimensions({height, width});
     }
 
     const background = () => {
@@ -69,7 +70,8 @@ const Background = ({state, setMainState}) => {
         setState(prev => ({...prev, isResized: false}))
         setMainState(prev => ({...prev, changeBg: false}))
 
-        background()
+        background();
+        console.log(height, width)
         
         window.addEventListener('resize', resizeHandler);
 

@@ -389,6 +389,11 @@ body:hover .mouse-tracker {
     0% {
         transform: translateX(200%);
     }
+
+    80% {
+        transform: translateX(20%);
+    }
+    
     100% {
         transform: translateX(0);
     }

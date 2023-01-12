@@ -10,11 +10,12 @@ const DarkVariables = () => {
     --text: rgb(233, 196, 106);
     --highlight-text: rgb(227, 203, 144);
     --header2-color: rgba(233, 196, 106, 0.9);
-    --header2-secondary-color: rgb(233, 196, 106, 0.7);
+    --header2-secondary-color: rgba(233, 196, 106, 0.7);
     --menu-before-bg: rgba(16, 30, 35, 0.7);
-    --linear-color1: rgba(233, 196, 106, 0.235);
+    --linear-color1: rgba(233, 196, 106, 0.2);
     --linear-color2: transparent;
     --light-background: rgba(0, 0, 0, 0.3);
+    --profile-overlay: rgba(233, 196, 106, 0.3);
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(233, 196, 106, 0.6);
     --project-description-color: rgb(22, 42, 49);

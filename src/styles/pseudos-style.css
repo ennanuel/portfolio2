@@ -191,7 +191,7 @@ body:hover .mouse-tracker {
   transition: 0.3s -webkit-transform;
   transition: 0.3s transform;
   transition: 0.3s transform, 0.3s -webkit-transform;
-  border-radius: 50%;
+  border-radius: 18px;
 }
 
 .change-color .theme-icon {
@@ -510,6 +510,10 @@ body:hover .mouse-tracker {
     -webkit-transform: translateX(200%);
             transform: translateX(200%);
   }
+  80% {
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -520,6 +524,10 @@ body:hover .mouse-tracker {
   0% {
     -webkit-transform: translateX(200%);
             transform: translateX(200%);
+  }
+  80% {
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
   100% {
     -webkit-transform: translateX(0);

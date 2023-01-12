@@ -1,21 +1,13 @@
 import BgText from "./BgText"
-import Button from "./Button"
 import Title from "./Title"
 import '../styles/resume.css'
 import { useEffect, useState, useRef } from "react"
 import { useIsVisible } from 'react-is-visible'
-import { BsDownload } from 'react-icons/bs'
-import Pdf from '../cv/CV.pdf'
-import MovingBackground from "./MovingBackground"
 
 const Resume = ({deviceWidth, showDynamicBg}) => {
   const [style, setStyle] = useState({transform: ''})
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
-
-  const downloadCV = () => {
-    window.open(Pdf)
-  }
 
   useEffect(() => {
 
@@ -39,16 +31,21 @@ const Resume = ({deviceWidth, showDynamicBg}) => {
   }, [deviceWidth])
 
   return (
-    <section ref={nodeRef} id="resume" title="02. Resume" className="section resume flex-center">
-      <Title number="02.">Resume</Title>
-        {(showDynamicBg && deviceWidth > 770) && <MovingBackground />}
+    <section ref={nodeRef} id="resume" title="02. Skills" className="section resume flex-center">
+      <Title number="02.">Skills</Title>
         
         <div className={`section-content flex-center ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`} style={{flexDirection: 'column', height: '100%'}}>
 
-        <h2 className="section-header">Checkout My Resume Below!</h2>
-        <p>If you haven't had a chance to view my resume, you can click the button below to download my resume.</p>
-        <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+          <h2>Languages</h2>
+          <ul>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>CSS</li>
+            <li>HTML</li>
+          </ul>
 
+          <h2>Tech Used</h2>
+          <ul></ul>
         </div>
 
         {
@@ -68,7 +65,7 @@ const Resume = ({deviceWidth, showDynamicBg}) => {
           </div>
         }
       
-      <BgText left={true}>Resume.</BgText>
+      <BgText left={true}>Skills.</BgText>
     </section>
   )
 }

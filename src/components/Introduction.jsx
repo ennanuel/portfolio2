@@ -39,7 +39,7 @@ const Introduction = ({setState}) => {
             </p>
           </div>
           <div className={`lets-connect anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
-            <Button onClick={handleClick} width="100%">Let's Connect</Button>
+            <Button onClick={handleClick} width="100%">Hire Me</Button>
           </div>
         </article>
         <BgText r="10px" b="-10px">Intro.</BgText>

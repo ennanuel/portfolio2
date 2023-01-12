@@ -14,7 +14,8 @@ const LightVariables = () => {
     --menu-before-bg: rgba(213, 187, 197, 0.7);
     --linear-color1: rgba(76, 56, 88, 0.4);
     --linear-color2: transparent;
-    --light-background: rgba(255, 255, 255, 0.3);
+    --light-background: rgba(255, 255, 255, 0.1);
+    --profile-overlay: rgba(106, 78, 98, 0.3);
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(106, 78, 98, 0.6);
     --project-description-color: rgb(213, 187, 197);
