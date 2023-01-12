@@ -19,7 +19,7 @@ const NewHeader = ({state, setState}) => {
     const linkItems = [
         {name: 'Intro', link: '#intro'},
         {name: 'About Me', link: '#about'},
-        {name: 'Resume', link: '#resume'},
+        {name: 'Skills', link: '#skills'},
         {name: 'Projects', link: '#projects'},
         {name: 'Contact', link: '#contact'}
     ]
