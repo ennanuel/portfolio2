@@ -1,9 +1,6 @@
 
 @media (max-width: 770px) {
   html, body {
-    p {
-      font-size: 0.8rem;
-    }
     
       .section {
         padding: 5%;
@@ -89,6 +86,7 @@
         }
 
         p {
+          font-size: 1.5rem !important;
           
           &:before {
             opacity: 0;
@@ -124,13 +122,26 @@
     
       .new-project {
         gap: 0;
+        margin: 50px 0;
+        position: relative;
 
         .new-project-text {
           padding-top: 0;
         }
 
-        .new-project-bg-img, .project-number, img {
+        .proj-img, .project-number {
           display: none;
+        }
+
+        .new-project-bg-img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          object-fit: cover;
+          opacity: 0.1 !important;
         }
 
         .new-project-title, .new-project-links, .new-project-text {
@@ -138,6 +149,8 @@
           transform: scale(1);
           width: 100%;
           top: 0;
+          z-index: 1;
+          background-color: transparent;
         }
 
         .new-project-title {
@@ -185,7 +198,31 @@
 
 @media (max-width: 500px) {
   html, body {
+    p {
+      font-size: 0.8rem !important;
+    }
 
+    button {
+      font-size: 1rem !important;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      top: -30px;
+    }
+
+    .title span {
+      font-size: 1.3rem;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem !important;
+    }
+
+    .about h2 {
+      font-size: 2rem !important;
+    }
 
     .introduction {
       border-bottom: none;

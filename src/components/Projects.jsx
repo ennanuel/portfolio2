@@ -16,10 +16,7 @@ const Projects = ({ projects }) => {
       
       <h2 className="projects-text section-header">Some Projects I've Built</h2>
       {
-        projects.filter( project => project.type === 'main' ).map((project, i) => {
-          left = !left
-          return <NewProject key={i} content={project} left={left} number={i} />
-        })
+        projects.filter( project => project.type === 'main' ).map((project, i) => <NewProject key={i} content={project} left={i % 2 === 0} number={i} />)
       }
 
       <div className="other-projects">

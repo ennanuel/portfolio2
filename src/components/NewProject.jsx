@@ -20,7 +20,7 @@ const NewProject = ({left, number, content}) => {
         </div>
 
         <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-          <img src={imgURL} alt="Project Image" />
+          <img className="proj-img" src={imgURL} alt="Project Image" />
           <div className="link link-container flex-center">
             <a target="_blank" className="link flex-center full-border" link="Go to Project" href={content.mainLink}><FaExternalLinkAlt /></a>
             <a target="_blank" className="link flex-center full-border" link="Github Repo" href={content.gitLink}><FiGithub /></a>

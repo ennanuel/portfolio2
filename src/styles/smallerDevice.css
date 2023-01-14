@@ -81,6 +81,9 @@
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
+  html .menu p, body .menu p {
+    font-size: 1.5rem !important;
+  }
   html .menu p:before, body .menu p:before {
     opacity: 0;
   }
@@ -90,6 +93,9 @@
   html .about p, body .about p {
     padding: 15px;
     text-align: left;
+  }
+  html .about p:before, body .about p:before {
+    opacity: 0.5;
   }
   html .about h2, body .about h2 {
     margin-top: 20px;
@@ -105,12 +111,25 @@
   }
   html .new-project, body .new-project {
     gap: 0;
+    margin: 50px 0;
+    position: relative;
   }
   html .new-project .new-project-text, body .new-project .new-project-text {
     padding-top: 0;
   }
-  html .new-project .new-project-bg-img, html .new-project .project-number, html .new-project img, body .new-project .new-project-bg-img, body .new-project .project-number, body .new-project img {
+  html .new-project .proj-img, html .new-project .project-number, body .new-project .proj-img, body .new-project .project-number {
     display: none;
+  }
+  html .new-project .new-project-bg-img, body .new-project .new-project-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0.1 !important;
   }
   html .new-project .new-project-title, html .new-project .new-project-links, html .new-project .new-project-text, body .new-project .new-project-title, body .new-project .new-project-links, body .new-project .new-project-text {
     position: relative;
@@ -118,6 +137,8 @@
             transform: scale(1);
     width: 100%;
     top: 0;
+    z-index: 1;
+    background-color: transparent;
   }
   html .new-project .new-project-title, body .new-project .new-project-title {
     margin-bottom: 10px;
@@ -155,6 +176,26 @@
 }
 
 @media (max-width: 500px) {
+  html p, body p {
+    font-size: 0.8rem !important;
+  }
+  html button, body button {
+    font-size: 1rem !important;
+  }
+  html .title, body .title {
+    font-size: 1.5rem;
+    top: -30px;
+  }
+  html .title span, body .title span {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  html h2, body h2 {
+    font-size: 1.5rem !important;
+  }
+  html .about h2, body .about h2 {
+    font-size: 2rem !important;
+  }
   html .introduction, body .introduction {
     border-bottom: none;
   }
