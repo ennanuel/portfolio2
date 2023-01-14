@@ -15,12 +15,13 @@ const DarkVariables = () => {
     --linear-color1: rgba(233, 196, 106, 0.2);
     --linear-color2: transparent;
     --light-background: rgba(0, 0, 0, 0.3);
+    --skill-bg: rgba(0, 0, 0, 0.3);
     --profile-overlay: rgba(233, 196, 106, 0.3);
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(233, 196, 106, 0.6);
     --project-description-color: rgb(22, 42, 49);
     --project-link-color: rgba(233, 196, 106, 0.5);
-    --project-title-color: rgb(233, 196, 106);
+    --project-title-color: rgb(22, 42, 49);
     --project-text-color: rgb(171, 147, 85);
     --social-icon-bg: rgb(16, 30, 35);
     --social-icon-after: rgb(233, 196, 106);

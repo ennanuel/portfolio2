@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Background, Introduction, Footer, AboutMe, Resume, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
+import { Background, Introduction, Footer, AboutMe, Skills, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
 import AddProject from './components/AddProject';
 import DarkLogo from './components/DarkLogo';
 import DarkVariables from './components/DarkVariables';
@@ -23,10 +23,11 @@ function App() {
     isVisible: false,
     showDynamicBg: window.innerWidth > 720,
     changeBg: true,
-    lightTheme: true,
+    lightTheme: !localStorage.getItem('light_theme') === 'false',
     currentPage: 0,
     projects: []
   })
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +54,7 @@ function App() {
       const res = await fetch(apiUrl)
       const data = await res.json()
       setState(prev => ({...prev, projects: data? data: []}))
+      setLoading(false)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -103,26 +105,30 @@ function App() {
         </div>
 
         { state.deviceWidth > 770 && <MouseTracker /> }
+          <div className={loading && 'dontshow'}>
+            {
+              state.lightTheme? <LightLogo dragDown={state.showingFullContent} />: <DarkLogo dragDown={state.showingFullContent} />
+            }
 
-        {
-          state.lightTheme? <LightLogo dragDown={state.showingFullContent} />: <DarkLogo dragDown={state.showingFullContent} />
-        }
+            <NewHeader state={state} setState={setState} />
+            <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
 
-        <NewHeader state={state} setState={setState} />
-          <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
-          {true ? <main>
-            <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
-              <Introduction setState={setState} />
-              <div id="body">
-                <AboutMe />
-                <Resume deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
-                <Projects projects={state.projects} />
-                <GetInTouch />
-                {/* <AddProject /> */}
-              </div>
-            </article>
-          </main>: <Wating />}
-        <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
+              <main>
+                <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
+                  <Introduction setState={setState} />
+                  <div id="body">
+                    <AboutMe />
+                    <Skills deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
+                    <Projects projects={state.projects} />
+                    <GetInTouch />
+                    {/* <AddProject /> */}
+                  </div>
+                </article>
+              </main>
+
+            <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
+          </div>
+          <Wating lightTheme={state.lightTheme} hide={loading} />
       </div>
     </>
   )

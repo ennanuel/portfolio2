@@ -27,6 +27,7 @@
 
 .socials .social {
   width: 30px;
+  color: inherit;
 }
 
 .socials .social:hover {

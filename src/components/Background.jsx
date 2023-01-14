@@ -71,7 +71,6 @@ const Background = ({state, setMainState}) => {
         setMainState(prev => ({...prev, changeBg: false}))
 
         background();
-        console.log(height, width)
         
         window.addEventListener('resize', resizeHandler);
 

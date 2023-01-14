@@ -28,7 +28,7 @@ const Introduction = ({setState}) => {
         <div className={`title delay full-border intro-title anim-duration ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
           <span>Hi, my name is</span>
         </div>
-        <article className="info">
+        <article className={`info ${isVisible && 'animate__animated animate__fadeIn'}`}>
           <div className="about">
             <h2 className={`anim-duration delay ${isVisible? 'animate__animated animate__fadeInDown': 'hidden'}`}>
               <span>Ezema Emmanuel.</span>

@@ -3,20 +3,12 @@ import Title from './Title'
 import '../styles/projects.css'
 import Project2 from './Project2'
 import Button from './Button'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import NewProject from './NewProject'
 
 let left = false;
 const Projects = ({ projects }) => {
-
-  useEffect(() => {
-    const otherProjects = document.querySelectorAll('.other-project');
-    console.log(projects);
-
-    [...otherProjects].forEach( (otherProject, i) => {
-      otherProject.style.animationDelay = (i/20).toFixed(2) + 's'
-    })
-  }, [])
+  const [showProject, setShowProject] = useState(false)
 
   return (
     <section id="projects" title="03. Projects" className="section projects">
@@ -36,10 +28,16 @@ const Projects = ({ projects }) => {
 
         <div className="other-projects-container">
           {
-            projects.filter( project => project.type === 'secondary' ).map( (project, i) => <Project2 key={i} content={project} />  )
+            projects.filter( (project) => project.type === 'secondary' ).map( (project, i) => <Project2 key={i} content={project} i={i} />  )
           }
         </div>
-        <Button width="150px">Show More</Button>
+        {
+          projects.length > 6 ?
+          showProject ?
+          <Button width="150px" onClick={() => setShowProject(false)}>Show Less</Button> :
+          <Button width="150px" onClick={() => setShowProject(true)}>Show More</Button> :
+          null
+        }
       </div>
 
       <BgText>Projects.</BgText>

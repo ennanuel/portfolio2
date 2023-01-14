@@ -14,6 +14,7 @@ const Customize = ({state, setState}) => {
 
     const handleThemeChange = () => {
         setState((prev) => ({...prev, lightTheme: !prev.lightTheme}))
+        localStorage.setItem('light_theme', state.lightTheme)
     }
 
 

@@ -168,6 +168,9 @@
     -webkit-transform: translate(10px, -10px) !important;
             transform: translate(10px, -10px) !important;
   }
+  html .skill, body .skill {
+    width: 100% !important;
+  }
   html .menu, body .menu {
     width: 100%;
     -webkit-box-align: center;

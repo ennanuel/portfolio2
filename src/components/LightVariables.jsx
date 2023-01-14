@@ -9,12 +9,13 @@ const LightVariables = () => {
     --text: rgb(35, 63, 90);
     --title-before-bg: rgb(52, 86, 116);
     --highlight-text: rgb(106, 78, 98);
-    --header2-color: rgba(35, 63, 90);
-    --header2-secondary-color: rgba(75, 103, 130);
+    --header2-color: rgb(35, 63, 90);
+    --header2-secondary-color: rgb(75, 103, 130);
     --menu-before-bg: rgba(213, 187, 197, 0.7);
     --linear-color1: rgba(76, 56, 88, 0.4);
     --linear-color2: transparent;
     --light-background: rgba(255, 255, 255, 0.1);
+    --skill-bg: rgba(0, 0, 0, 0.1);
     --profile-overlay: rgba(106, 78, 98, 0.3);
     --box-shadow: rgba(0, 0, 0, 0.4);
     --project-img-color: rgba(106, 78, 98, 0.6);

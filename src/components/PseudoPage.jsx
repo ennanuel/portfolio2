@@ -9,7 +9,7 @@ const PseudoPage = ({shouldShow, y}) => {
             About Me
         </section>
         <section className="fake-pages" id="resume0">
-            Resume
+            Skills
         </section>
         <section className="fake-pages" id="projects0">
             Projects

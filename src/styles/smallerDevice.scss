@@ -1,7 +1,10 @@
 
 @media (max-width: 770px) {
   html, body {
-
+    p {
+      font-size: 0.8rem;
+    }
+    
       .section {
         padding: 5%;
         margin-bottom: 200px;
@@ -100,6 +103,10 @@
       .about p {
         padding: 15px;
         text-align: left;
+        
+        &:before {
+          opacity: 0.5;
+        }
       }
     
       .about h2 {
@@ -194,6 +201,10 @@
     
     .section .title .title-content {
       transform: translate(10px, -10px) !important;
+    }
+
+    .skill {
+      width: 100% !important;
     }
 
     .menu {

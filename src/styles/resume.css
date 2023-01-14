@@ -1,18 +1,112 @@
-.resume h2 {
+.skills {
+  padding: 0;
+  margin: 0;
+}
+
+.skills h2 {
   color: var(--text);
   text-align: center;
 }
 
-.resume p {
-  margin-bottom: 50px;
-  max-width: 600px;
-  text-align: center;
+.skills .section-content {
+  width: 100%;
 }
 
-.section-content {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.skills .skill-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.skills .skill-container .skill {
+  border-radius: 3px;
+  max-width: 100%;
+  background-color: var(--skill-bg);
+  padding: 10px;
+  position: relative;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.skills .skill-container .skill .line {
+  width: 70%;
+  height: 2px;
+  margin: 10px;
+  position: relative;
+  background-color: var(--header2-secondary-color);
+}
+
+.skills .skill-container .skill h2 {
+  color: var(--header2-secondary-color);
+  font-weight: 400;
+}
+
+.skills .skill-container ul {
+  padding: 0 20px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills .skill-container ul li {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  gap: 3px;
+  font-size: 3rem;
+  color: var(--text);
+  border-radius: 5px;
+}
+
+.skills .skill-container ul li span {
+  font-size: 0.9rem;
+  color: var(--header2-secondary-color);
+}
+
+.skills .skill-container ul li:before {
+  content: "";
+}
+
+.skills .skill-container ul li:hover {
+  background-color: var(--project-img-color);
+  color: var(--project-title-color);
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.skills .skill-container ul li:hover span {
+  color: var(--project-title-color);
 }
 
 .face {
@@ -21,6 +115,7 @@
   left: 0;
   margin: 50px 8%;
   gap: 20px;
+  z-index: 0;
 }
 
 .eyes {

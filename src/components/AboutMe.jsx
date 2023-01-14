@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 import { BsDownload } from "react-icons/bs"
 import Pdf from '../cv/CV.pdf'
-import image from './assets/images/site/Screenshot_20221106-133620-PhotoRoom.png'
+import image from './assets/images/site/profile-img2.jpg'
 import '../styles/aboutme.css'
 
 const AboutMe = () => {
@@ -31,14 +31,19 @@ const AboutMe = () => {
                       <p>
                         My main goal these days is to land a web development job so I can be able to contribute my skills and what I've learnt so far to the growth of a corporation.
                       </p>
-                      <p>My resume is available below.</p>
-                      <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+            
+                      {
+                        window.innerWidth > 720 && <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+                      }
                     </div>
             
                     <div className={`second  ${isVisible ? 'animate__animated animate__fadeInUp': 'hide-element'}`}>
                       <div className="picture flex-center"><img src={image} /><div className="profile-overlay" /></div>
                     </div>
-            
+
+                    {
+                      window.innerWidth <= 720 && <Button onClick={downloadCV} width="300px">Download Resume<br /><b><i><BsDownload /></i></b></Button>
+                    }
                   </div>
                     
                 </article>

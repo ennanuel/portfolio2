@@ -12,7 +12,8 @@ const GetInTouch = () => {
   const [showForm, setShowForm] = useState(false);
 
   const handleClick = () => {
-    setShowForm(prev => !prev)
+    // setShowForm(prev => !prev)
+    location.href = 'http://emmanuelezema6@gmail.com'
   }
 
   return (

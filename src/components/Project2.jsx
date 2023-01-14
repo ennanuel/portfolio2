@@ -1,21 +1,26 @@
 import React from 'react'
-import { FaExternalLinkAlt, FaRegLightbulb } from 'react-icons/fa'
-import { FiGithub } from 'react-icons/fi'
+import { BsGear } from 'react-icons//bs'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FiCodepen, FiGithub } from 'react-icons/fi'
 import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 
 
-const Project2 = ({content}) => {
+const Project2 = ({content, i}) => {
   const nodeRef = useRef()
   const isVisible = useIsVisible(nodeRef, {once: true})
 
   return (
-    <div ref={nodeRef} className={`other-project anim-duration ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`}>
+    <div ref={nodeRef} className={`other-project anim-duration ${isVisible? 'animate__animated animate__fadeInUp': 'hide-element'}`} style={{animationDelay: (i/10).toFixed(2) + 's'}}>
       <div className="project-top">
-        <div className="file-img"><i><FaRegLightbulb /></i></div>
-        <div className="links">
-            <div className="link flex-center" link="Github Repo"><a target="_blank" href={content.gitLink}><FiGithub /></a></div>
-            <div className="link flex-center" link="Main Link"><a target="_blank" href={content.mainLink}><FaExternalLinkAlt /></a></div>
+        <div className="file-img"><i><BsGear /></i></div>
+        <div className="links other-project-links link">
+          {
+            content.codepenLink ?
+            <div className="link project2-link flex-center" link="Codepen"><a target="_blank" href={content.codepenLink}><FiCodepen /></a></div> :
+            <div className="link project2-link flex-center" link="Github Repo"><a target="_blank" href={content.gitLink}><FiGithub /></a></div>
+          }
+          <div className="link project2-link flex-center" link="Main Link"><a target="_blank" href={content.mainLink}><FaExternalLinkAlt /></a></div>
         </div>
       </div>
       <div className='project-info'>
@@ -24,7 +29,7 @@ const Project2 = ({content}) => {
       </div>
       <div className='tech-used'>
         {
-          content.stack.map(stack => <div className="tech">{stack}</div>)
+          content.stack.map(stack => <div className="tech full-border flex-center">{stack}</div>)
         }
       </div>
     </div>

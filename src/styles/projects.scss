@@ -12,9 +12,14 @@
         }
 
         &:hover {
-            color: var(--text);
+            background-color: var(--highlight-text) !important;
+            color: var(--project-title-color) !important;
         }
     }
+}
+
+.other-project-links {
+    gap: 5px;
 }
     
 .tech-used {
@@ -112,10 +117,27 @@
         display: flex;
         justify-content: stretch;
     }
+
+    .tech {
+        padding: 3px;
+        font-size: 0.8em;
+    }
+
+    .project2-link {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--border);
+            color: var(--project-description-color);
+        }
+    }
 }
 
 .new-project {
     width: 100%;
+    max-height: 80vh;
     margin: 100px auto 150px;
     position: relative;
     background: var(--project-description-color);
@@ -129,7 +151,7 @@
 
     .start-from-left {
         left: 0;
-        transform-origin: left;
+        transform: translateX(-100%);
 
         h3, h4 {
             text-align: left;
@@ -138,7 +160,7 @@
 
     .start-from-right {
         right: 0;
-        transform-origin: right;
+        transform: translateX(100%);
 
         h3, h4 {
             text-align: right;
@@ -154,8 +176,7 @@
         background: var(--project-description-color);
         margin: 0;
         padding: 0 15px;
-        transform: scaleX(0);
-        transition: transform 0.3s;
+        transition: transform 0.5s ease;
         flex-wrap: wrap;
         padding-top: 20px;
 
@@ -186,9 +207,8 @@
         height: calc(100% - 90px);
         padding: 10px;
         background: var(--project-description-color);
-        transform-origin: bottom;
-        transform: scaleY(0);
-        transition: transform 0.3s;
+        transform: translateY(100%);
+        transition: transform 0.5s ease;
         flex-wrap: wrap;
 
 
@@ -252,9 +272,8 @@
         height: 100%;
         background: var(--project-description-color);
         padding: 20px;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.3s;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
 
         .tech-used {
             margin: 0;
@@ -278,24 +297,32 @@
         position: absolute;
         top: 0;
         margin: 15px;
-        transform: scaleY(0);
-        transform-origin: bottom;
-        transition: transform 0.3s;
+        transition: transform 0.5s ease;
+    }
+
+    .left-number {
+        transform: translateX(100px);
+        right: 0;
+    }
+
+    .right-number {
+        transform: translateX(-100px);
+        left: 0;
     }
 
     &:hover {
         box-shadow: 0 0 30px var(--box-shadow);
 
         .new-project-text {
-            transform: scaleY(1);
+            transform: translateY(0);
         }
 
         .new-project-title {
-            transform: scaleX(1);
+            transform: translateX(0);
         }
 
         .new-project-links {
-            transform: scaleY(1);
+            transform: translateY(0);
 
             img {
                 opacity: 1;
@@ -303,11 +330,11 @@
         }
 
         .project-number {
-            transform: scaleY(1);
+            transform: translateX(0);
         }
 
         .progress-box {
-            opacity: 0;
+            transform: translateY(-200px);
         }
     }
 }
@@ -321,8 +348,8 @@
     z-index: 10;
     top: 15px;
     right: 15px;
-    opacity: 1;
-    transition: opacity 0.3s;
+    transform: translateY(0);
+    transition: transform 0.3s;
     text-transform: capitalize;
     font-size: 0.8rem;
 
