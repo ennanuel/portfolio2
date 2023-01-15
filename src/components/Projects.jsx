@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
       
       <h2 className="projects-text section-header">Some Projects I've Built</h2>
       {
-        projects.filter( project => project.type === 'main' ).map((project, i) => <NewProject key={i} content={project} left={i % 2 === 0} number={i} />)
+        projects?.filter( project => project?.type === 'main' ).map((project, i) => <NewProject key={i} content={project} left={i % 2 === 0} number={i} />)
       }
 
       <div className="other-projects">
@@ -25,11 +25,11 @@ const Projects = ({ projects }) => {
 
         <div className="other-projects-container">
           {
-            projects.filter( (project) => project.type === 'secondary' ).map( (project, i) => <Project2 key={i} content={project} i={i} />  )
+            projects.filter( (project) => project?.type === 'secondary' ).map( (project, i) => <Project2 key={i} content={project} i={i} />  )
           }
         </div>
         {
-          projects.length > 6 ?
+          projects.filter( project => project?.type === 'secondary' ).length > 6 ?
           showProject ?
           <Button width="150px" onClick={() => setShowProject(false)}>Show Less</Button> :
           <Button width="150px" onClick={() => setShowProject(true)}>Show More</Button> :

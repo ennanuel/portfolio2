@@ -145,6 +145,27 @@
     transition: box-shadow, transform 0.3s ease;
     overflow: hidden;
 
+    .proj-img-container {
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .img-shadow {
+            position: absolute;
+            width: 60%;
+            height: 20%;
+            bottom: 20px;
+            left: 30px;
+            background-color: var(--border);
+            opacity: 0.7;
+            z-index: 0;
+            filter: blur(10px);
+        }
+    }
+
     img {
         display: block;
     }
