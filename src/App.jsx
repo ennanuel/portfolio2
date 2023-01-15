@@ -121,7 +121,7 @@ function App() {
                     <Skills deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
                     <Projects projects={state.projects} />
                     <GetInTouch />
-                    <AddProject />
+                    {/* <AddProject /> */}
                   </div>
                 </article>
               </main>
