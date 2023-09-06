@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Background, Introduction, Footer, AboutMe, Skills, Projects, GetInTouch, NewHeader, MouseTracker } from './components';
-import AddProject from './components/AddProject';
-import DarkLogo from './components/DarkLogo';
-import DarkVariables from './components/DarkVariables';
-import LightLogo from './components/LightLogo';
-import LightVariables from './components/LightVariables';
-import PseudoPage from './components/PseudoPage';
-import Wating from './components/Wating';
+import { Introduction, AboutMe, Skills, Projects, GetInTouch } from './components/sections';
+import { AddProject } from './components/forms'
+import { NewHeader, DarkLogo, LightLogo } from './components/header'
+import { Footer } from './components/footer'
+import { DarkVariables, LightVariables } from './components/cssvariables'
+import { PseudoPage, Waiting, MouseTracker, Background } from './components/decorations';
 
 let isFirstTime = true;
 
@@ -51,10 +49,15 @@ function App() {
     const fetchRequest = async () => {
       const apiUrl = 'https://portfolio-projects-14ccd-default-rtdb.firebaseio.com/projects.json';
 
-      const res = await fetch(apiUrl)
-      const data = await res.json()
-      setState(prev => ({...prev, projects: data? data: []}))
-      setLoading(false)
+      try {
+        const res = await fetch(apiUrl)
+        const data = await res.json()
+        setState(prev => ({...prev, projects: data? data: []}))
+        setLoading(false)
+      } catch (error) {
+        setState(prev => ({...prev, projects: []}))
+        setLoading(false)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -94,14 +97,12 @@ function App() {
 
   return (
     <>
-    {
-      state.lightTheme? <LightVariables /> : <DarkVariables/>
-    }
+      {
+        state.lightTheme? <LightVariables /> : <DarkVariables/>
+      }
       <div className="App">
         <div id="background" className="flex-center">
-
           <Background state={state} setMainState={setState} />
-
         </div>
 
         { state.deviceWidth > 770 && <MouseTracker /> }
@@ -109,26 +110,19 @@ function App() {
             {
               state.lightTheme? <LightLogo dragDown={state.showingFullContent} />: <DarkLogo dragDown={state.showingFullContent} />
             }
-
             <NewHeader state={state} setState={setState} />
             <PseudoPage shouldShow={state.isMenuHovered} y={state.currentPage} />
-
-              <main>
-                <article className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
-                  <Introduction setState={setState} />
-                  <div id="body">
-                    <AboutMe />
-                    <Skills deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
-                    <Projects projects={state.projects} />
-                    <GetInTouch />
-                    {/* <AddProject /> */}
-                  </div>
-                </article>
+              <main className={`page-content ${state.isMenuHovered? 'thin-content': ''}`}>
+                <Introduction setState={setState} />
+                <AboutMe />
+                <Skills deviceWidth={state.deviceWidth} showDynamicBg={state.showDynamicBg} />
+                <Projects projects={state.projects} />
+                <GetInTouch />
+                {/* <AddProject /> */}
               </main>
-
             <Footer isVisible={state.isVisible} isMenuHovered={state.isMenuHovered} />
           </div>
-          <Wating lightTheme={state.lightTheme} hide={loading} />
+          <Waiting lightTheme={state.lightTheme} hide={loading} />
       </div>
     </>
   )

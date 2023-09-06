@@ -1,0 +1,85 @@
+.contact {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+}
+
+.whats-next .title {
+  right: auto !important;
+}
+
+.whats-next.section {
+  margin-bottom: 0 !important;
+  padding-bottom: 15%;
+}
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  padding: 30px;
+  padding: 1px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.contact-form .form-content {
+  background-color: var(--contact-form-bg);
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.contact-form label {
+  padding-left: 10px;
+  color: var(--text);
+}
+.contact-form .btn {
+  width: 100%;
+}
+.contact-form .contact-input {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin: 5px auto 25px;
+  padding-left: 20px;
+  background-color: var(--box-shadow);
+  color: var(--text);
+  border: none;
+  border-top: 1px solid var(--border);
+}
+.contact-form .contact-input:focus {
+  border: 1px solid var(--border);
+}
+.contact-form .textarea {
+  height: 100px;
+  padding: 20px;
+}
+.contact-form:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  background: linear-gradient(transparent, var(--highlight-text));
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=getintouch.css.map */
