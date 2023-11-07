@@ -1,0 +1,61 @@
+.contact {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+}
+
+.whats-next .title {
+  right: auto !important;
+}
+
+.whats-next.section {
+  margin-bottom: 0 !important;
+  padding-bottom: 15%;
+}
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.contact-form .form-content {
+  background-color: var(--contact-form-bg);
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.contact-form .btn {
+  width: 100%;
+}
+.contact-form .btn.loading {
+  pointer-events: none;
+}
+.contact-form .contact-input {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin: 5px auto 25px;
+  padding-left: 20px;
+  background-color: transparent;
+  color: var(--text);
+}
+.contact-form .contact-input::-moz-placeholder {
+  color: var(--text);
+}
+.contact-form .contact-input::placeholder {
+  color: var(--text);
+}
+.contact-form .contact-input:focus {
+  border: 1px solid var(--border);
+}
+.contact-form .textarea {
+  height: 100px;
+  padding: 20px;
+}/*# sourceMappingURL=getintouch.css.map */
