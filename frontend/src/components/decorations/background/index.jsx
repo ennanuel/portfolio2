@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { PageContext } from '../../../PageContext.jsx';
 import { createBackgroundBoxes } from './create.jsx';
-import '../../../styles/background/background.css';
+import '../../../styles/background.scss';
 
 const Background = () => {
     const { dynamicBackground } = useContext(PageContext);
