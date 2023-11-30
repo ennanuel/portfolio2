@@ -1,7 +1,7 @@
 import { BgText, BoxDecor, Button, Highlight, Taskbar } from '../decorations';
 import { useRef } from 'react';
 import { useIsVisible } from 'react-is-visible';
-import '../../styles/introduction/introduction.css';
+import '../../styles/introduction.scss';
 
 
 const Introduction = () => {
@@ -20,9 +20,11 @@ const Introduction = () => {
             <h2 className="anim-duration delay animate__animated animate__fadeInDown">
               <span>Ezema Emmanuel.</span>
               <br />I am a Web Developer.</h2>
-            <p className="full-border anim-duration delay animate__animated animate__fadeInDown poppins">
+            <p className="anim-duration delay poppins animate__animated animate__fadeIn">
+              <span className='my-desc full-border'>
               <BoxDecor />
-              I’m a Web Developer specializing in building (and occasionally designing) exceptional web applications and other web related projects. If you'd like to know more about me please feel free to <Highlight>contact me</Highlight>, I'm available to start work immediately.
+                I’m a Web Developer specializing in building (and occasionally designing) exceptional web applications and other web related projects. If you'd like to know more about me please feel free to <Highlight>contact me</Highlight>, I'm available to start work immediately.
+              </span>
             </p>
           </div>
           <div className="lets-connect anim-duration delay animate__animated animate__fadeInDown">
