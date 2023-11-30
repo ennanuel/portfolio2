@@ -1,7 +1,7 @@
 import { DiCss3, DiGit, DiHtml5, DiJavascript, DiNodejs, DiPhp, DiPostgresql, DiReact, DiSass } from 'react-icons/di';
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
-import { SiExpress, SiFirebase, SiMongodb, SiMysql, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiExpress, SiFirebase, SiJest, SiMongodb, SiMysql, SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 export const ALPH_REGEXP = /[a-z]+/gi;
 
@@ -35,42 +35,46 @@ export const ABOUT_ME = [
 ]
 
 export const SKILLS = [
-    {
-        title: 'Backend',
-        skills: [
-            { name: 'NodeJs', Icon: DiNodejs },
-            { name: 'PHP', Icon: DiPhp },
-            { name: 'Express', Icon: SiExpress}
-        ]
-    },
-    {
-        title: 'Frontend',
-        skills: [
-            { name: 'ReactJS', Icon: DiReact },
-            { name: 'Typescript', Icon: SiTypescript },
-            { name: 'JavaScript', Icon: DiJavascript },
-            { name: 'Tailwind', Icon: SiTailwindcss },
-            { name: 'SASS', Icon: DiSass },
-            { name: 'CSS', Icon: DiCss3 },
-            { name: 'HTML', Icon: DiHtml5 },
-        ]
-    },
-    {
-        title: 'Database',
-        skills: [
-            { name: 'MongoDB', Icon: SiMongodb },
-            { name: 'PostgreSQL', Icon: DiPostgresql },
-            { name: 'MySQL', Icon: SiMysql },
-            { name: 'Firebase', Icon: SiFirebase }
-        ]
-    },
-    {
-        title: 'Version Control',
-        skills: [
-            { name: 'Git', Icon: DiGit }
-        ]
-    }
-]
+  {
+    title: 'Frontend',
+    skills: [
+      { name: 'ReactJS', Icon: DiReact },
+      { name: 'Typescript', Icon: SiTypescript },
+      { name: 'JavaScript', Icon: DiJavascript },
+      { name: 'Tailwind', Icon: SiTailwindcss },
+      { name: 'SASS', Icon: DiSass },
+    ]
+  },
+  {
+    title: 'Backend',
+    skills: [
+      { name: 'NodeJs', Icon: DiNodejs },
+      { name: 'PHP', Icon: DiPhp },
+      { name: 'Express', Icon: SiExpress }
+    ]
+  },
+  {
+    title: 'Database',
+    skills: [
+      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'PostgreSQL', Icon: DiPostgresql },
+      { name: 'MySQL', Icon: SiMysql },
+      { name: 'Firebase', Icon: SiFirebase }
+    ]
+  },
+  {
+    title: 'Version Control',
+    skills: [
+      { name: 'Git', Icon: DiGit }
+    ]
+  },
+  {
+    title: 'Testing',
+    skills: [
+      { name: 'Jest', Icon: SiJest }
+    ]
+  },
+];
 
 export const SOCIAL_LINKS = [
   {
