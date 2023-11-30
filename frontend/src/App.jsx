@@ -1,8 +1,8 @@
 import Theme from './components/theme';
-import { Introduction, AboutMe, Skills, Projects, GetInTouch } from './components/sections';
 import NavBar from './components/navbar';
 import Logo from './components/logo';
 import { Footer } from './components/footer';
+import { Introduction, AboutMe, Skills, Projects, GetInTouch } from './components/sections';
 import { PseudoPages, Waiting, MouseTracker, Background } from './components/decorations';
 import { useContext } from 'react';
 import { PageContext } from './PageContext';
