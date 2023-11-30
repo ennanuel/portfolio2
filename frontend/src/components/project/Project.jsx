@@ -1,59 +1,57 @@
 import { useRef } from 'react';
 import { useIsVisible } from 'react-is-visible';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { FiGithub } from 'react-icons/fi';
+import { FiCodepen, FiExternalLink, FiGithub } from 'react-icons/fi';
 import { useMemo } from 'react';
+import exampleImage4 from "../../assets/images/ezema_image.png";
+import exampleImage3 from "../../assets/images/robert_image.png";
+import exampleImage2 from "../../assets/images/ridm_image.png";
+import exampleImage from "../../assets/images/Card Store Image.jpg";
 
-const Project = ({ left, num, name, description, stack, image, mainLink, gitLink }) => {
-  const projectRef = useRef();
+const Project = ({ left, num, name, desc, stacks, images, demo_link, code_link, is_github_link }) => {
+  const projectRef = useRef(null);
   const isVisible = useIsVisible(projectRef, { once: true });
-  const projectNumber = useMemo(() => num < 10 ? `0${num + 1}.` : `${num + 1}.`, []);
-  const imgSrc = useMemo(() => {
-    return new URL(`../../assets/images/${image}`, import.meta.url).href;
-  }, []);
+  const projectNumber = useMemo(() => num < 10 ? `0${num + 1}` : `${num + 1}`, []);
 
   return (
-    <article className="project-container">
-      <div
-        outertitle={name}
-        className={`new-project full-border left-new-project ${isVisible ? left ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeIn' : 'hidden'}`}
-        ref={projectRef}
-      >
-        <a href={mainLink} target="_blank" className={`new-project-title flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-          <h4>Featured Project</h4>
-          <h3>{name}</h3>
-        </a>
-        <div className={`new-project-links flex-center ${left? 'start-from-left': 'start-from-right'}`}>
-          <div className="proj-img-container">
-            <img className="proj-img" src={imgSrc} alt="Project Image" />
-            <div className="img-shadow" />
-          </div>
-          <div className="link link-container flex-center">
-            <a target="_blank" className="link flex-center full-border" link="Go to Project" href={mainLink}>
-              <FaExternalLinkAlt />
+    <article ref={projectRef} className={`main-project flex-center ${left && 'left'} ${isVisible && 'animate__animated animate__fadeIn'}`}>
+      <div className="images relative">
+        <div className="container">
+          {/* { images.slice(0, 1).map((image, i) => <img src={image} key={i} alt={name} />) } */}
+          <img src={num === 0 ? exampleImage2 : num === 1 ? exampleImage3 : num === 2 ? exampleImage4 : exampleImage} alt="" />
+        </div>
+      </div>
+      <div className='details flex-col'>
+        <ul className="decor-dots flex-row ai-center">
+          <li className="dot dot1"></li>
+          <li className="dot dot2"></li>
+          <li className="dot dot3"></li>
+        </ul>
+        <div className="project-info flex-col">
+          <h2 className="project-title flex-row">
+            <span className="number flex-center poppins">{projectNumber}</span>
+            <span className="name flex-col">
+              <span>{name}</span>
+              <span className='name-line'></span>
+            </span>
+          </h2>
+          <p className="desc poppins">{desc}</p>
+          <div className="links">
+            <a href={demo_link} link="Open Demo" className="link demo flex-center">
+              <FiExternalLink size={24} />
               <span>Demo</span>
             </a>
-            <a target="_blank" className="link flex-center full-border" link="Github Repo" href={gitLink}>
-              <FiGithub />
-              <span>Github</span>
+            <a href={code_link} link="View Code" className="link code flex-center">
+              {is_github_link ? <FiGithub size={24} /> : <FiCodepen size={24} />}
+              <span>{ is_github_link ? 'Github' : 'Codepen' }</span>
             </a>
           </div>
         </div>
-        <div className={`new-project-text flex-center ${left? 'start-from-right': 'start-from-left'}`}>
-          <p>{description}</p>
-          <ul className={`bb-10 tech-used`}>
-            {
-              stack.map(tech => <li className="tech">{tech}</li>)
-            }
-          </ul>
-        </div>
-        <img src={imgSrc} className="new-project-bg-img" />
-        <div className={`project-number full-border flex-center ${!left ? 'left-number': 'right-number'}`}>
-          {projectNumber}
-        </div>
+        <ul className="stacks poppins flex-row">
+          { stacks.map(tech => <li key={tech} className="stack">{tech}</li>) }
+        </ul>
       </div>
     </article>
   )
-}
+};
 
 export default Project
