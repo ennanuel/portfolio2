@@ -1,4 +1,4 @@
-import '../../styles/waiting/waiting.css';
+import '../../styles/waiting.scss';
 import lightLogo from '../../assets/images/icon-light.png';
 import darkLogo from '../../assets/images/icon-dark.png';
 
