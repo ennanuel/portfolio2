@@ -1,7 +1,7 @@
 export const fetchProjects = () => new Promise(
     async function (resolve, reject) {
         try {
-            const URL = import.meta.env.VITE_API_URL + '/projects';
+            const URL = `${import.meta.env.VITE_API_URL}/project`;
             const response = await fetch(URL);
             const res = await response.json();
             if (response.status !== 200) throw res;
@@ -20,7 +20,7 @@ export const sendEmail = (values) => new Promise(
             headers.append('Content-Type', 'application/json');
             const body = JSON.stringify(values);
             const options = { body, headers, method: 'POST' };
-            const URL = import.meta.env.VITE_API_URL + '/mail';
+            const URL = `${import.meta.env.VITE_API_URL}/mail`;
             const response = await fetch(URL, options);
             const res = await response.json();
             if (res.status !== 200) throw new Error(res.message);
