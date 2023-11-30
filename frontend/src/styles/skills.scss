@@ -1,0 +1,91 @@
+.skills {
+    padding: 0;
+    margin: 0;
+}
+
+.skills h2 {
+    color: var(--text);
+    text-align: center;
+}
+
+.skills .section-content {
+    width: 100%;
+}
+
+.skill-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .skill {
+        padding: 10px 20px;
+        max-width: 100%;
+        background-color: var(--project-description-color);
+        box-shadow: 0 7px 10px var(--box-shadow);
+        position: relative;
+
+        .line {
+            width: 70%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            height: 2px;
+            position: relative;
+            background-color: var(--header2-secondary-color);
+        }
+
+        h2 {
+            font-weight: normal;
+        }
+    }
+
+    ul {
+        padding: 10px;
+        padding-bottom: 0;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        li {
+            position: relative;
+
+            .skill-detail {
+                text-align: center;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+                gap: 10px;
+                font-size: .8rem;
+                color: var(--text);
+                background-color: var(--project-description-color);
+                border-color: var(--border);
+                transition: transform 0.1s ease;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: -5px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--border);
+                background: repeating-linear-gradient(-45deg, var(--border) 0, var(--border) 2px, transparent 2px, transparent 10px);
+            }
+
+            &:hover {
+                .skill-detail {
+                    transform: translate(-5px, 5px);
+                }
+            }
+        }
+    }
+}

@@ -318,6 +318,7 @@ body:hover .mouse-tracker {
 
 [data-content]:before {
     content: attr(data-content);
+    font-family: 'Poppins', sans-serif;
     width: max-content;
     padding: 5px;
     overflow: hidden;
@@ -333,6 +334,7 @@ body:hover .mouse-tracker {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    font-size: .8rem;
 }  
 
 .show-circle-content:before {
