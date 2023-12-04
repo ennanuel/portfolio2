@@ -4,7 +4,7 @@ const DarkVariables = () => {
       {`:root {
     --section-container-bg: rgba(0, 0, 0, 0.4);
     --border:rgb(139, 126, 92);
-    --title-before-bg: rgb(141, 123, 77);
+    --title-before-bg: rgb(240, 216, 156);
     --text: rgb(235, 212, 156);
     --highlight-text: rgb(240, 216, 156);
     --header2-color: rgba(240, 216, 156, 0.9);
