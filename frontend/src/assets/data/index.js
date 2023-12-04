@@ -30,8 +30,8 @@ export const LINK_ITEMS = [
 ];
 
 export const ABOUT_ME = [
-    "Hello! My name is Emmanuel I'm very passionate about programming and creating web related products. This interest of mine dates back to 2020 when I was introduced to Computer Programming as a  course in college, turns out I really enjoyed solving challenges using code I wrote! Fast-forward to today and although I've not had the priviledge to program professionally, I still have done some decent projects that have given me profound knowledge in most programming language!",
-    "My main goal these days is to land a web development job so I can be able to contribute my skills and what I've learnt so far to the growth of a corporation."
+  "I'm Emmanuel Ezema, a driven developer with a clear goal: to become the go-to, reliable programmer in full-stack web development. My coding journey kicked off in 2020 during college, and from day one, I've been captivated by the art of crafting solutions through code. While I'm yet to dive into commercial projects, my dedication to continuous learning and skill refinement is unwavering. The evolution in the quality and logic of my projects over time reflects this commitment.",
+  "My focus is on being not just a programmer, but a reliable and effective one.I invest time in mastering new concepts, adopting best practices, and consistently enhancing my coding skills.With a keen eye on staying updated with the latest technologies, I'm on a mission to be the developer who comes to mind first in full-stack web development. Ready to contribute my dedication and evolving expertise to any development team, I am committed to being the reliable force that ensures success in every project."
 ]
 
 export const SKILLS = [
