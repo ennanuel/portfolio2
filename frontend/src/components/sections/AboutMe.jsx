@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 import { BsDownload } from "react-icons/bs"
 import Pdf from '../../cv/CV.pdf';
-import image from '../../assets/images/profile-img2.jpg';
-import '../../styles/aboutme/aboutme.css';
+import image from '../../assets/images/my_image.jpeg';
 import { ABOUT_ME } from '../../assets/data';
+import '../../styles/aboutme.scss';
 
 const AboutMe = () => {
   const downloadCV = () => {
@@ -20,7 +20,7 @@ const AboutMe = () => {
  
   return (
     <section ref={nodeRef} id="about" title="01. About Me" className="about-me section flex-center">
-      <Title number="01." left={true}>About Me</Title>
+      <Title left={true}>About Me</Title>
       <article className={`me anim-duration`}>
         <h2 className={`bio-tile anim-duration ${isVisible ? 'animate_animated animate__fadeIn' : 'hide-element'}`}>Short Biography</h2>
         <div className="bio">
