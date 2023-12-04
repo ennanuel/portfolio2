@@ -1,23 +1,22 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useIsVisible } from 'react-is-visible';
 import { FiCodepen, FiExternalLink, FiGithub } from 'react-icons/fi';
 import { useMemo } from 'react';
-import exampleImage4 from "../../assets/images/ezema_image.png";
-import exampleImage3 from "../../assets/images/robert_image.png";
-import exampleImage2 from "../../assets/images/ridm_image.png";
-import exampleImage from "../../assets/images/Card Store Image.jpg";
+
+const MAX_STRING_LENGTH = 400;
 
 const Project = ({ left, num, name, desc, stacks, images, demo_link, code_link, is_github_link }) => {
   const projectRef = useRef(null);
   const isVisible = useIsVisible(projectRef, { once: true });
+  const [showAllText, setShowAllText] = useState(false);
   const projectNumber = useMemo(() => num < 10 ? `0${num + 1}` : `${num + 1}`, []);
+  const projectDescription = useMemo(() => showAllText || desc.length < MAX_STRING_LENGTH ? desc : `${desc.substring(0, MAX_STRING_LENGTH)}...`, [showAllText, desc])
 
   return (
     <article ref={projectRef} className={`main-project flex-center ${left && 'left'} ${isVisible && 'animate__animated animate__fadeIn'}`}>
       <div className="images relative">
         <div className="container">
-          {/* { images.slice(0, 1).map((image, i) => <img src={image} key={i} alt={name} />) } */}
-          <img src={num === 0 ? exampleImage2 : num === 1 ? exampleImage3 : num === 2 ? exampleImage4 : exampleImage} alt="" />
+          { images.slice(0, 1).map((image, i) => <img src={`${import.meta.env.VITE_IMG_URL}/${image}`} key={i} alt={name} />) }
         </div>
       </div>
       <div className='details flex-col'>
@@ -34,13 +33,25 @@ const Project = ({ left, num, name, desc, stacks, images, demo_link, code_link, 
               <span className='name-line'></span>
             </span>
           </h2>
-          <p className="desc poppins">{desc}</p>
+          <p className="desc poppins">
+            <span>{projectDescription}</span>
+            {
+              desc.length > MAX_STRING_LENGTH &&
+              <button
+                  className="more-info link poppins"
+                  link={!showAllText ? "Show More Details" : "Show Less Details"}
+                  onClick={() => setShowAllText(!showAllText)}
+                >
+                  {showAllText ? '  show less' : '  more info'}
+                </button>
+            }
+          </p>
           <div className="links">
-            <a href={demo_link} link="Open Demo" className="link demo flex-center">
+            <a href={demo_link} target="_blank" link="Open Demo" className="link demo flex-center">
               <FiExternalLink size={24} />
               <span>Demo</span>
             </a>
-            <a href={code_link} link="View Code" className="link code flex-center">
+            <a href={code_link} target="_blank" link="View Code" className="link code flex-center">
               {is_github_link ? <FiGithub size={24} /> : <FiCodepen size={24} />}
               <span>{ is_github_link ? 'Github' : 'Codepen' }</span>
             </a>
