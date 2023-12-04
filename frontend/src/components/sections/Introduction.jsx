@@ -23,7 +23,7 @@ const Introduction = () => {
             <p className="anim-duration delay poppins animate__animated animate__fadeIn">
               <span className='my-desc full-border'>
               <BoxDecor />
-                I’m a Web Developer specializing in building (and occasionally designing) exceptional web applications and other web related projects. If you'd like to know more about me please feel free to <Highlight>contact me</Highlight>, I'm available to start work immediately.
+                I’m a Web Developer specializing in building (and occasionally designing) exceptional full-stack web applications and other web related projects. If you'd like to know more about me please feel free to <a href="#contact" className="highlight">contact me</a>, I'm currently available to start work.
               </span>
             </p>
           </div>
