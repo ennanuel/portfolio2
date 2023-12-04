@@ -3,20 +3,22 @@ import { Button, Title, BgText } from '../decorations';
 import { Project, Project2 } from '../project';
 import { useContext } from 'react';
 import { PageContext } from '../../PageContext';
-import '../../styles/projects/projects.css';
+import '../../styles/projects.scss';
 
 const Projects = () => {
   const { projects } = useContext(PageContext);
   const [showMoreProject, setShowMoreProject] = useState(false);
-  const { mainProjects, secondaryProjects } = useMemo(() => {
-    const mainProjects = projects?.filter(project => project?.type === 'main');
-    const secondaryProjects = projects.filter(project => project?.type === 'secondary');
-    return { mainProjects, secondaryProjects };
-  }, [projects]);
+  const { mainProjects, secondaryProjects } = useMemo(() => projects.reduce(
+    (a, b) => {
+      const key = b.is_main_project ? 'mainProjects' : 'secondaryProjects';
+      const value = [...(a[key]), b];
+      return { ...a, [key]: value };
+    }, { mainProjects: [], secondaryProjects: [] }
+  ), [projects])
 
   return (
     <section id="projects" title="03. Projects" className="section projects">
-      <Title number="03." left={true}>Projects</Title>
+      <Title left={true}>Projects</Title>
       <h2 className="projects-text section-header">Some Projects I've Built</h2>
       {mainProjects.map((project, i) => <Project key={i} {...project} left={i % 2 === 0} num={i} />)}
       <div className="other-projects">
