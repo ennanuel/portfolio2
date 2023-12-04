@@ -13,7 +13,8 @@ const Footer = () => {
       </div>
       <Socials />
       <p>
-        Built and Designed by <a href="https://www.github.com/ennanuel" target="_blank" className="poppins">Emmanuel Ezema</a>.
+        <span className="poppins">Built and Designed by </span>
+        <a href="https://www.github.com/ennanuel" target="_blank" className="highlight">Emmanuel Ezema</a>.
       </p>
     </footer>
   )
