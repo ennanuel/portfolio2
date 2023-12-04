@@ -83,7 +83,7 @@ export const SOCIAL_LINKS = [
     url: "https://www.github.com/ennanuel"
   },
   {
-    link: 'codepen',
+    link: 'twitter',
     Icon: FiTwitter,
     url: "https://www.twitter.com/nnanna_ezema"
   },
