@@ -26,21 +26,14 @@ const AboutMe = () => {
         <div className="bio">
           <div className={`bio-text ${isVisible ? 'animate__animated animate__fadeInUp' : 'hide-element'}`}>
             {ABOUT_ME.map((paragraph, i) => <p key={i} className="poppins">{paragraph}</p>)}
-            {
-              window.innerWidth > 720 &&
-              <div className="navigate_btns">
-                <Button onClick={downloadCV} width="300px">Resume<BsDownload /></Button>
-                <Button2 width="300px" onClick={navigateToProjects}>My Projects</Button2>
+            <div className="navigate_btns">
+                <Button onClick={downloadCV}>Resume<BsDownload /></Button>
+                <Button2 onClick={navigateToProjects}>My Projects</Button2>
               </div>
-            }
           </div>
           <div className={`second  ${isVisible ? 'animate__animated animate__fadeInUp' : 'hide-element'}`}>
             <div className="picture flex-center"><img src={image} /><div className="profile-overlay" /></div>
           </div>
-          {
-            window.innerWidth <= 720 &&
-              <Button onClick={downloadCV} width="300px">Resume<BsDownload /></Button>
-          }
         </div>
       </article>
       <BgText>About.</BgText>
