@@ -174,6 +174,10 @@ p {
     background-color: var(--title-before-bg);
     transform: scaleX(0.8);
     transition: transform 0.3s;
+
+    @media (max-width: 720px) {
+      width: 100%;
+    }
   }
 
   &:hover {
@@ -189,6 +193,7 @@ p {
 .highlight {
   color: var(--highlight-text);
   position: relative;
+  text-decoration: none;
 
   &:after {
     content: "";
@@ -264,10 +269,14 @@ footer {
     }
   }
 
-  a {
+  .highlight {
     color: var(--main-background);
     text-decoration: none;
     font-weight: bold;
+
+    &:after {
+      background-color: var(--main-background);
+    }
   }
 
   p {
