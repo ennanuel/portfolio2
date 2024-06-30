@@ -215,6 +215,7 @@
 
         img {
             width: 100%;
+            aspect-ratio: 1;
             filter: grayscale(80%);
             position: relative;
         }
